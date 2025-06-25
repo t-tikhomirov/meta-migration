@@ -1,0 +1,9 @@
+{
+  "table_id_exceptions": {
+    "38534": 87234
+  },
+  "table_name_exceptions": {
+    "analyst.group_sum_turnover_eur": "MART__GROUP_SUM_TURNOVER_EUR"
+  },
+  "description": "Hardcoded exceptions for tables that don't follow standard naming conventions during migration from Exasol to StarRocks"
+} 

@@ -1,0 +1,280 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 17 questions
+
+📝 Validating Question 1/17
+--------------------------------------------------
+  🔍 Validating Question 4082: 3 Pay-out Acceptance Rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 182
+    📋 Columns: 2
+    📝 Column names: ['CREATED_AT', 'ACCEPTANCE_RATE']
+    📈 First row: ['2022-07-11T00:00:00Z', 1.0]
+    📈 Second row: ['2024-03-25T00:00:00Z', 0.6637187707273933]
+
+📝 Validating Question 2/17
+--------------------------------------------------
+  🔍 Validating Question 4081: 3 Pay-out Acceptance Rate Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'ACCEPTANCE_RATE']
+    📈 First row: ['2024-09-30T00:00:00Z', 'Broex UAB', 0.7021951219512195]
+    📈 Second row: ['2022-05-23T00:00:00Z', 'others', 1.0]
+
+📝 Validating Question 3/17
+--------------------------------------------------
+  🔍 Validating Question 4089: 3 Pay-out Turnover
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 182
+    📋 Columns: 2
+    📝 Column names: ['CREATED_AT', 'TURNOVER_EUR']
+    📈 First row: ['2022-06-13T00:00:00Z', 1796772.0354216003]
+    📈 Second row: ['2023-09-11T00:00:00Z', 4522527.033997702]
+
+📝 Validating Question 4/17
+--------------------------------------------------
+  🔍 Validating Question 4079: 3 Pay-out Turnover Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'TURNOVER_EUR']
+    📈 First row: ['2022-08-08T00:00:00Z', 'Europe EU', 447622.3938458]
+    📈 Second row: ['2022-08-15T00:00:00Z', 'Global Financial Innovation Ltd', 813081.6800000004]
+
+📝 Validating Question 5/17
+--------------------------------------------------
+  🔍 Validating Question 4079: 3 Pay-out Turnover Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'TURNOVER_EUR']
+    📈 First row: ['2024-08-19T00:00:00Z', 'Europe non-EU', 1095039.2360599004]
+    📈 Second row: ['2024-08-12T00:00:00Z', 'Asia', 1555787.7012004007]
+
+📝 Validating Question 6/17
+--------------------------------------------------
+  🔍 Validating Question 4080: 3 Pay-out Revenue Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'REVENUE_EUR']
+    📈 First row: ['2022-09-26T00:00:00Z', 'EUR', 86901.7299999999]
+    📈 Second row: ['2022-09-26T00:00:00Z', 'AL/B.W.I. BLACK-WOOD LIMITED(new)-EUR', 39118.050000000025]
+
+📝 Validating Question 7/17
+--------------------------------------------------
+  🔍 Validating Question 4080: 3 Pay-out Revenue Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'REVENUE_EUR']
+    📈 First row: ['2022-09-26T00:00:00Z', 'Asia', 5362.548776199998]
+    📈 Second row: ['2022-09-26T00:00:00Z', 'VISA', 62725.42917040007]
+
+📝 Validating Question 8/17
+--------------------------------------------------
+  🔍 Validating Question 4086: 3 Pay-out Winpay Fee Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'WINPAY_FEE_EUR']
+    📈 First row: ['2022-08-15T00:00:00Z', 'United Kingdom of Great Britain and Northern Ireland', 47.421858965000006]
+    📈 Second row: ['2022-08-29T00:00:00Z', 'Europe non-EU', 249.79874766300003]
+
+📝 Validating Question 9/17
+--------------------------------------------------
+  🔍 Validating Question 4086: 3 Pay-out Winpay Fee Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'WINPAY_FEE_EUR']
+    📈 First row: ['2022-05-23T00:00:00Z', 'PAY_OK', 1462.166987025]
+    📈 Second row: ['2022-06-06T00:00:00Z', 'PAY_OK', 1795.615930224]
+
+📝 Validating Question 10/17
+--------------------------------------------------
+  🔍 Validating Question 4088: 3 Stat Table
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 9
+    📝 Column names: ['grouped', 'Created at', 'Number of total transactions', 'Number of complete transactions', 'Acceptance Rate', 'Sum of total transactions', 'Turnover (of complete transactions)', 'Revenue (of complete transactions)', 'Winpay Fee (of complete transactions)']
+    📈 First row: [None, '2022-07-04T00:00:00Z', 1, 1, 1.0, 50.0, 50.0, 3.75, 0.025]
+    📈 Second row: [None, '2022-07-18T00:00:00Z', 13, 13, 1.0, 1633.3700000000001, 1633.3700000000001, 83.16, 0.8169000000000001]
+
+📝 Validating Question 11/17
+--------------------------------------------------
+  🔍 Validating Question 4090: 3 Pay-out GMV Split 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'GMV_EUR']
+    📈 First row: ['2024-08-26T00:00:00Z', 'PAY_FAIL', 35092.27844074036]
+    📈 Second row: ['2024-09-02T00:00:00Z', 'Europe non-EU', 16797.9752009721]
+
+📝 Validating Question 12/17
+--------------------------------------------------
+  🔍 Validating Question 4090: 3 Pay-out GMV Split 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'GMV_EUR']
+    📈 First row: ['2022-01-24T00:00:00Z', 'PAY_OK', 22737.99322007821]
+    📈 Second row: ['2022-02-21T00:00:00Z', 'USD', 4604.059236189599]
+
+📝 Validating Question 13/17
+--------------------------------------------------
+  🔍 Validating Question 4085: 3 Pay-out Turnover, Revenue, Fees, GMV
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 182
+    📋 Columns: 7
+    📝 Column names: ['CREATED_AT', 'turnover_eur', 'REVENUE_EUR', 'ACQUIRER_FEE_EUR', 'WINPAY_FEE_EUR', 'QUICKO_FEE_EUR', 'GMV_EUR']
+    📈 First row: ['2023-08-07T00:00:00Z', 3586996.3804699993, 118216.96508809991, 54044.49566311746, 2562.059821373999, 0.0, 61610.40960360854]
+    📈 Second row: ['2024-03-18T00:00:00Z', 6743351.184617606, 210059.33242320002, 95444.71716653774, 4936.726590019999, 13486.702369235194, 96191.18629740702]
+
+📝 Validating Question 14/17
+--------------------------------------------------
+  🔍 Validating Question 4083: 3 Pay-out Acquiring Fee Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'ACQUIRER_FEE_EUR']
+    📈 First row: ['2022-05-16T00:00:00Z', 'others', 35638.92517097205]
+    📈 Second row: ['2022-05-23T00:00:00Z', 'CIS', 6218.85881449115]
+
+📝 Validating Question 15/17
+--------------------------------------------------
+  🔍 Validating Question 4083: 3 Pay-out Acquiring Fee Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'GROUPING_TOP_N', 'ACQUIRER_FEE_EUR']
+    📈 First row: ['2022-10-03T00:00:00Z', 'Global Financial Innovation Ltd', 28461.39134500001]
+    📈 Second row: ['2022-10-03T00:00:00Z', 'VISA', 27079.490084461457]
+
+📝 Validating Question 16/17
+--------------------------------------------------
+  🔍 Validating Question 4084: 3 Pay-Out Acquiring Fee Fact rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 232
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'FEE_ACQUIRER_IS_EXACT', 'N']
+    📈 First row: ['2024-08-12T00:00:00Z', 'Fact', 20405]
+    📈 Second row: ['2022-05-30T00:00:00Z', 'Calculation', 3732]
+
+📝 Validating Question 17/17
+--------------------------------------------------
+  🔍 Validating Question 4078: 3 Pay-out Turnover, Revenue, Fees, GMV Rates
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 182
+    📋 Columns: 6
+    📝 Column names: ['CREATED_AT', 'REVENUE_EUR', 'ACQUIRER_FEE_EUR', 'WINPAY_FEE_EUR', 'QUICKO_FEE_EUR', 'GMV_EUR']
+    📈 First row: ['2022-06-06T00:00:00Z', 0.03381529298344112, 0.012359041220080295, 0.001488137341931991, 0.0, 0.019968114421428814]
+    📈 Second row: ['2022-07-04T00:00:00Z', 0.032908064723017, 0.011955486707897183, 0.0014772416028947587, 0.0, 0.019475336412225056]
+
+🎉 Validation Summary:
+✅ Successfully validated: 17/17 questions
+🎊 All questions are working correctly! Migration successful!

@@ -1,0 +1,4355 @@
+{
+  "description": null,
+  "archived": false,
+  "view_count": 1,
+  "collection_position": 1,
+  "dashcards": [
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": null,
+        "archived": false,
+        "view_count": 1,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": null,
+        "result_metadata": [
+          {
+            "display_name": "DT_MONTH",
+            "field_ref": [
+              "field",
+              "DT_MONTH",
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "base_type": "type/DateTime",
+            "effective_type": "type/DateTime",
+            "name": "DT_MONTH",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 6,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/DateTime": {
+                  "earliest": "2025-01-01T00:00:00Z",
+                  "latest": "2025-06-01T00:00:00Z"
+                }
+              }
+            }
+          },
+          {
+            "display_name": "TYPE_USER",
+            "field_ref": [
+              "field",
+              "TYPE_USER",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "TYPE_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 2,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 8.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_CREATED_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_CREATED_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_CREATED_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 16920.0,
+                  "q1": 22671.5,
+                  "q3": 36483.0,
+                  "max": 48387.0,
+                  "sd": 9627.588066057717,
+                  "avg": 30949.833333333332
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_COMPLETED_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 6899.0,
+                  "q1": 11567.5,
+                  "q3": 23598.5,
+                  "max": 34692.0,
+                  "sd": 8267.253786732474,
+                  "avg": 18322.916666666668
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_USERS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_USERS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_USERS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.40774231678487,
+                  "q1": 0.4264329954546,
+                  "q3": 0.7172073296192893,
+                  "max": 0.7307443888260939,
+                  "sd": 0.14834810334593815,
+                  "avg": 0.5769759098835774
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 16920.0,
+                  "q1": 27070.5,
+                  "q3": 149930.0,
+                  "max": 198800.0,
+                  "sd": 67538.3105380445,
+                  "avg": 89014.83333333333
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETE_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COMPLETE_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COMPLETE_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 6899.0,
+                  "q1": 11567.5,
+                  "q3": 99691.5,
+                  "max": 124805.0,
+                  "sd": 46661.3790021937,
+                  "avg": 55275.25
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_TRANSACTIONS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.40774231678487,
+                  "q1": 0.42639605647255285,
+                  "q3": 0.6590369331295836,
+                  "max": 0.6760098751297006,
+                  "sd": 0.11735542665019222,
+                  "avg": 0.5465601790645018
+                }
+              }
+            }
+          },
+          {
+            "display_name": "CREATED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "CREATED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "CREATED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 10,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1.0000204871415808,
+                  "q3": 4.5585500058991855,
+                  "max": 4.814144963483533,
+                  "sd": 1.841437395004101,
+                  "avg": 2.7550279014464834
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "COMPLETED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "COMPLETED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 7,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1.0,
+                  "q3": 4.193753159616553,
+                  "max": 4.536108710266014,
+                  "sd": 1.6534317727389944,
+                  "avg": 2.566891814416713
+                }
+              }
+            }
+          }
+        ],
+        "initially_published_at": null,
+        "can_write": true,
+        "database_id": 2,
+        "enable_embedding": false,
+        "collection_id": 744,
+        "query_type": "native",
+        "name": "Statistics since moment of creating transaction",
+        "last_used_at": "2025-06-22T08:11:55.032419Z",
+        "type": "question",
+        "query_average_duration": null,
+        "creator_id": 148,
+        "moderation_reviews": [],
+        "updated_at": "2025-06-22T08:11:52.205419Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "database": 2,
+          "type": "native",
+          "native": {
+            "template-tags": {
+              "WIDGET_PARTNER_NAME": {
+                "id": "6ae18e46-46c2-2195-d8d5-c165abf0c70a",
+                "name": "WIDGET_PARTNER_NAME",
+                "display-name": "Widget partner name",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20834,
+                  null
+                ],
+                "widget-type": "string/=",
+                "required": false
+              },
+              "CREATED_AT": {
+                "id": "103015da-5748-4434-c93e-f4cd78e31c89",
+                "name": "CREATED_AT",
+                "display-name": "Created at",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20835,
+                  null
+                ],
+                "widget-type": "date/all-options"
+              },
+              "antifraud_status": {
+                "id": "8fc812f8-da59-3c1d-f1d8-37f2f9e25d2e",
+                "name": "antifraud_status",
+                "display-name": "Antifraud status",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  536409,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "Pay_system": {
+                "type": "dimension",
+                "name": "Pay_system",
+                "id": "9a23eb36-769f-4d2a-ad4d-f39d7c7113ed",
+                "display-name": "Pay System",
+                "default": null,
+                "dimension": [
+                  "field",
+                  20885,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              },
+              "vendor_name": {
+                "type": "dimension",
+                "name": "vendor_name",
+                "id": "375e148a-cbf1-4081-909c-89c721f36e85",
+                "display-name": "Vendor Name",
+                "default": null,
+                "dimension": [
+                  "field",
+                  20868,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              }
+            },
+            "query": "WITH tr as (select CREATED_AT\n                 , ID\n                 , USER_ID\n                 , WIDGET_PARTNER_NAME\n                 , CONFIRMED\n            from MART.TRANSACTIONS\n            where TYPE_MAIN in ('buy', 'sell')\n              and WIDGET_PARTNER_NAME is not null\n              and {{WIDGET_PARTNER_NAME}} \n              and {{Pay_system}}\n              and {{vendor_name}}\n              and ({{antifraud_status}} or type in ('sell', 'buy_acquirer'))\n              ),\n     first_tr as (select USER_ID, min(CREATED_AT) as first_transaction\n                  from tr\n                  group by 1),\n     filter_data as (select ID\n     from MART.TRANSACTIONS\n      where TYPE_MAIN in ('buy', 'sell')\n              and WIDGET_PARTNER_NAME is not null \n              and {{CREATED_AT}}),\n     type_user as (select tr.CREATED_AT\n                        , tr.ID\n                        , tr.USER_ID\n                        , tr.WIDGET_PARTNER_NAME\n                        , tr.CONFIRMED\n                        , CASE\n                              WHEN first_tr.first_transaction = tr.CREATED_AT\n                                  THEN 'new user'\n                              ELSE 'old user' END type_user\n                   from tr\n                            inner join first_tr as first_tr on tr.USER_ID = first_tr.USER_ID\n                            inner join filter_data on filter_data.id = tr.id)\n\nselect date_trunc('month', CREATED_AT) as dt_month\n     , type_user\n     , count(distinct USER_ID) as count_users_created_transaction\n     , count(distinct case when CONFIRMED then USER_ID end) as count_users_completed_transaction\n     , count(distinct case when CONFIRMED then USER_ID end)/count(distinct USER_ID) as acceptance_rate_users\n     , count(ID) as count_transaction\n     , count(case when CONFIRMED then id end) as complete_transaction\n     , count(case when CONFIRMED then id end)/count(id) as acceptance_rate_transactions\n     , count(ID)/count(distinct USER_ID) as created_transaction_per_user\n     , case when count(distinct case when CONFIRMED then USER_ID end) > 0\n     then count(case when CONFIRMED then id end)/count(distinct case when CONFIRMED then USER_ID end) end as completed_transaction_per_user\nfrom type_user\ngroup by 1,2\norder by 1,2"
+          }
+        },
+        "id": 4093,
+        "parameter_mappings": [],
+        "display": "table",
+        "archived_directly": false,
+        "entity_id": "5XsV8k2P_c6TyiNLsJppQ",
+        "collection_preview": true,
+        "visualization_settings": {
+          "table.pivot_column": "TYPE_USER",
+          "table.cell_column": "COUNT_USERS_CREATED_TRANSACTION",
+          "column_settings": {
+            "[\"name\",\"TYPE_USER\"]": {
+              "column_title": "Type user"
+            },
+            "[\"name\",\"CREATED_TRANSACTION_PER_USER\"]": {
+              "column_title": "Created transaction per user",
+              "decimals": 2
+            },
+            "[\"name\",\"COMPLETED_TRANSACTION_PER_USER\"]": {
+              "column_title": "Completed transaction per user",
+              "decimals": 2
+            },
+            "[\"name\",\"COUNT_USERS_CREATED_TRANSACTION\"]": {
+              "column_title": "Count users who created transaction"
+            },
+            "[\"name\",\"ACCEPTANCE_RATE_USERS\"]": {
+              "column_title": "Acceptance rate by users",
+              "number_style": "percent",
+              "decimals": 2
+            },
+            "[\"name\",\"COMPLETE_TRANSACTION\"]": {
+              "column_title": "Count completed transactions"
+            },
+            "[\"name\",\"ACCEPTANCE_RATE_TRANSACTIONS\"]": {
+              "column_title": "Acceptance rate by transaction",
+              "number_style": "percent",
+              "decimals": 2
+            },
+            "[\"name\",\"COUNT_USERS_COMPLETED_TRANSACTION\"]": {
+              "column_title": "Count users who completed transaction"
+            },
+            "[\"name\",\"DT_MONTH\"]": {
+              "column_title": "Month transaction"
+            },
+            "[\"name\",\"COUNT_TRANSACTION\"]": {
+              "column_title": "Count created transactions"
+            }
+          }
+        },
+        "metabase_version": "v0.52.9 (f9fbbf8)",
+        "parameters": [
+          {
+            "id": "6ae18e46-46c2-2195-d8d5-c165abf0c70a",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "WIDGET_PARTNER_NAME"
+              ]
+            ],
+            "name": "Widget partner name",
+            "slug": "WIDGET_PARTNER_NAME",
+            "required": false
+          },
+          {
+            "id": "103015da-5748-4434-c93e-f4cd78e31c89",
+            "type": "date/all-options",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "CREATED_AT"
+              ]
+            ],
+            "name": "Created at",
+            "slug": "CREATED_AT"
+          },
+          {
+            "id": "8fc812f8-da59-3c1d-f1d8-37f2f9e25d2e",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "antifraud_status"
+              ]
+            ],
+            "name": "Antifraud status",
+            "slug": "antifraud_status"
+          },
+          {
+            "id": "9a23eb36-769f-4d2a-ad4d-f39d7c7113ed",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "Pay_system"
+              ]
+            ],
+            "name": "Pay System",
+            "slug": "Pay_system"
+          },
+          {
+            "id": "375e148a-cbf1-4081-909c-89c721f36e85",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "vendor_name"
+              ]
+            ],
+            "name": "Vendor Name",
+            "slug": "vendor_name"
+          }
+        ],
+        "created_at": "2025-06-22T08:11:52.205419Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-06-22T08:11:52.205419Z",
+      "col": 0,
+      "id": 3294,
+      "parameter_mappings": [
+        {
+          "parameter_id": "f1986da0",
+          "card_id": 4093,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "CREATED_AT"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "b1175a9b",
+          "card_id": 4093,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "WIDGET_PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "3d141496",
+          "card_id": 4093,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "antifraud_status"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "c0d76f4",
+          "card_id": 4093,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "WIDGET_PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "242e8de7",
+          "card_id": 4093,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "Pay_system"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "505026ae",
+          "card_id": 4093,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "vendor_name"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 4093,
+      "entity_id": "gtJcJCFUdGN92Xppqk4dQ",
+      "visualization_settings": {},
+      "size_y": 7,
+      "dashboard_id": 411,
+      "created_at": "2025-06-22T08:11:52.205419Z",
+      "row": 5
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": null,
+        "archived": false,
+        "view_count": 1,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": null,
+        "result_metadata": [
+          {
+            "display_name": "DT_MONTH",
+            "field_ref": [
+              "field",
+              "DT_MONTH",
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "base_type": "type/DateTime",
+            "effective_type": "type/DateTime",
+            "name": "DT_MONTH",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 2,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/DateTime": {
+                  "earliest": "2025-04-01T00:00:00Z",
+                  "latest": "2025-05-01T00:00:00Z"
+                }
+              }
+            }
+          },
+          {
+            "display_name": "TYPE_USER",
+            "field_ref": [
+              "field",
+              "TYPE_USER",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "TYPE_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 2,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 8.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_CALCULATION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_CALCULATION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_CALCULATION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 4,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 22524.0,
+                  "q1": 24129.5,
+                  "q3": 31801.0,
+                  "max": 35347.0,
+                  "sd": 5451.464780221918,
+                  "avg": 27965.25
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_COMPLETED_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 4,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 4048.0,
+                  "q1": 4848.0,
+                  "q3": 8956.5,
+                  "max": 9392.0,
+                  "sd": 2485.899753275126,
+                  "avg": 6902.25
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_USERS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_USERS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_USERS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 4,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.14326667846398866,
+                  "q1": 0.15152696528229564,
+                  "q3": 0.37162901979960017,
+                  "max": 0.37830758302255374,
+                  "sd": 0.12737161574545808,
+                  "avg": 0.26157799254094793
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 4,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 28255.0,
+                  "q1": 31801.0,
+                  "q3": 94551.0,
+                  "max": 100224.0,
+                  "sd": 36638.21588633012,
+                  "avg": 63176.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETE_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COMPLETE_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COMPLETE_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 4,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 4048.0,
+                  "q1": 4848.0,
+                  "q3": 29124.0,
+                  "max": 30215.0,
+                  "sd": 14059.21688193668,
+                  "avg": 16986.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_TRANSACTIONS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 4,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.14326667846398866,
+                  "q1": 0.15152696528229564,
+                  "q3": 0.30844229219534136,
+                  "max": 0.3154098877112446,
+                  "sd": 0.09102376845530671,
+                  "avg": 0.2299846287388185
+                }
+              }
+            }
+          },
+          {
+            "display_name": "CREATED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "CREATED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "CREATED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 3,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1.0,
+                  "q3": 3.920193570611657,
+                  "max": 3.945924347362813,
+                  "sd": 1.6861054371525421,
+                  "avg": 2.4600967853058284
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "COMPLETED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "COMPLETED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 3,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1.0,
+                  "q3": 3.253485870013097,
+                  "max": 3.289872080741697,
+                  "sd": 1.3013898312971737,
+                  "avg": 2.1267429350065488
+                }
+              }
+            }
+          }
+        ],
+        "initially_published_at": null,
+        "can_write": true,
+        "database_id": 2,
+        "enable_embedding": false,
+        "collection_id": 744,
+        "query_type": "native",
+        "name": "Statistics since moment of creating calculation",
+        "last_used_at": "2025-06-22T08:11:55.032419Z",
+        "type": "question",
+        "query_average_duration": null,
+        "creator_id": 148,
+        "moderation_reviews": [],
+        "updated_at": "2025-06-22T08:11:52.205419Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "database": 2,
+          "type": "native",
+          "native": {
+            "template-tags": {
+              "PARTNER_NAME": {
+                "id": "518f1aff-aed4-77de-802e-d7632292a03f",
+                "name": "PARTNER_NAME",
+                "display-name": "Partner name",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  402,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "CREATED_AT": {
+                "id": "9fae2cea-144e-32d8-f658-ae8526155599",
+                "name": "CREATED_AT",
+                "display-name": "Created at",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  3395,
+                  null
+                ],
+                "widget-type": "date/all-options"
+              },
+              "payment_type": {
+                "type": "dimension",
+                "name": "payment_type",
+                "id": "8fb413c5-20c1-4ac3-820e-bae8d099fe4f",
+                "display-name": "Payment Type",
+                "default": null,
+                "dimension": [
+                  "field",
+                  3412,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              }
+            },
+            "query": "WITH calc as (select WEBAPP_WIDGET_CALCULATIONS_LOG.CREATED_AT\n                 , WEBAPP_WIDGET_CALCULATIONS_LOG.ID\n                 , WEBAPP_WIDGET_CALCULATIONS_LOG.USER_ID\n                 , WIDGETS.PARTNER_NAME\n                 , TRANSACTIONS.CONFIRMED\n            from REPLICA.WEBAPP_WIDGET_CALCULATIONS_LOG \n            inner join MART.WIDGETS on WIDGETS.ID = WEBAPP_WIDGET_CALCULATIONS_LOG.WIDGET_ID\n            left join (select ID, CONFIRMED\n                           from MART.TRANSACTIONS\n                where TYPE_MAIN in ('buy', 'sell')\n              and WIDGET_PARTNER_NAME is not null) AS TRANSACTIONS on TRANSACTIONS.ID = WEBAPP_WIDGET_CALCULATIONS_LOG.TRANSACTION_ID\n            where WEBAPP_WIDGET_CALCULATIONS_LOG.USER_ID is not null \n            and {{PARTNER_NAME}}\n            and {{payment_type}}\n            ),\n     first_calc as (select USER_ID, min(CREATED_AT) as first_calculation\n                  from calc\n                  group by 1),\n     data_filter as (select id\n     from REPLICA.WEBAPP_WIDGET_CALCULATIONS_LOG \n     where {{CREATED_AT}}),\n     type_user as (select calc.CREATED_AT\n                        , calc.ID\n                        , calc.USER_ID\n                        , calc.PARTNER_NAME\n                        , calc.CONFIRMED\n                        , CASE\n                              WHEN first_tr.first_calculation = calc.CREATED_AT\n                                  THEN 'new user'\n                              ELSE 'old user' END type_user\n                   from calc\n                            inner join first_calc as first_tr on calc.USER_ID = first_tr.USER_ID\n                            inner join data_filter on data_filter.id = calc.id)\n\nselect date_trunc('month', CREATED_AT) as dt_month\n     , type_user\n     , count(distinct USER_ID) as count_users_calculation\n     , count(distinct case when CONFIRMED then USER_ID end) as count_users_completed_transaction\n     , count(distinct case when CONFIRMED then USER_ID end)/count(distinct USER_ID) as acceptance_rate_users\n     , count(ID) as count_transaction\n     , count(case when CONFIRMED then id end) as complete_transaction\n     , count(case when CONFIRMED then id end)/count(id) as acceptance_rate_transactions\n     , count(ID)/count(distinct USER_ID) as created_transaction_per_user\n     , case when count(distinct case when CONFIRMED then USER_ID end) >0\n         then count(case when CONFIRMED then id end)/count(distinct case when CONFIRMED then USER_ID end)\n         else 0 end as completed_transaction_per_user\nfrom type_user\ngroup by 1,2\norder by 1,2"
+          }
+        },
+        "id": 4094,
+        "parameter_mappings": [],
+        "display": "table",
+        "archived_directly": false,
+        "entity_id": "VyJJwTcYDuh0A4e_dHXeR",
+        "collection_preview": true,
+        "visualization_settings": {
+          "table.pivot_column": "TYPE_USER",
+          "table.cell_column": "COUNT_USERS_CALCULATION",
+          "column_settings": {
+            "[\"name\",\"TYPE_USER\"]": {
+              "column_title": "Type user"
+            },
+            "[\"name\",\"CREATED_TRANSACTION_PER_USER\"]": {
+              "column_title": "Created calculation per user",
+              "decimals": 2
+            },
+            "[\"name\",\"COMPLETED_TRANSACTION_PER_USER\"]": {
+              "column_title": "Completed transaction per user",
+              "decimals": 2
+            },
+            "[\"name\",\"COUNT_USERS_CALCULATION\"]": {
+              "column_title": "Count users who created caclulation"
+            },
+            "[\"name\",\"ACCEPTANCE_RATE_USERS\"]": {
+              "column_title": "Conversion rate by users",
+              "number_style": "percent",
+              "decimals": 2
+            },
+            "[\"name\",\"COMPLETE_TRANSACTION\"]": {
+              "column_title": "Count completed transactions"
+            },
+            "[\"name\",\"ACCEPTANCE_RATE_TRANSACTIONS\"]": {
+              "column_title": "Conversion rate by calculation",
+              "number_style": "percent",
+              "decimals": 2
+            },
+            "[\"name\",\"COUNT_USERS_COMPLETED_TRANSACTION\"]": {
+              "column_title": "Count users who complete transaction"
+            },
+            "[\"name\",\"DT_MONTH\"]": {
+              "column_title": "Month calculation"
+            },
+            "[\"name\",\"COUNT_TRANSACTION\"]": {
+              "column_title": "Count calculations"
+            }
+          }
+        },
+        "metabase_version": "v0.52.9 (f9fbbf8)",
+        "parameters": [
+          {
+            "id": "518f1aff-aed4-77de-802e-d7632292a03f",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "PARTNER_NAME"
+              ]
+            ],
+            "name": "Partner name",
+            "slug": "PARTNER_NAME"
+          },
+          {
+            "id": "9fae2cea-144e-32d8-f658-ae8526155599",
+            "type": "date/all-options",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "CREATED_AT"
+              ]
+            ],
+            "name": "Created at",
+            "slug": "CREATED_AT"
+          },
+          {
+            "id": "8fb413c5-20c1-4ac3-820e-bae8d099fe4f",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "payment_type"
+              ]
+            ],
+            "name": "Payment Type",
+            "slug": "payment_type"
+          }
+        ],
+        "created_at": "2025-06-22T08:11:52.205419Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-06-22T08:11:52.205419Z",
+      "col": 0,
+      "id": 3295,
+      "parameter_mappings": [
+        {
+          "parameter_id": "f1986da0",
+          "card_id": 4094,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "CREATED_AT"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "b1175a9b",
+          "card_id": 4094,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "c0d76f4",
+          "card_id": 4094,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "8ff952dd",
+          "card_id": 4094,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "payment_type"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 4094,
+      "entity_id": "o1TbGlL2qvaxTzSwugOzE",
+      "visualization_settings": {},
+      "size_y": 6,
+      "dashboard_id": 411,
+      "created_at": "2025-06-22T08:11:52.205419Z",
+      "row": 12
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null
+      },
+      "updated_at": "2025-06-22T08:11:52.205419Z",
+      "col": 0,
+      "id": 3296,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "Pyi_smchIMcUSxQ3_aIDK",
+      "visualization_settings": {
+        "virtual_card": {
+          "name": null,
+          "display": "text",
+          "visualization_settings": {},
+          "dataset_query": {},
+          "archived": false
+        },
+        "text": "How we count new and old user:\nwe count user first transaction how new user's transaction and his second (or any next) transaction how old user\nBut then we will count new and old users - this sum doesn't equal the real count of users.\nFor example, we have 10 users: 3 of them made 1 transaction and other 7 users returned to Mercuryo and made more transactions\nwe will count this way:\nnew users - 10 users with their first transaction \nold users - 3 users with their second, third and other transaction\n\nNow dashboard has filter for only TrustWallet - but you can filter for any partner.\nCalculation are only for last 3 months\nBecause of bug we have problems with calculation since April 2023 to June 2023 and convertion rate will be lower than reality"
+      },
+      "size_y": 4,
+      "dashboard_id": 411,
+      "created_at": "2025-06-22T08:11:52.205419Z",
+      "row": 1
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null
+      },
+      "updated_at": "2025-06-22T08:11:52.205419Z",
+      "col": 0,
+      "id": 3297,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "qcdF6AgOG1f76Q07hH_pO",
+      "visualization_settings": {
+        "virtual_card": {
+          "name": null,
+          "display": "text",
+          "visualization_settings": {},
+          "dataset_query": {},
+          "archived": false
+        },
+        "text": "First way of dividing new / old (returned user)",
+        "text.align_horizontal": "center"
+      },
+      "size_y": 1,
+      "dashboard_id": 411,
+      "created_at": "2025-06-22T08:11:52.205419Z",
+      "row": 0
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null
+      },
+      "updated_at": "2025-06-22T08:11:52.205419Z",
+      "col": 0,
+      "id": 3298,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "uZgx5HBtG2auOQKK86YkZ",
+      "visualization_settings": {
+        "virtual_card": {
+          "name": null,
+          "display": "text",
+          "visualization_settings": {},
+          "dataset_query": {},
+          "archived": false
+        },
+        "text": "Second way of dividing new / old (returned user)",
+        "text.align_vertical": "top",
+        "text.align_horizontal": "center"
+      },
+      "size_y": 1,
+      "dashboard_id": 411,
+      "created_at": "2025-06-22T08:11:52.205419Z",
+      "row": 23
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "query_average_duration": null
+      },
+      "updated_at": "2025-06-22T08:11:52.205419Z",
+      "col": 0,
+      "id": 3299,
+      "parameter_mappings": [],
+      "card_id": null,
+      "entity_id": "UrJAjKKjxrdmBZGCIEH0H",
+      "visualization_settings": {
+        "virtual_card": {
+          "name": null,
+          "display": "text",
+          "visualization_settings": {},
+          "dataset_query": {},
+          "archived": false
+        },
+        "text": "How we count new and old user: \nnew users - users who have only one transaction\nold users - users who have ,more than 1 transactions\n\nUser can move from new to old user if he created second reansaction\n\nNow dashboard has filter for only TrustWallet - but you can filter for any partner. Calculation are only for last 3 months Because of bug we have problems with calculation since April 2023 to June 2023 and convertion rate will be lower than reality\n\nSum of new and old users equal of unique users per month"
+      },
+      "size_y": 4,
+      "dashboard_id": 411,
+      "created_at": "2025-06-22T08:11:52.205419Z",
+      "row": 24
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": null,
+        "archived": false,
+        "view_count": 1,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": null,
+        "result_metadata": [
+          {
+            "display_name": "DT_MONTH",
+            "field_ref": [
+              "field",
+              "DT_MONTH",
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "base_type": "type/DateTime",
+            "effective_type": "type/DateTime",
+            "name": "DT_MONTH",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 6,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/DateTime": {
+                  "earliest": "2025-01-01T00:00:00Z",
+                  "latest": "2025-06-01T00:00:00Z"
+                }
+              }
+            }
+          },
+          {
+            "display_name": "TYPE_USER",
+            "field_ref": [
+              "field",
+              "TYPE_USER",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "TYPE_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 2,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 8.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_CREATED_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_CREATED_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_CREATED_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 9223.0,
+                  "q1": 13532.5,
+                  "q3": 33597.0,
+                  "max": 50947.0,
+                  "sd": 13086.108321422378,
+                  "avg": 24576.5
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_COMPLETED_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 4177.0,
+                  "q1": 6300.5,
+                  "q3": 24441.0,
+                  "max": 37301.0,
+                  "sd": 11037.7771710969,
+                  "avg": 16275.833333333334
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_USERS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_USERS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_USERS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.4501530570033921,
+                  "q1": 0.46718195715979527,
+                  "q3": 0.7325774514912233,
+                  "max": 0.7438561387306962,
+                  "sd": 0.13429544764945398,
+                  "avg": 0.6070425640751688
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 9223.0,
+                  "q1": 13532.5,
+                  "q3": 163237.5,
+                  "max": 221322.0,
+                  "sd": 82224.27960250861,
+                  "avg": 89014.83333333333
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETE_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COMPLETE_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COMPLETE_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 4177.0,
+                  "q1": 6300.5,
+                  "q3": 105042.0,
+                  "max": 134139.0,
+                  "sd": 52543.71632377783,
+                  "avg": 55275.25
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_TRANSACTIONS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 12,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.4501530570033921,
+                  "q1": 0.46718195715979527,
+                  "q3": 0.6371249215316405,
+                  "max": 0.654975373376731,
+                  "sd": 0.08482485565441739,
+                  "avg": 0.5577888439802813
+                }
+              }
+            }
+          },
+          {
+            "display_name": "CREATED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "CREATED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "CREATED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 7,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1.0,
+                  "q3": 4.8583284616604985,
+                  "max": 5.067622950819672,
+                  "sd": 1.9723368547460307,
+                  "avg": 2.879924331763036
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "COMPLETED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "COMPLETED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 7,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1.0,
+                  "q3": 4.2144188230521555,
+                  "max": 4.5281851512373965,
+                  "sd": 1.649276362625139,
+                  "avg": 2.5630913557976474
+                }
+              }
+            }
+          }
+        ],
+        "initially_published_at": null,
+        "can_write": true,
+        "database_id": 2,
+        "enable_embedding": false,
+        "collection_id": 744,
+        "query_type": "native",
+        "name": "Statistics since moment of creating transaction (new user = user with 1 transaction)",
+        "last_used_at": "2025-06-22T08:11:55.032419Z",
+        "type": "question",
+        "query_average_duration": null,
+        "creator_id": 148,
+        "moderation_reviews": [],
+        "updated_at": "2025-06-22T08:11:52.205419Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "database": 2,
+          "type": "native",
+          "native": {
+            "template-tags": {
+              "WIDGET_PARTNER_NAME": {
+                "id": "77c447d9-ea40-781a-40f6-e70a74e96fc0",
+                "name": "WIDGET_PARTNER_NAME",
+                "display-name": "Widget partner name",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20834,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "CREATED_AT": {
+                "id": "0084935e-3887-6b0d-5942-b0d3c608a0eb",
+                "name": "CREATED_AT",
+                "display-name": "Created at",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20835,
+                  null
+                ],
+                "widget-type": "date/month-year"
+              },
+              "antifraud_status": {
+                "id": "2fa21077-7914-750b-8339-536ab095316e",
+                "name": "antifraud_status",
+                "display-name": "Antifraud status",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  536409,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "Pay_system": {
+                "type": "dimension",
+                "name": "Pay_system",
+                "id": "eb6b9f05-5135-48d5-bab1-eb012f2f7a3d",
+                "display-name": "Pay System",
+                "default": null,
+                "dimension": [
+                  "field",
+                  20885,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              },
+              "vendor_name": {
+                "type": "dimension",
+                "name": "vendor_name",
+                "id": "bea7d652-155b-4ff8-be2e-3c16d917d16b",
+                "display-name": "Vendor Name",
+                "default": null,
+                "dimension": [
+                  "field",
+                  20868,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              }
+            },
+            "query": "WITH tr as (select CREATED_AT\n                 , ID\n                 , USER_ID\n                 , WIDGET_PARTNER_NAME\n                 , CONFIRMED\n            from MART.TRANSACTIONS\n            where TYPE_MAIN in ('buy', 'sell')\n              and WIDGET_PARTNER_NAME is not null \n              and {{WIDGET_PARTNER_NAME}} and\n                  ({{antifraud_status}}  or type in ('sell', 'buy_acquirer')) and\n                  {{Pay_system}} and\n                  {{vendor_name}} \n              ),\n     first_tr as (select USER_ID, count(1) as count_transaction\n                  from tr\n                  group by 1),\n     date_filter as (select ID\n     from mart.transactions \n     where  {{CREATED_AT}} and TYPE_MAIN in ('buy', 'sell')\n              and WIDGET_PARTNER_NAME is not null \n     ),\n     type_user as (select tr.CREATED_AT\n                        , tr.ID\n                        , tr.USER_ID\n                        , tr.WIDGET_PARTNER_NAME\n                        , tr.CONFIRMED\n                        , CASE\n                              WHEN first_tr.count_transaction > 1\n                                  THEN 'old user'\n                              ELSE 'new user' END type_user\n                   from tr\n                            inner join first_tr as first_tr on tr.USER_ID = first_tr.USER_ID\n                            inner join date_filter on date_filter.id = tr.id)\n\nselect date_trunc('month', CREATED_AT) as dt_month\n     , type_user\n     , count(distinct USER_ID) as count_users_created_transaction\n     , count(distinct case when CONFIRMED then USER_ID end) as count_users_completed_transaction\n     , count(distinct case when CONFIRMED then USER_ID end)/count(distinct USER_ID) as acceptance_rate_users\n     , count(ID) as count_transaction\n     , count(case when CONFIRMED then id end) as complete_transaction\n     , count(case when CONFIRMED then id end)/count(id) as acceptance_rate_transactions\n     , count(ID)/count(distinct USER_ID) as created_transaction_per_user\n     , case when count(distinct case when CONFIRMED then USER_ID end) > 0\n     then count(case when CONFIRMED then id end)/count(distinct case when CONFIRMED then USER_ID end) end as completed_transaction_per_user\nfrom type_user\ngroup by 1,2\norder by 1,2"
+          }
+        },
+        "id": 4095,
+        "parameter_mappings": [],
+        "display": "table",
+        "archived_directly": false,
+        "entity_id": "hTXAHQjFint92JZDiCrwy",
+        "collection_preview": true,
+        "visualization_settings": {
+          "table.pivot_column": "TYPE_USER",
+          "table.cell_column": "COUNT_USERS_CREATED_TRANSACTION",
+          "column_settings": {
+            "[\"name\",\"TYPE_USER\"]": {
+              "column_title": "Type user"
+            },
+            "[\"name\",\"CREATED_TRANSACTION_PER_USER\"]": {
+              "column_title": "Created transaction per user",
+              "decimals": 2
+            },
+            "[\"name\",\"COMPLETED_TRANSACTION_PER_USER\"]": {
+              "column_title": "Completed transaction per user",
+              "decimals": 2
+            },
+            "[\"name\",\"COUNT_USERS_CREATED_TRANSACTION\"]": {
+              "column_title": "Count users who created transaction"
+            },
+            "[\"name\",\"ACCEPTANCE_RATE_USERS\"]": {
+              "column_title": "Acceptance rate by users",
+              "number_style": "percent",
+              "decimals": 2
+            },
+            "[\"name\",\"COMPLETE_TRANSACTION\"]": {
+              "column_title": "Count completed transactions"
+            },
+            "[\"name\",\"ACCEPTANCE_RATE_TRANSACTIONS\"]": {
+              "column_title": "Acceptance rate by transaction",
+              "number_style": "percent",
+              "decimals": 2
+            },
+            "[\"name\",\"COUNT_USERS_COMPLETED_TRANSACTION\"]": {
+              "column_title": "Count users who complete transaction"
+            },
+            "[\"name\",\"DT_MONTH\"]": {
+              "column_title": "Month transaction"
+            },
+            "[\"name\",\"COUNT_TRANSACTION\"]": {
+              "column_title": "Count created transactions"
+            }
+          }
+        },
+        "metabase_version": "v0.52.9 (f9fbbf8)",
+        "parameters": [
+          {
+            "id": "77c447d9-ea40-781a-40f6-e70a74e96fc0",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "WIDGET_PARTNER_NAME"
+              ]
+            ],
+            "name": "Widget partner name",
+            "slug": "WIDGET_PARTNER_NAME"
+          },
+          {
+            "id": "0084935e-3887-6b0d-5942-b0d3c608a0eb",
+            "type": "date/month-year",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "CREATED_AT"
+              ]
+            ],
+            "name": "Created at",
+            "slug": "CREATED_AT"
+          },
+          {
+            "id": "2fa21077-7914-750b-8339-536ab095316e",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "antifraud_status"
+              ]
+            ],
+            "name": "Antifraud status",
+            "slug": "antifraud_status"
+          },
+          {
+            "id": "eb6b9f05-5135-48d5-bab1-eb012f2f7a3d",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "Pay_system"
+              ]
+            ],
+            "name": "Pay System",
+            "slug": "Pay_system"
+          },
+          {
+            "id": "bea7d652-155b-4ff8-be2e-3c16d917d16b",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "vendor_name"
+              ]
+            ],
+            "name": "Vendor Name",
+            "slug": "vendor_name"
+          }
+        ],
+        "created_at": "2025-06-22T08:11:52.205419Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-06-22T08:11:52.205419Z",
+      "col": 0,
+      "id": 3300,
+      "parameter_mappings": [
+        {
+          "parameter_id": "f1986da0",
+          "card_id": 4095,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "CREATED_AT"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "b1175a9b",
+          "card_id": 4095,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "WIDGET_PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "3d141496",
+          "card_id": 4095,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "antifraud_status"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "c0d76f4",
+          "card_id": 4095,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "WIDGET_PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "242e8de7",
+          "card_id": 4095,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "Pay_system"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "505026ae",
+          "card_id": 4095,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "vendor_name"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 4095,
+      "entity_id": "pfTBo0_yINJgaBaK8vWer",
+      "visualization_settings": {},
+      "size_y": 6,
+      "dashboard_id": 411,
+      "created_at": "2025-06-22T08:11:52.205419Z",
+      "row": 28
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": null,
+        "archived": false,
+        "view_count": 1,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": null,
+        "result_metadata": [
+          {
+            "display_name": "DT_MONTH",
+            "field_ref": [
+              "field",
+              "DT_MONTH",
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "base_type": "type/DateTime",
+            "effective_type": "type/DateTime",
+            "name": "DT_MONTH",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 42,
+                "nil%": 0.02380952380952381
+              },
+              "type": {
+                "type/DateTime": {
+                  "earliest": "2022-02-01T00:00:00Z",
+                  "latest": "2025-06-01T00:00:00Z"
+                }
+              }
+            }
+          },
+          {
+            "display_name": "TYPE_USER",
+            "field_ref": [
+              "field",
+              "TYPE_USER",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "TYPE_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 2,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 8.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_CALCULATION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_CALCULATION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_CALCULATION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 84,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1405.0,
+                  "q1": 28390.0,
+                  "q3": 65677.5,
+                  "max": 101585.0,
+                  "sd": 25585.996463192252,
+                  "avg": 43165.72619047619
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_COMPLETED_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 84,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 2174.5,
+                  "q3": 20975.2637405664,
+                  "max": 36760.0,
+                  "sd": 10657.283460594752,
+                  "avg": 10739.392857142857
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_USERS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_USERS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_USERS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 84,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 0.09484258711011585,
+                  "q3": 0.32742899352270777,
+                  "max": 0.41712962962962963,
+                  "sd": 0.12213525946978147,
+                  "avg": 0.20326182586833333
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 84,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1405.0,
+                  "q1": 32824.0,
+                  "q3": 316167.5,
+                  "max": 494109.0,
+                  "sd": 156977.06863784994,
+                  "avg": 150210.2857142857
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETE_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COMPLETE_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COMPLETE_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 84,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 2585.7470547299627,
+                  "q3": 64841.5,
+                  "max": 122995.0,
+                  "sd": 37395.37366398824,
+                  "avg": 29802.35714285714
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_TRANSACTIONS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 84,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 0.09312262994392456,
+                  "q3": 0.2072282488536924,
+                  "max": 0.28727795050819105,
+                  "sd": 0.0743683210387802,
+                  "avg": 0.14597972868136772
+                }
+              }
+            }
+          },
+          {
+            "display_name": "CREATED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "CREATED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "CREATED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 43,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1.0,
+                  "q3": 4.875422604406789,
+                  "max": 6.2795819335572975,
+                  "sd": 1.9286118791437203,
+                  "avg": 2.871402038133296
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "COMPLETED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "COMPLETED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 43,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 0.9759071538736526,
+                  "q3": 2.9447600030941494,
+                  "max": 4.263597950193293,
+                  "sd": 1.0869595333553894,
+                  "avg": 1.9392213816128752
+                }
+              }
+            }
+          }
+        ],
+        "initially_published_at": null,
+        "can_write": true,
+        "database_id": 2,
+        "enable_embedding": false,
+        "collection_id": 744,
+        "query_type": "native",
+        "name": "Statistics since moment of creating calculation (new user = user with 1 transaction)",
+        "last_used_at": "2025-06-22T08:11:55.032419Z",
+        "type": "question",
+        "query_average_duration": null,
+        "creator_id": 148,
+        "moderation_reviews": [],
+        "updated_at": "2025-06-22T08:11:52.205419Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "database": 2,
+          "type": "native",
+          "native": {
+            "template-tags": {
+              "PARTNER_NAME": {
+                "id": "c55d5954-cb4b-a820-fada-def7bb7fb2fc",
+                "name": "PARTNER_NAME",
+                "display-name": "Partner name",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  402,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "CREATED_AT": {
+                "id": "3da392e4-acd5-25f0-8e02-f020f916577a",
+                "name": "CREATED_AT",
+                "display-name": "Created at",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  3395,
+                  null
+                ],
+                "widget-type": "date/all-options"
+              },
+              "payment_type": {
+                "type": "dimension",
+                "name": "payment_type",
+                "id": "6b6477ae-a35b-4f5b-8390-d4796f53cade",
+                "display-name": "Payment Type",
+                "default": null,
+                "dimension": [
+                  "field",
+                  3412,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              }
+            },
+            "query": "WITH calc as (select WEBAPP_WIDGET_CALCULATIONS_LOG.CREATED_AT\n                 , WEBAPP_WIDGET_CALCULATIONS_LOG.ID\n                 , WEBAPP_WIDGET_CALCULATIONS_LOG.USER_ID\n                 , WIDGETS.PARTNER_NAME\n                 , TRANSACTIONS.CONFIRMED\n            from REPLICA.WEBAPP_WIDGET_CALCULATIONS_LOG \n            inner join MART.WIDGETS on WIDGETS.ID = WEBAPP_WIDGET_CALCULATIONS_LOG.WIDGET_ID\n            left join (select ID, CONFIRMED\n                           from MART.TRANSACTIONS\n                where TYPE_MAIN in ('buy', 'sell')\n              and WIDGET_PARTNER_NAME is not null) AS TRANSACTIONS on TRANSACTIONS.ID = WEBAPP_WIDGET_CALCULATIONS_LOG.TRANSACTION_ID\n            where WEBAPP_WIDGET_CALCULATIONS_LOG.USER_ID is not null \n            and {{PARTNER_NAME}} \n            and {{payment_type}}),\n     first_calc as (select USER_ID, count(1) as count_calculation\n                  from calc\n                  group by 1),\n     date_filter as (select id \n     from REPLICA.WEBAPP_WIDGET_CALCULATIONS_LOG \n     where {{CREATED_AT}}),\n     type_user as (select calc.CREATED_AT\n                        , calc.ID\n                        , calc.USER_ID\n                        , calc.PARTNER_NAME\n                        , calc.CONFIRMED\n                        , CASE\n                              WHEN first_tr.count_calculation > 1\n                                  THEN 'old user'\n                              ELSE 'new user' END type_user\n                   from calc\n                            inner join first_calc as first_tr on calc.USER_ID = first_tr.USER_ID\n                            inner join date_filter on date_filter.id = calc.id)\n\nselect date_trunc('month', CREATED_AT) as dt_month\n     , type_user\n     , count(distinct USER_ID) as count_users_calculation\n     , count(distinct case when CONFIRMED then USER_ID end) as count_users_completed_transaction\n     , count(distinct case when CONFIRMED then USER_ID end)/count(distinct USER_ID) as acceptance_rate_users\n     , count(ID) as count_transaction\n     , count(case when CONFIRMED then id end) as complete_transaction\n     , count(case when CONFIRMED then id end)/count(id) as acceptance_rate_transactions\n     , count(ID)/count(distinct USER_ID) as created_transaction_per_user\n     , case when count(distinct case when CONFIRMED then USER_ID end) >0\n         then count(case when CONFIRMED then id end)/count(distinct case when CONFIRMED then USER_ID end)\n         else 0 end as completed_transaction_per_user\nfrom type_user\ngroup by 1,2\norder by 1,2"
+          }
+        },
+        "id": 4096,
+        "parameter_mappings": [],
+        "display": "table",
+        "archived_directly": false,
+        "entity_id": "AdK8nQKr_2rIV6T_sDfnW",
+        "collection_preview": true,
+        "visualization_settings": {
+          "table.pivot_column": "TYPE_USER",
+          "table.cell_column": "COUNT_USERS_CALCULATION",
+          "column_settings": {
+            "[\"name\",\"TYPE_USER\"]": {
+              "column_title": "Type user"
+            },
+            "[\"name\",\"CREATED_TRANSACTION_PER_USER\"]": {
+              "column_title": "Created calculation per user",
+              "decimals": 2
+            },
+            "[\"name\",\"COMPLETED_TRANSACTION_PER_USER\"]": {
+              "column_title": "Completed transaction per user",
+              "decimals": 2
+            },
+            "[\"name\",\"COUNT_USERS_CALCULATION\"]": {
+              "column_title": "Count users who created caclulation"
+            },
+            "[\"name\",\"ACCEPTANCE_RATE_USERS\"]": {
+              "column_title": "Conversion rate by users",
+              "number_style": "percent",
+              "decimals": 2
+            },
+            "[\"name\",\"COMPLETE_TRANSACTION\"]": {
+              "column_title": "Count completed transactions"
+            },
+            "[\"name\",\"ACCEPTANCE_RATE_TRANSACTIONS\"]": {
+              "column_title": "Acceptance rate by calculation",
+              "number_style": "percent",
+              "decimals": 2
+            },
+            "[\"name\",\"COUNT_USERS_COMPLETED_TRANSACTION\"]": {
+              "column_title": "Count users who completed transaction"
+            },
+            "[\"name\",\"DT_MONTH\"]": {
+              "column_title": "Month calculation"
+            },
+            "[\"name\",\"COUNT_TRANSACTION\"]": {
+              "column_title": "Count calculations"
+            }
+          }
+        },
+        "metabase_version": "v0.52.9 (f9fbbf8)",
+        "parameters": [
+          {
+            "id": "c55d5954-cb4b-a820-fada-def7bb7fb2fc",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "PARTNER_NAME"
+              ]
+            ],
+            "name": "Partner name",
+            "slug": "PARTNER_NAME"
+          },
+          {
+            "id": "3da392e4-acd5-25f0-8e02-f020f916577a",
+            "type": "date/all-options",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "CREATED_AT"
+              ]
+            ],
+            "name": "Created at",
+            "slug": "CREATED_AT"
+          },
+          {
+            "id": "6b6477ae-a35b-4f5b-8390-d4796f53cade",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "payment_type"
+              ]
+            ],
+            "name": "Payment Type",
+            "slug": "payment_type"
+          }
+        ],
+        "created_at": "2025-06-22T08:11:52.205419Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-06-22T08:11:52.205419Z",
+      "col": 0,
+      "id": 3301,
+      "parameter_mappings": [
+        {
+          "parameter_id": "f1986da0",
+          "card_id": 4096,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "CREATED_AT"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "b1175a9b",
+          "card_id": 4096,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "c0d76f4",
+          "card_id": 4096,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "8ff952dd",
+          "card_id": 4096,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "payment_type"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 4096,
+      "entity_id": "Tw_V2VYs4LGLpmhZHzv3L",
+      "visualization_settings": {},
+      "size_y": 6,
+      "dashboard_id": 411,
+      "created_at": "2025-06-22T08:11:52.205419Z",
+      "row": 34
+    },
+    {
+      "size_x": 12,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": null,
+        "archived": false,
+        "view_count": 1,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": null,
+        "result_metadata": [
+          {
+            "display_name": "TOP_50_COUNTRY",
+            "field_ref": [
+              "field",
+              "TOP_50_COUNTRY",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "TOP_50_COUNTRY",
+            "semantic_type": "type/Country",
+            "fingerprint": {
+              "global": {
+                "distinct-count": 51,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 9.235294117647058
+                }
+              }
+            }
+          },
+          {
+            "display_name": "TYPE_USER",
+            "field_ref": [
+              "field",
+              "TYPE_USER",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "TYPE_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 2,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 8.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_CREATED_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_CREATED_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_CREATED_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 101,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 636.0,
+                  "q3": 2709.0,
+                  "max": 45643.0,
+                  "sd": 5902.845856197562,
+                  "avg": 2994.7156862745096
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_COMPLETED_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 99,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 332.0,
+                  "q3": 1757.0,
+                  "max": 16952.0,
+                  "sd": 2440.2709985968554,
+                  "avg": 1616.4117647058824
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_USERS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_USERS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_USERS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 102,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 0.48129353819492016,
+                  "q3": 0.739418069486102,
+                  "max": 0.8940568475452196,
+                  "sd": 0.22149663062755057,
+                  "avg": 0.5801227479691027
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 102,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1281.404883338936,
+                  "q3": 8045.9835245497425,
+                  "max": 249307.0,
+                  "sd": 27076.215948395715,
+                  "avg": 10472.333333333334
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETE_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COMPLETE_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COMPLETE_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 101,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 609.2930474286784,
+                  "q3": 5545.125,
+                  "max": 163265.0,
+                  "sd": 17658.91425391661,
+                  "avg": 6502.970588235294
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_TRANSACTIONS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 102,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 0.49251680215270655,
+                  "q3": 0.6857063238756937,
+                  "max": 0.8271004261273294,
+                  "sd": 0.18917876711136322,
+                  "avg": 0.5533779313079055
+                }
+              }
+            }
+          },
+          {
+            "display_name": "CREATED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "CREATED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "CREATED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 53,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1.0000094731998408,
+                  "q3": 5.84748427672956,
+                  "max": 12.303577512776831,
+                  "sd": 2.9795166291656847,
+                  "avg": 3.656384588227818
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "COMPLETED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "COMPLETED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 53,
+                "nil%": 0.00980392156862745
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1.011428067701042,
+                  "q3": 5.474775784753363,
+                  "max": 12.556338028169014,
+                  "sd": 2.942114374095309,
+                  "avg": 3.554429166281553
+                }
+              }
+            }
+          }
+        ],
+        "initially_published_at": null,
+        "can_write": true,
+        "database_id": 2,
+        "enable_embedding": false,
+        "collection_id": 744,
+        "query_type": "native",
+        "name": "Statistics since moment of creating transaction by country",
+        "last_used_at": "2025-06-22T08:11:55.032419Z",
+        "type": "question",
+        "query_average_duration": null,
+        "creator_id": 148,
+        "moderation_reviews": [],
+        "updated_at": "2025-06-22T08:11:52.205419Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "database": 2,
+          "type": "native",
+          "native": {
+            "template-tags": {
+              "WIDGET_PARTNER_NAME": {
+                "id": "26dfd15e-7f29-5a66-f924-923296b3942e",
+                "name": "WIDGET_PARTNER_NAME",
+                "display-name": "Widget partner name",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20834,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "CREATED_AT": {
+                "id": "cc61719f-2bc1-ca1e-e3e4-296a26a93e25",
+                "name": "CREATED_AT",
+                "display-name": "Created at",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20835,
+                  null
+                ],
+                "widget-type": "date/month-year"
+              },
+              "antifraud_status": {
+                "id": "f9635311-fcc5-9eda-af2c-7e2ec58b38d5",
+                "name": "antifraud_status",
+                "display-name": "Antifraud status",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  536409,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "Pay_system": {
+                "type": "dimension",
+                "name": "Pay_system",
+                "id": "0405faaf-d500-440a-a514-aae03ae08a7c",
+                "display-name": "Pay System",
+                "default": null,
+                "dimension": [
+                  "field",
+                  20885,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              },
+              "vendor_name": {
+                "type": "dimension",
+                "name": "vendor_name",
+                "id": "c4c8b72d-b047-4acd-9337-af13ea92ee48",
+                "display-name": "Vendor Name",
+                "default": null,
+                "dimension": [
+                  "field",
+                  20868,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              }
+            },
+            "query": "WITH tr as (select TRANSACTIONS.CREATED_AT\n                 , TRANSACTIONS.ID\n                 , TRANSACTIONS.USER_ID\n                 , TRANSACTIONS.WIDGET_PARTNER_NAME\n                 , TRANSACTIONS.CONFIRMED\n                 , first_value(coalesce(TRANSACTIONS.CARD_ISOCOUNTRY, 'no country')) over (partition by USER_ID order by TRANSACTIONS.CREATED_AT) as country_user\n            from MART.TRANSACTIONS\n            where TYPE_MAIN in ('buy', 'sell')\n              and TRANSACTIONS.WIDGET_PARTNER_NAME is not null\n              and {{WIDGET_PARTNER_NAME}} and\n                  {{Pay_system}} and\n                  {{vendor_name}} and\n                  ({{antifraud_status}}  or type in ('sell', 'buy_acquirer'))\n              ),\n     top_50_country as (\n     WITH filter_50 as (\n     select country_user\n     , count(distinct tr.id) as count_tr\n     from TR\n     group by 1\n     order by 2 desc\n     )\n     select country_user\n     , row_number() over (order by count_tr desc) as rn\n     from filter_50\n     ),\n     first_tr as (select USER_ID, min(CREATED_AT) as first_transaction\n                  from tr\n                  group by 1),\n     filter_data as (select ID\n     from MART.TRANSACTIONS\n      where TYPE_MAIN in ('buy', 'sell')\n              and WIDGET_PARTNER_NAME is not null \n              and {{CREATED_AT}}),\n     type_user as (select tr.CREATED_AT\n                        , tr.ID\n                        , tr.USER_ID\n                        , tr.WIDGET_PARTNER_NAME\n                        , tr.CONFIRMED\n                        , CASE\n                              WHEN first_tr.first_transaction = tr.CREATED_AT\n                                  THEN 'new user'\n                              ELSE 'old user' END type_user\n                        , CASE \n                              WHEN rn <= 50\n                                  THEN top_50_country.country_user\n                              ELSE 'other countries' END top_50_country\n                   from tr\n                            inner join first_tr as first_tr on tr.USER_ID = first_tr.USER_ID\n                            inner join filter_data on filter_data.id = tr.id\n                            inner join top_50_country on top_50_country.country_user = tr.country_user),\nmain_stat as (\nselect top_50_country\n     , type_user\n     , count(distinct USER_ID) as count_users_created_transaction\n     , count(distinct case when CONFIRMED then USER_ID end) as count_users_completed_transaction\n     , count(distinct case when CONFIRMED then USER_ID end)/count(distinct USER_ID) as acceptance_rate_users\n     , count(ID) as count_transaction\n     , count(case when CONFIRMED then id end) as complete_transaction\n     , count(case when CONFIRMED then id end)/count(id) as acceptance_rate_transactions\n     , count(ID)/count(distinct USER_ID) as created_transaction_per_user\n     , case when count(distinct case when CONFIRMED then USER_ID end) > 0\n     then count(case when CONFIRMED then id end)/count(distinct case when CONFIRMED then USER_ID end) end as completed_transaction_per_user\nfrom type_user\ngroup by 1,2),\nsort_stat as (\nselect top_50_country, sum(count_users_created_transaction) as sum_count_users_created_transaction\nfrom main_stat\ngroup by 1)\n\nselect main_stat.top_50_country\n     , type_user\n     , count_users_created_transaction\n     , count_users_completed_transaction\n     , acceptance_rate_users\n     , count_transaction\n     , complete_transaction\n     , acceptance_rate_transactions\n     , created_transaction_per_user\n     , completed_transaction_per_user\nfrom main_stat\nleft join sort_stat on main_stat.top_50_country = sort_stat.top_50_country\norder by sort_stat.sum_count_users_created_transaction desc, type_user\n"
+          }
+        },
+        "id": 4097,
+        "parameter_mappings": [],
+        "display": "table",
+        "archived_directly": false,
+        "entity_id": "LAd5tOdLCrtpIouHP8vJU",
+        "collection_preview": true,
+        "visualization_settings": {
+          "table.pivot_column": "TYPE_USER",
+          "table.cell_column": "COUNT_USERS_CREATED_TRANSACTION",
+          "column_settings": {
+            "[\"name\",\"ACCEPTANCE_RATE_USERS\"]": {
+              "number_style": "percent"
+            },
+            "[\"name\",\"ACCEPTANCE_RATE_TRANSACTIONS\"]": {
+              "number_style": "percent"
+            },
+            "[\"name\",\"CREATED_TRANSACTION_PER_USER\"]": {
+              "decimals": 2
+            },
+            "[\"name\",\"COMPLETED_TRANSACTION_PER_USER\"]": {
+              "decimals": 2
+            }
+          }
+        },
+        "metabase_version": "v0.52.9 (f9fbbf8)",
+        "parameters": [
+          {
+            "id": "26dfd15e-7f29-5a66-f924-923296b3942e",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "WIDGET_PARTNER_NAME"
+              ]
+            ],
+            "name": "Widget partner name",
+            "slug": "WIDGET_PARTNER_NAME"
+          },
+          {
+            "id": "cc61719f-2bc1-ca1e-e3e4-296a26a93e25",
+            "type": "date/month-year",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "CREATED_AT"
+              ]
+            ],
+            "name": "Created at",
+            "slug": "CREATED_AT"
+          },
+          {
+            "id": "f9635311-fcc5-9eda-af2c-7e2ec58b38d5",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "antifraud_status"
+              ]
+            ],
+            "name": "Antifraud status",
+            "slug": "antifraud_status"
+          },
+          {
+            "id": "0405faaf-d500-440a-a514-aae03ae08a7c",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "Pay_system"
+              ]
+            ],
+            "name": "Pay System",
+            "slug": "Pay_system"
+          },
+          {
+            "id": "c4c8b72d-b047-4acd-9337-af13ea92ee48",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "vendor_name"
+              ]
+            ],
+            "name": "Vendor Name",
+            "slug": "vendor_name"
+          }
+        ],
+        "created_at": "2025-06-22T08:11:52.205419Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-06-22T08:11:52.205419Z",
+      "col": 0,
+      "id": 3302,
+      "parameter_mappings": [
+        {
+          "parameter_id": "f1986da0",
+          "card_id": 4097,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "CREATED_AT"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "b1175a9b",
+          "card_id": 4097,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "WIDGET_PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "3d141496",
+          "card_id": 4097,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "antifraud_status"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "c0d76f4",
+          "card_id": 4097,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "WIDGET_PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "242e8de7",
+          "card_id": 4097,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "Pay_system"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "505026ae",
+          "card_id": 4097,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "vendor_name"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 4097,
+      "entity_id": "O5-gyk-OBLkNcO3GqcRbT",
+      "visualization_settings": {},
+      "size_y": 5,
+      "dashboard_id": 411,
+      "created_at": "2025-06-22T08:11:52.205419Z",
+      "row": 18
+    },
+    {
+      "size_x": 12,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": null,
+        "archived": false,
+        "view_count": 1,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": null,
+        "result_metadata": [
+          {
+            "display_name": "TOP_50_COUNTRY",
+            "field_ref": [
+              "field",
+              "TOP_50_COUNTRY",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "TOP_50_COUNTRY",
+            "semantic_type": "type/Country",
+            "fingerprint": {
+              "global": {
+                "distinct-count": 51,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 9.568627450980392
+                }
+              }
+            }
+          },
+          {
+            "display_name": "TYPE_USER",
+            "field_ref": [
+              "field",
+              "TYPE_USER",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "TYPE_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 2,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 8.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_CALCULATION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_CALCULATION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_CALCULATION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 98,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 88.0,
+                  "q1": 227.0,
+                  "q3": 1030.0,
+                  "max": 14057.0,
+                  "sd": 1859.6075518098448,
+                  "avg": 1051.2156862745098
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_USERS_COMPLETED_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_USERS_COMPLETED_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 87,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 38.673762078750734,
+                  "q3": 314.98076211353316,
+                  "max": 2141.0,
+                  "sd": 363.08068800573506,
+                  "avg": 244.23529411764707
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_USERS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_USERS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_USERS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 99,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 0.15789473684210525,
+                  "q3": 0.4555941150667925,
+                  "max": 0.5748344370860927,
+                  "sd": 0.1743235695116127,
+                  "avg": 0.2829980913354801
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COUNT_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COUNT_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COUNT_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 102,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 114.0,
+                  "q1": 434.59976619936356,
+                  "q3": 2358.2576396401455,
+                  "max": 42759.0,
+                  "sd": 5070.882320853949,
+                  "avg": 2477.4901960784314
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETE_TRANSACTION",
+            "field_ref": [
+              "field",
+              "COMPLETE_TRANSACTION",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "COMPLETE_TRANSACTION",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 91,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 64.09430584957906,
+                  "q3": 609.0,
+                  "max": 12191.0,
+                  "sd": 1468.008666167514,
+                  "avg": 666.1176470588235
+                }
+              }
+            }
+          },
+          {
+            "display_name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "field_ref": [
+              "field",
+              "ACCEPTANCE_RATE_TRANSACTIONS",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "ACCEPTANCE_RATE_TRANSACTIONS",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 100,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 0.14864864864864866,
+                  "q3": 0.3315064338864796,
+                  "max": 0.5282522996057819,
+                  "sd": 0.13638022176823514,
+                  "avg": 0.24674397006938853
+                }
+              }
+            }
+          },
+          {
+            "display_name": "CREATED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "CREATED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "CREATED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 52,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 1.0,
+                  "q3": 4.2862232779097384,
+                  "max": 7.950693374422188,
+                  "sd": 1.8212415021633115,
+                  "avg": 2.6571423434474224
+                }
+              }
+            }
+          },
+          {
+            "display_name": "COMPLETED_TRANSACTION_PER_USER",
+            "field_ref": [
+              "field",
+              "COMPLETED_TRANSACTION_PER_USER",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "COMPLETED_TRANSACTION_PER_USER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 52,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 0.9682783130840016,
+                  "q3": 3.3402612826603324,
+                  "max": 7.318840579710145,
+                  "sd": 1.7145584479737392,
+                  "avg": 2.335819553589533
+                }
+              }
+            }
+          }
+        ],
+        "initially_published_at": null,
+        "can_write": true,
+        "database_id": 2,
+        "enable_embedding": false,
+        "collection_id": 744,
+        "query_type": "native",
+        "name": "Statistics since moment of creating calculation by country",
+        "last_used_at": "2025-06-22T08:11:55.032419Z",
+        "type": "question",
+        "query_average_duration": null,
+        "creator_id": 148,
+        "moderation_reviews": [],
+        "updated_at": "2025-06-22T08:11:52.205419Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "database": 2,
+          "type": "native",
+          "native": {
+            "template-tags": {
+              "PARTNER_NAME": {
+                "id": "92cfea4a-8c6e-9954-400b-03ba8d923f89",
+                "name": "PARTNER_NAME",
+                "display-name": "Partner name",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  402,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "CREATED_AT": {
+                "id": "63b3373a-553f-f38c-0a16-41e107b4b657",
+                "name": "CREATED_AT",
+                "display-name": "Created at",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  3395,
+                  null
+                ],
+                "widget-type": "date/month-year"
+              },
+              "payment_type": {
+                "type": "dimension",
+                "name": "payment_type",
+                "id": "3fc9bf42-b23f-4ef9-9ffd-91713a18331f",
+                "display-name": "Payment Type",
+                "default": null,
+                "dimension": [
+                  "field",
+                  3412,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              }
+            },
+            "query": "WITH calc as (select WEBAPP_WIDGET_CALCULATIONS_LOG.CREATED_AT\n                 , WEBAPP_WIDGET_CALCULATIONS_LOG.ID\n                 , WEBAPP_WIDGET_CALCULATIONS_LOG.USER_ID\n                 , WIDGETS.PARTNER_NAME\n                 , TRANSACTIONS.CONFIRMED\n                 , first_value(coalesce(TRANSACTIONS.CARD_ISOCOUNTRY, users.USR_COUNTRY_ENG, 'no country')) over (partition by WEBAPP_WIDGET_CALCULATIONS_LOG.USER_ID order by WEBAPP_WIDGET_CALCULATIONS_LOG.CREATED_AT) as country_user\n            from REPLICA.WEBAPP_WIDGET_CALCULATIONS_LOG \n            inner join MART.WIDGETS on WIDGETS.ID = WEBAPP_WIDGET_CALCULATIONS_LOG.WIDGET_ID\n            left join (select ID, CONFIRMED, CARD_ISOCOUNTRY\n                           from MART.TRANSACTIONS\n                where TYPE_MAIN in ('buy', 'sell')\n              and WIDGET_PARTNER_NAME is not null) AS TRANSACTIONS on TRANSACTIONS.ID = WEBAPP_WIDGET_CALCULATIONS_LOG.TRANSACTION_ID\n            left join mart.users on users.user_id = WEBAPP_WIDGET_CALCULATIONS_LOG.user_id\n            where WEBAPP_WIDGET_CALCULATIONS_LOG.USER_ID is not null \n            and {{PARTNER_NAME}} and\n            {{payment_type}} ),\n     first_calc as (select USER_ID, min(CREATED_AT) as first_calculation\n                  from calc\n                  group by 1),\n     data_filter as (select id\n     from REPLICA.WEBAPP_WIDGET_CALCULATIONS_LOG \n     where {{CREATED_AT}}),\n     top_50_country as (\n     WITH filter_50 as (\n     select country_user\n     , count(distinct calc.id) as count_tr\n     from calc\n     group by 1\n     order by 2 desc\n     )\n     select country_user\n     , row_number() over (order by count_tr desc) as rn\n     from filter_50\n     ),\n     type_user as (select calc.CREATED_AT\n                        , calc.ID\n                        , calc.USER_ID\n                        , calc.PARTNER_NAME\n                        , calc.CONFIRMED\n                        , CASE\n                              WHEN first_tr.first_calculation = calc.CREATED_AT\n                                  THEN 'new user'\n                              ELSE 'old user' END type_user\n                        , CASE \n                              WHEN rn <= 50\n                                  THEN top_50_country.country_user\n                              ELSE 'other countries' END top_50_country\n                   from calc\n                            inner join first_calc as first_tr on calc.USER_ID = first_tr.USER_ID\n                            inner join data_filter on data_filter.id = calc.id\n                            inner join top_50_country on top_50_country.country_user = calc.country_user),\nmain_stat as (\nselect top_50_country\n     , type_user\n     , count(distinct USER_ID) as count_users_calculation\n     , count(distinct case when CONFIRMED then USER_ID end) as count_users_completed_transaction\n     , count(distinct case when CONFIRMED then USER_ID end)/count(distinct USER_ID) as acceptance_rate_users\n     , count(ID) as count_transaction\n     , count(case when CONFIRMED then id end) as complete_transaction\n     , count(case when CONFIRMED then id end)/count(id) as acceptance_rate_transactions\n     , count(ID)/count(distinct USER_ID) as created_transaction_per_user\n     , case when count(distinct case when CONFIRMED then USER_ID end) >0\n         then count(case when CONFIRMED then id end)/count(distinct case when CONFIRMED then USER_ID end)\n         else 0 end as completed_transaction_per_user\nfrom type_user\ngroup by 1,2),\nsort_stat as (\nselect top_50_country, sum(count_users_calculation) as sum_count_users_calculation\nfrom main_stat\ngroup by 1)\n\nselect main_stat.top_50_country\n     , type_user\n     , count_users_calculation\n     , count_users_completed_transaction\n     , acceptance_rate_users\n     , count_transaction\n     , complete_transaction\n     , acceptance_rate_transactions\n     , created_transaction_per_user\n     , completed_transaction_per_user\nfrom main_stat\nleft join sort_stat on main_stat.top_50_country = sort_stat.top_50_country\norder by sort_stat.sum_count_users_calculation desc, type_user\n"
+          }
+        },
+        "id": 4098,
+        "parameter_mappings": [],
+        "display": "table",
+        "archived_directly": false,
+        "entity_id": "q50MOJVVJjAD6pT80EIoH",
+        "collection_preview": true,
+        "visualization_settings": {
+          "table.pivot_column": "TOP_50_COUNTRY",
+          "table.cell_column": "COUNT_USERS_CALCULATION"
+        },
+        "metabase_version": "v0.52.9 (f9fbbf8)",
+        "parameters": [
+          {
+            "id": "92cfea4a-8c6e-9954-400b-03ba8d923f89",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "PARTNER_NAME"
+              ]
+            ],
+            "name": "Partner name",
+            "slug": "PARTNER_NAME"
+          },
+          {
+            "id": "63b3373a-553f-f38c-0a16-41e107b4b657",
+            "type": "date/month-year",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "CREATED_AT"
+              ]
+            ],
+            "name": "Created at",
+            "slug": "CREATED_AT"
+          },
+          {
+            "id": "3fc9bf42-b23f-4ef9-9ffd-91713a18331f",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "payment_type"
+              ]
+            ],
+            "name": "Payment Type",
+            "slug": "payment_type"
+          }
+        ],
+        "created_at": "2025-06-22T08:11:52.205419Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-06-22T08:11:52.205419Z",
+      "col": 12,
+      "id": 3303,
+      "parameter_mappings": [
+        {
+          "parameter_id": "f1986da0",
+          "card_id": 4098,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "CREATED_AT"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "b1175a9b",
+          "card_id": 4098,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "c0d76f4",
+          "card_id": 4098,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "PARTNER_NAME"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "242e8de7",
+          "card_id": 4098,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "Pay_system"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "505026ae",
+          "card_id": 4098,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "vendor_name"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "8ff952dd",
+          "card_id": 4098,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "payment_type"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 4098,
+      "entity_id": "Lqv1I75oULqReTiXR3Mpj",
+      "visualization_settings": {},
+      "size_y": 5,
+      "dashboard_id": 411,
+      "created_at": "2025-06-22T08:11:52.205419Z",
+      "row": 18
+    }
+  ],
+  "param_values": {
+    "3412": {
+      "field_id": 3412,
+      "human_readable_values": [],
+      "values": [
+        "'",
+        "EightBWorld_bni",
+        "EightBWorld_bni_clicked",
+        "EightBWorld_bri",
+        "EightBWorld_bri_clicked",
+        "EightBWorld_dana",
+        "EightBWorld_dana_clicked",
+        "EightBWorld_mandiri",
+        "EightBWorld_mandiri_clicked",
+        "EightBWorld_ovo",
+        "EightBWorld_ovo_clicked",
+        "EightBWorld_permata",
+        "EightBWorld_permata_clicked",
+        "EightBWorld_qris",
+        "EightBWorld_qris_clicked",
+        "EightBWorld_shopeepay_clicked",
+        "NGNBankTransfer",
+        "NGNBankTransfer_clicked",
+        "VNDBankTransfer",
+        "VNDBankTransfer_clicked",
+        "apple",
+        "apple_clicked",
+        "apple_pay",
+        "card",
+        "card_clicked",
+        "fiat_card",
+        "fiat_card_clicked",
+        "fiat_card_open",
+        "fiat_card_open_clicked",
+        "fiat_card_topup",
+        "fiat_card_topup_clicked",
+        "google",
+        "google-wallet",
+        "google_clicked",
+        "google_pay",
+        "gpay",
+        "hyperion_blik_clicked",
+        "instapay_qrph_clicked",
+        "mobile_pay",
+        "mock_clicked",
+        "new_card",
+        "new_card_clicked",
+        "new_fiat_card",
+        "new_fiat_card_clicked",
+        "pix",
+        "pix_clicked",
+        "rapyd",
+        "revolut_pay",
+        "revolut_pay_clicked",
+        "sepa",
+        "sepa_clicked",
+        "u_pix_clicked",
+        "v_sepa",
+        "v_sepa_clicked",
+        "vauld",
+        "volt",
+        "volt_clicked",
+        null
+      ]
+    },
+    "20834": {
+      "field_id": 20834,
+      "human_readable_values": [],
+      "values": [
+        "1inch",
+        "2btc.io",
+        "3commas.io",
+        "5bit.me",
+        "AAX",
+        "ADV cash",
+        "AMLSafe",
+        "AMarkets",
+        "AWEX",
+        "AXOM",
+        "Abra",
+        "Accumulus",
+        "Actoz",
+        "AfricaMoney",
+        "Aifory LLC",
+        "AlfaCash",
+        "Alpha Exchange",
+        "Amarkets",
+        "Amber",
+        "AmirCapital",
+        "Api.Hamsterspay.com",
+        "Aqru finance",
+        "ArcticWallet",
+        "Artozo",
+        "Atlas Wallet",
+        "B2B exchanger",
+        "BKEX",
+        "BTC-Alpha",
+        "BTCC (task 8417)",
+        "BYDFi",
+        "Bancor",
+        "Barclay Stone",
+        "Best Change",
+        "BetBoom",
+        "Bibox",
+        "Billance",
+        "Binance.mercuryo.io",
+        "BingX",
+        "Biswap",
+        "BitMEX",
+        "Bitay",
+        "Bitcoin TitanX",
+        "Bitcoinbtc.club",
+        "Bitfinex Widget",
+        "Bitforex",
+        "Bitget",
+        "Bithumb",
+        "Bitmax(Ascendex)",
+        "Bitquidity",
+        "Bitzing",
+        "Blue Wallet",
+        "Bonuz App",
+        "BoxExchanger",
+        "Bro Fintech LTD",
+        "Btcshark",
+        "Bybit",
+        "CAEX",
+        "Cabbagino",
+        "Capitalist",
+        "Cardex Exchange",
+        "ChainApp",
+        "ChangeNOW",
+        "Changelly",
+        "Citihexltd",
+        "ClickToBuyBitcoin",
+        "Coin to pay",
+        "Coin98",
+        "CoinCash",
+        "CoinDisco",
+        "CoinEx",
+        "CoinPayments",
+        "CoinStats",
+        "CoinTiger",
+        "CoinW",
+        "Coinandcoin",
+        "Coincola",
+        "Coinlocally",
+        "Coinplay",
+        "Coinsbit",
+        "Coinstore",
+        "Coinzix",
+        "CompanyDao",
+        "Credefi",
+        "Credits.com",
+        "Cricle",
+        "Cryptadium",
+        "Cryptero_x_Mercuryo test partner",
+        "Cryptix",
+        "Crypto-news",
+        "CryptoCash",
+        "CryptoCash API",
+        "CryptoFundsToday",
+        "CryptoPal",
+        "Cryptolines",
+        "Cryptomus",
+        "Custonomy",
+        "Cuverse",
+        "DA 5",
+        "DA5 Mobile",
+        "Darius Tech inc.",
+        "DeCenter",
+        "DefiBet",
+        "Defirex",
+        "DhanuX",
+        "Digifinex",
+        "Dok Wallet",
+        "Doshi",
+        "DreamSteam",
+        "EMCD",
+        "EasiHK.com",
+        "EasyPortal2",
+        "EasyPortal3",
+        "Easyportal",
+        "Ebankx",
+        "Ecos",
+        "Electrocoin",
+        "Ellipal",
+        "Eternl",
+        "Everstake",
+        "Exchange Demo",
+        "Exchangers Monitor",
+        "Exchangesumo",
+        "Exmo",
+        "Exness",
+        "ExpressMinds",
+        "Exworth",
+        "FMFW(bitcoin.com)",
+        "Fairdesk",
+        "FastToken",
+        "Fastex",
+        "Fizen",
+        "Flooz",
+        "Fozeus",
+        "Fundwallet",
+        "GIE",
+        "GKFX",
+        "GMT",
+        "Galaktika N.V.",
+        "GamblingMercuryo",
+        "Garantex",
+        "Gem4Me",
+        "Globiance",
+        "Gokumarket",
+        "Golden Way Payments LTD",
+        "Grand Time",
+        "Grapherex",
+        "HOO",
+        "Hackathon",
+        "HamstersPay.com",
+        "Haru",
+        "Haven",
+        "Hawex",
+        "HereWallet",
+        "Hitbtc",
+        "Hiveon",
+        "Hotcoin",
+        "Hoyabit",
+        "Huacool",
+        "Huobi",
+        "INJ Bridge",
+        "IPerCash",
+        "IXFI",
+        "Indodax.com",
+        "Infinito Solutions",
+        "Insta.money",
+        "InstaSwap",
+        "IntellaX",
+        "Irontrade",
+        "JapanTest",
+        "Jupiter",
+        "Kauri",
+        "Kauri2",
+        "Kauri3",
+        "Keystone",
+        "Kickex",
+        "Kirill_Blik_Test",
+        "KryptoGo",
+        "Kryptoknights.io",
+        "KuCoin",
+        "Kymis",
+        "LA token",
+        "LBank",
+        "Ledger",
+        "Ledger Spend",
+        "Leon",
+        "LeveX",
+        "Livecoin",
+        "LocalTrade",
+        "Lucky Labs",
+        "Lumi",
+        "MEXC",
+        "Magic wallet",
+        "Magneticexchange",
+        "Magnum",
+        "Mandala",
+        "Matrixport",
+        "Mayex",
+        "Meld",
+        "Meld I",
+        "Mercuryo",
+        "Mercuryo CaaS Test",
+        "Mercuryo.b2b.test",
+        "MercuryoWidget",
+        "Mercuryo_referral",
+        "Metamask",
+        "Metaspins",
+        "Metavault",
+        "Meteor Wallet",
+        "Mexo",
+        "Millionero",
+        "Mining-Bitcoin",
+        "Minswap",
+        "Minto",
+        "Mostbet",
+        "Mycelium",
+        "NFTGate",
+        "NeoWallet",
+        "Nft Checkout Brand",
+        "Ninji wallet",
+        "Nominex",
+        "Nova",
+        "OERO",
+        "OKX",
+        "Onederex",
+        "Onramper2",
+        "Onramper3",
+        "OpenC",
+        "PNGMarketing.com",
+        "PU",
+        "Pancakeswap",
+        "Parallax",
+        "Particle",
+        "Paytech Pro LTD",
+        "Phemex",
+        "Pichains",
+        "PointPay",
+        "Poloniex",
+        "PrimeFin Solutions inc.",
+        "Probit",
+        "Pyypl",
+        "Q-Send",
+        "Q-send_preprod",
+        "Qiwi",
+        "Quickex",
+        "RON",
+        "Rare",
+        "Revuto",
+        "Riv",
+        "Roobee",
+        "SDK Blik test",
+        "STEX",
+        "Santepay",
+        "Sapien",
+        "Sastanaqqam",
+        "Savl",
+        "Scrypton",
+        "SendNomad",
+        "Shido",
+        "Simex",
+        "SimpleSwap",
+        "Simpledo",
+        "SmartyAPI",
+        "SmartyPay",
+        "Smarty_PreProd",
+        "Socoin",
+        "SoftSwiss",
+        "Spatium",
+        "Speedybits",
+        "Staging",
+        "Stakecito",
+        "Star Exchangealliance",
+        "Status Wallet",
+        "StealthEx",
+        "StepApp",
+        "Stepan_test_b2b",
+        "SuperEX",
+        "Swapspace",
+        "Swapster",
+        "Sweat",
+        "Swoo",
+        "TEST101",
+        "TKEY",
+        "TON",
+        "TON Space",
+        "Tangem",
+        "Techroo",
+        "Telegram Wallet",
+        "Test",
+        "Test_Mercuryo",
+        "TheWOLF",
+        "Tiger Trade",
+        "ToTheMoon",
+        "TokenPocket",
+        "Tomo",
+        "Tonkeeper",
+        "Trade4coins (task 9345)",
+        "TransferMole",
+        "Trastera",
+        "Trastra",
+        "Trezor",
+        "TrueFlip.io",
+        "TrustWallet",
+        "TrustWallet0%",
+        "Trustee",
+        "UTEX",
+        "UUEX",
+        "UWIM (task 9405)",
+        "UllaPay",
+        "Union BTC",
+        "Uniramp",
+        "Unistex",
+        "VNSmart",
+        "Vardex",
+        "Vave",
+        "Venga",
+        "Venga preprod",
+        "VeroWay",
+        "WOO",
+        "WalletBot",
+        "Wallex",
+        "Waveland",
+        "Waves",
+        "Waves2",
+        "Waxpeer",
+        "Wbb",
+        "Web3Auth",
+        "Wemix",
+        "Weownomy Pay",
+        "Westchange",
+        "WhiteBit",
+        "WhiteMarket",
+        "Wigwam",
+        "Wild",
+        "Win.Wallet",
+        "XENA",
+        "XT.com",
+        "Xive",
+        "Xjet",
+        "Xponential crypto",
+        "Xzen",
+        "YIBI",
+        "Zerion",
+        "Zink",
+        "advantech",
+        "allcoinswapper",
+        "amber",
+        "binance.org",
+        "bitcastle",
+        "bitcoin.com",
+        "bitpapa",
+        "bitx.land/merchantpay",
+        "blackmoonfg.uk",
+        "bspin",
+        "buycoinnow",
+        "c3 exchange",
+        "changehero.io",
+        "coin galaxy",
+        "cryptofully",
+        "cryptoxchangers",
+        "cubaxchange",
+        "daovc",
+        "demo-wg-301019.mercuryo.io",
+        "demo-widget-301019.mercuryo.io",
+        "dropstab.com",
+        "fastcoin",
+        "gate",
+        "goodbuycrypto",
+        "hkbitex",
+        "i-cex",
+        "iToken",
+        "iqex",
+        "iquick.io",
+        "kefa comm",
+        "klever",
+        "kryptonite",
+        "letsexchange.io",
+        "mercuryorabbit.com",
+        "onramper",
+        "onramper1",
+        "open_C (task 9535)",
+        "o\u0441tagonFX",
+        "parabolus",
+        "paytiz",
+        "polysports",
+        "quantfury",
+        "quickx",
+        "ready-steady.net",
+        "rokkex.com",
+        "sendcash.africa",
+        "strikeX",
+        "swallet",
+        "swapy.app",
+        "tbit",
+        "threefold.io",
+        "tokean.com",
+        "tokens.net",
+        "torus",
+        "tozex",
+        "vlafx.us",
+        "x-meta",
+        "xChange",
+        "xp-trade.com",
+        "\u0410thena Crypto Bank",
+        null
+      ]
+    },
+    "20868": {
+      "field_id": 20868,
+      "human_readable_values": [],
+      "values": [
+        "acquiring_card",
+        "arius",
+        "blik_hyperion_mobilum",
+        "bni_8bworld_moneymaple",
+        "bri_8bworld_moneymaple",
+        "checkout_hyperion_moneysail",
+        "checkout_hyperion_moneytea",
+        "checkout_moneytea",
+        "checkout_sbc_moneyswap",
+        "connectum",
+        "converter",
+        "cup_unlimint_moneytea",
+        "dana_8bworld_moneymaple",
+        "decta_moneyswap",
+        "decta_moneytea",
+        "fenige_hyperion_winpay_moneytea",
+        "fenige_sbc_moneytea",
+        "fenige_sbc_winpay_moneytea",
+        "flutterwave",
+        "getkollo_moneymaple",
+        "hyperion",
+        "iban",
+        "instapay_qrph_8bworld_moneymaple",
+        "kraken",
+        "mandiri_8bworld_moneymaple",
+        "mpay",
+        "mxn_unlimint_moneytea",
+        "ngn_unlimint_moneytea",
+        "nuvei_hyperion_moneyamber",
+        "nuvei_hyperion_moneyamber_recurring",
+        "nuvei_hyperion_moneysail",
+        "nuvei_hyperion_moneysail_recurring",
+        "nuvei_hyperion_winpay_moneysail",
+        "nuvei_moneyamber",
+        "nuvei_moneysail",
+        "nuvei_sbc_moneyamber",
+        "offchain",
+        "ovo_8bworld_moneymaple",
+        "payture",
+        "permata_8bworld_moneymaple",
+        "pix_unlimint_moneytea",
+        "qris_8bworld_moneymaple",
+        "quicko_hyperion_moneysail",
+        "rails",
+        "rapyd",
+        "rapyd_moneyswap",
+        "rbk",
+        "revolut_pay_moneysail",
+        "sber",
+        "shopeepay_8bworld_moneymaple",
+        "trustpayments_moneyswap",
+        "trustpayments_moneytea",
+        "trustpayments_sbc_moneytea",
+        "unlimint",
+        "unlimint_moneyamber",
+        "unlimint_moneysail",
+        "unlimint_moneyswap",
+        "unlimint_moneytea",
+        "unlimint_moneytea_new",
+        "vnd_unlimint_moneyswap",
+        "volt_moneytea",
+        "walletto_moneytea",
+        "walletto_payture_moneytea",
+        null
+      ]
+    },
+    "20885": {
+      "field_id": 20885,
+      "human_readable_values": [],
+      "values": [
+        "AMERICAN EXPRESS",
+        "Apple Pay",
+        "Buy Acquirer",
+        "Google Pay",
+        "HUMOCARD",
+        "LOCAL BRAND",
+        "LOCAL_CARDS_BRANDS",
+        "MASTERCARD",
+        "No Data",
+        "RUPAY",
+        "Sell to an unknown card",
+        "UNIONPAY",
+        "UZCARD",
+        "VISA"
+      ]
+    },
+    "536409": {
+      "field_id": 536409,
+      "human_readable_values": [],
+      "values": [
+        false,
+        true,
+        null
+      ]
+    }
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "tabs": [],
+  "enable_embedding": false,
+  "collection_id": 744,
+  "show_in_getting_started": false,
+  "name": "Success rate new/old (SR)",
+  "width": "full",
+  "caveats": null,
+  "collection_authority_level": null,
+  "creator_id": 148,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-06-22T08:11:55.178015Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "last_used_param_values": {
+    "b1175a9b": [
+      "TrustWallet"
+    ],
+    "f1986da0": "thisyear"
+  },
+  "id": 411,
+  "last_viewed_at": "2025-06-22T08:11:54.935715Z",
+  "position": null,
+  "archived_directly": false,
+  "entity_id": "EZzSN2vTZLAc8qBnWBHue",
+  "param_fields": {
+    "402": {
+      "semantic_type": "type/Category",
+      "table_id": 9,
+      "name": "PARTNER_NAME",
+      "has_field_values": "search",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 402,
+      "target": null,
+      "display_name": "PARTNER_NAME",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "3395": {
+      "semantic_type": "type/CreationTimestamp",
+      "table_id": 204,
+      "name": "CREATED_AT",
+      "has_field_values": "none",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 3395,
+      "target": null,
+      "display_name": "CREATED_AT",
+      "name_field": null,
+      "base_type": "type/DateTime"
+    },
+    "3412": {
+      "semantic_type": "type/Category",
+      "table_id": 204,
+      "name": "PAYMENT_TYPE",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 3412,
+      "target": null,
+      "display_name": "PAYMENT_TYPE",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "20834": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "WIDGET_PARTNER_NAME",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 20834,
+      "target": null,
+      "display_name": "WIDGET_PARTNER_NAME",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "20835": {
+      "semantic_type": "type/CreationTimestamp",
+      "table_id": 45,
+      "name": "CREATED_AT",
+      "has_field_values": "none",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 20835,
+      "target": null,
+      "display_name": "CREATED_AT",
+      "name_field": null,
+      "base_type": "type/DateTime"
+    },
+    "20868": {
+      "semantic_type": "type/Company",
+      "table_id": 45,
+      "name": "VENDOR_NAME",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 20868,
+      "target": null,
+      "display_name": "VENDOR_NAME",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "20885": {
+      "semantic_type": null,
+      "table_id": 45,
+      "name": "PAY_SYSTEM",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 20885,
+      "target": null,
+      "display_name": "PAY_SYSTEM",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "536409": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "ANTIFRAUD_STATUS",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 536409,
+      "target": null,
+      "display_name": "ANTIFRAUD_STATUS",
+      "name_field": null,
+      "base_type": "type/Boolean"
+    }
+  },
+  "last-edit-info": {
+    "id": 148,
+    "email": "t.tikhomirov@mercuryo.io",
+    "first_name": "Timofei",
+    "last_name": "Tikhomirov",
+    "timestamp": "2025-06-22T08:11:52.420185Z"
+  },
+  "collection": {
+    "authority_level": null,
+    "description": null,
+    "archived": false,
+    "slug": "success_rate_new_old__sr_",
+    "archive_operation_id": null,
+    "name": "Success rate new/old (SR)",
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": false,
+    "id": 744,
+    "archived_directly": null,
+    "entity_id": "ISrm9GkAbqPq38lOM_HMn",
+    "location": "/173/203/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-06-22T08:10:57.809633Z"
+  },
+  "parameters": [
+    {
+      "name": "Created at",
+      "slug": "created_at",
+      "id": "f1986da0",
+      "type": "date/all-options",
+      "sectionId": "date",
+      "default": "thisyear"
+    },
+    {
+      "name": "Partner name",
+      "slug": "partner_name",
+      "id": "b1175a9b",
+      "type": "string/=",
+      "sectionId": "string",
+      "default": [
+        "TrustWallet"
+      ]
+    },
+    {
+      "name": "Antifraud status (only for transactions tables)",
+      "slug": "antifraud_status_(only_for_transactions_tables)",
+      "id": "3d141496",
+      "type": "string/=",
+      "sectionId": "string"
+    },
+    {
+      "name": "Partner name (exclude)",
+      "slug": "partner_name_(exclude)",
+      "id": "c0d76f4",
+      "type": "string/!=",
+      "sectionId": "string"
+    },
+    {
+      "name": "Pay system (only for transactions)",
+      "slug": "pay_system_(only_for_transactions)",
+      "id": "242e8de7",
+      "type": "string/=",
+      "sectionId": "string"
+    },
+    {
+      "name": "Acquirer (only for transactions)",
+      "slug": "acquirer_(only_for_transactions)",
+      "id": "505026ae",
+      "type": "string/=",
+      "sectionId": "string"
+    },
+    {
+      "name": "Payment type (only for calculations)",
+      "slug": "payment_type_(only_for_calculations)",
+      "id": "8ff952dd",
+      "type": "string/=",
+      "sectionId": "string"
+    }
+  ],
+  "auto_apply_filters": true,
+  "created_at": "2025-06-22T08:11:52.205419Z",
+  "public_uuid": null,
+  "points_of_interest": null,
+  "can_delete": false
+}

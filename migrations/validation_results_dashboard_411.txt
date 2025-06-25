@@ -1,0 +1,92 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 6 questions
+
+📝 Validating Question 1/6
+--------------------------------------------------
+  🔍 Validating Question 4093: Statistics since moment of creating transaction
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH tr as (select CREATED_AT
+                 , ID
+                 , USER_ID
+                 , WI...
+    ✅ Query executed successfully!
+    📊 Rows returned: 150
+    📋 Columns: 10
+    📝 Column names: ['dt_month', 'TYPE_USER', 'COUNT_USERS_CREATED_TRANSACTION', 'count_users_completed_transaction', 'acceptance_rate_users', 'count_transaction', 'complete_transaction', 'acceptance_rate_transactions', 'created_transaction_per_user', 'completed_transaction_per_user']
+    📈 First row: ['2019-04-01T00:00:00Z', 'new user', 8, 2, 0.25, 8, 1, 0.125, 1.0, 0.5]
+    📈 Second row: ['2019-04-01T00:00:00Z', 'old user', 6, 4, 0.6666666666666666, 19, 5, 0.2631578947368421, 3.1666666666666665, 1.25]
+
+📝 Validating Question 2/6
+--------------------------------------------------
+  🔍 Validating Question 4094: Statistics since moment of creating calculation
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH calc as (select REPLICA__WEBAPP_WIDGET_CALCULATIONS_LOG.CREATED_AT
+                 , REPLICA__...
+    ✅ Query executed successfully!
+    📊 Rows returned: 83
+    📋 Columns: 10
+    📝 Column names: ['dt_month', 'TYPE_USER', 'COUNT_USERS_CALCULATION', 'count_users_completed_transaction', 'acceptance_rate_users', 'count_transaction', 'complete_transaction', 'acceptance_rate_transactions', 'created_transaction_per_user', 'completed_transaction_per_user']
+    📈 First row: [None, 'old user', 24508, 10, 0.0004080300310102824, 58496, 9, 0.0001538566739606127, 2.3868124693977477, 0.9]
+    📈 Second row: ['2022-02-01T00:00:00Z', 'new user', 16066, 3266, 0.20328644342088883, 16195, 3272, 0.20203766594627973, 1.0080293788123988, 1.001837109614207]
+
+📝 Validating Question 3/6
+--------------------------------------------------
+  🔍 Validating Question 4095: Statistics since moment of creating transaction (new user = user with 1 transaction)
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH tr as (select CREATED_AT
+                 , ID
+                 , USER_ID
+                 , WI...
+    ✅ Query executed successfully!
+    📊 Rows returned: 150
+    📋 Columns: 10
+    📝 Column names: ['dt_month', 'TYPE_USER', 'COUNT_USERS_CREATED_TRANSACTION', 'count_users_completed_transaction', 'acceptance_rate_users', 'count_transaction', 'complete_transaction', 'acceptance_rate_transactions', 'created_transaction_per_user', 'completed_transaction_per_user']
+    📈 First row: ['2019-04-01T00:00:00Z', 'new user', 2, 1, 0.5, 2, 0, 0.0, 1.0, 0.0]
+    📈 Second row: ['2019-04-01T00:00:00Z', 'old user', 6, 4, 0.6666666666666666, 25, 6, 0.24, 4.166666666666667, 1.5]
+
+📝 Validating Question 4/6
+--------------------------------------------------
+  🔍 Validating Question 4096: Statistics since moment of creating calculation (new user = user with 1 transaction)
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH calc as (select REPLICA__WEBAPP_WIDGET_CALCULATIONS_LOG.CREATED_AT
+                 , REPLICA__...
+    ✅ Query executed successfully!
+    📊 Rows returned: 84
+    📋 Columns: 10
+    📝 Column names: ['dt_month', 'TYPE_USER', 'COUNT_USERS_CALCULATION', 'count_users_completed_transaction', 'acceptance_rate_users', 'count_transaction', 'complete_transaction', 'acceptance_rate_transactions', 'created_transaction_per_user', 'completed_transaction_per_user']
+    📈 First row: [None, 'new user', 10135, 2, 0.0001973359644795264, 10135, 1, 9.86679822397632e-05, 1.0, 0.5]
+    📈 Second row: [None, 'old user', 14373, 9, 0.0006261740763932373, 48361, 8, 0.00016542255122929634, 3.3647116120503724, 0.8888888888888888]
+
+📝 Validating Question 5/6
+--------------------------------------------------
+  🔍 Validating Question 4097: Statistics since moment of creating transaction by country
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH tr as (select MART__TRANSACTIONS.CREATED_AT
+                 , MART__TRANSACTIONS.ID
+          ...
+    ❌ SQL Error: Getting analyzing error. Detail message: Unknown table 'METABASE_VIEWS.TR'.
+
+📝 Validating Question 6/6
+--------------------------------------------------
+  🔍 Validating Question 4098: Statistics since moment of creating calculation by country
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH calc as (select REPLICA__WEBAPP_WIDGET_CALCULATIONS_LOG.CREATED_AT
+                 , REPLICA__...
+    ✅ Query executed successfully!
+    📊 Rows returned: 102
+    📋 Columns: 10
+    📝 Column names: ['TOP_50_COUNTRY', 'type_user', 'COUNT_USERS_CALCULATION', 'count_users_completed_transaction', 'acceptance_rate_users', 'count_transaction', 'complete_transaction', 'acceptance_rate_transactions', 'created_transaction_per_user', 'completed_transaction_per_user']
+    📈 First row: ['United States of America', 'new user', 1332984, 143752, 0.10784225467072373, 1341081, 143801, 0.10722767677716707, 1.006074341477467, 1.0003408648227503]
+    📈 Second row: ['United States of America', 'old user', 692572, 136860, 0.19761122309305026, 4881932, 1017479, 0.20841728233822185, 7.048988408425406, 7.434451264065468]
+
+🎉 Validation Summary:
+✅ Successfully validated: 5/6 questions
+⚠️  Some questions have issues. Migration may need fixes.

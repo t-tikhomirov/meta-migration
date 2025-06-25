@@ -1,0 +1,8 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 0 questions
+
+🎉 Validation Summary:
+✅ Successfully validated: 0/0 questions
+🎊 All questions are working correctly! Migration successful!

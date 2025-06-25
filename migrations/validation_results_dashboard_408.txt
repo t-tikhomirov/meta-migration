@@ -1,0 +1,844 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 17 questions
+
+📝 Validating Question 1/17
+--------------------------------------------------
+  🔍 Validating Question 4069: 3 Pay-out Acceptance Rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 182
+    📋 Columns: 2
+    📝 Column names: ['CREATED_AT', 'ACCEPTANCE_RATE']
+    📈 First row: ['2024-09-09T00:00:00Z', 0.654123638421276]
+    📈 Second row: ['2023-03-13T00:00:00Z', 0.8493805694414258]
+
+📝 Validating Question 2/17
+--------------------------------------------------
+  🔍 Validating Question 4068: 3 Pay-out Acceptance Rate Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        --and {{STATUS}}
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 3/17
+--------------------------------------------------
+  🔍 Validating Question 4076: 3 Pay-out Turnover
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 182
+    📋 Columns: 2
+    📝 Column names: ['CREATED_AT', 'TURNOVER_EUR']
+    📈 First row: ['2022-01-10T00:00:00Z', 3462110.6258761017]
+    📈 Second row: ['2022-01-24T00:00:00Z', 2005942.6753555005]
+
+📝 Validating Question 4/17
+--------------------------------------------------
+  🔍 Validating Question 4066: 3 Pay-out Turnover Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 5/17
+--------------------------------------------------
+  🔍 Validating Question 4066: 3 Pay-out Turnover Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 6/17
+--------------------------------------------------
+  🔍 Validating Question 4067: 3 Pay-out Revenue Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 7/17
+--------------------------------------------------
+  🔍 Validating Question 4067: 3 Pay-out Revenue Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 8/17
+--------------------------------------------------
+  🔍 Validating Question 4073: 3 Pay-out Winpay Fee Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 9/17
+--------------------------------------------------
+  🔍 Validating Question 4073: 3 Pay-out Winpay Fee Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 10/17
+--------------------------------------------------
+  🔍 Validating Question 4075: 3 Stat Table
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        --and {{STATUS}}
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 11/17
+--------------------------------------------------
+  🔍 Validating Question 4077: 3 Pay-out GMV Split 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 12/17
+--------------------------------------------------
+  🔍 Validating Question 4077: 3 Pay-out GMV Split 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 13/17
+--------------------------------------------------
+  🔍 Validating Question 4072: 3 Pay-out Turnover, Revenue, Fees, GMV
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 182
+    📋 Columns: 7
+    📝 Column names: ['CREATED_AT', 'turnover_eur', 'REVENUE_EUR', 'ACQUIRER_FEE_EUR', 'WINPAY_FEE_EUR', 'QUICKO_FEE_EUR', 'GMV_EUR']
+    📈 First row: ['2024-06-03T00:00:00Z', 7599597.025372895, 240341.66107199958, 102333.31624696185, 6402.298565421973, 15199.194050745758, 116406.85220887033]
+    📈 Second row: ['2025-03-31T00:00:00Z', 8576703.238343706, 239378.10790040012, 118361.54261025622, 6441.103029234001, 17153.406476687403, 97422.05578422266]
+
+📝 Validating Question 14/17
+--------------------------------------------------
+  🔍 Validating Question 4070: 3 Pay-out Acquiring Fee Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 15/17
+--------------------------------------------------
+  🔍 Validating Question 4070: 3 Pay-out Acquiring Fee Split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Getting syntax error at line 54, column 15. Detail message: No viable statement for input 'with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 'week'
+          AND granularity is not null
+),
+
+filtered_groupby as (
+    select distinct payout_columns_groupby
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    where 1 = 1
+          AND payout_columns_groupby is not null
+),
+
+filtered_payout as (
+    select *
+    from WINPAY__TRANSACTION_WITH_WINPAY_COMISSION
+    where `WINPAY__TRANSACTION_WITH_WINPAY_COMISSION`.`PAYMENT_AT` >= '2022-01-02 00:00:00'
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and 1 = 1
+        and day(CREATED_AT) <= 31
+),
+
+pre_top_n as (
+    select 
+        CASE 
+            WHEN groupby.payout_columns_groupby = 'Currency'
+                THEN fatpay.CURRENCY
+            WHEN groupby.payout_columns_groupby = 'Partner'
+                THEN fatpay.PARTNER_NAME
+            WHEN groupby.payout_columns_groupby = 'Merchant'
+                THEN fatpay.MERCHANT_NAME
+            WHEN groupby.payout_columns_groupby = 'Card Bank'
+                THEN fatpay.CARD_BANK
+            WHEN groupby.payout_columns_groupby = 'Card Brand'
+                THEN fatpay.PAYMENT_SYSTEM
+            WHEN groupby.payout_columns_groupby = 'Card Geoscheme'
+                THEN fatpay.CARD_GEOSCHEME_BUSINESS
+            WHEN groupby.payout_columns_groupby = 'Card Country'
+                THEN fatpay.CARD_COUNTRY_NAME
+            WHEN groupby.payout_columns_groupby = 'Status'
+                THEN fatpay.STATUS
+            WHEN groupby.payout_columns_groupby = 'Acquirer'
+                THEN fatpay.ACQUIRER_NAME
+            ELSE null 
+        END as grouping'.
+
+📝 Validating Question 16/17
+--------------------------------------------------
+  🔍 Validating Question 4071: 3 Pay-Out Acquiring Fee Fact rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 232
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'FEE_ACQUIRER_IS_EXACT', 'N']
+    📈 First row: ['2022-12-26T00:00:00Z', 'Calculation', 10071]
+    📈 Second row: ['2024-10-14T00:00:00Z', 'Calculation', 10915]
+
+📝 Validating Question 17/17
+--------------------------------------------------
+  🔍 Validating Question 4065: 3 Pay-out Turnover, Revenue, Fees, GMV Rates
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ✅ Query executed successfully!
+    📊 Rows returned: 182
+    📋 Columns: 6
+    📝 Column names: ['CREATED_AT', 'REVENUE_EUR', 'ACQUIRER_FEE_EUR', 'WINPAY_FEE_EUR', 'QUICKO_FEE_EUR', 'GMV_EUR']
+    📈 First row: ['2023-06-19T00:00:00Z', 0.03568965883197635, 0.01609956755557686, 0.0006927424444723305, 0.0, 0.018897348831927178]
+    📈 Second row: ['2024-05-13T00:00:00Z', 0.03318639338120422, 0.014273082736068327, 0.0007859894033240621, 0.002000000000000001, 0.016127321241811893]
+
+🎉 Validation Summary:
+✅ Successfully validated: 5/17 questions
+⚠️  Some questions have issues. Migration may need fixes.

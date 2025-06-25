@@ -1,0 +1,157 @@
+{
+  "column_mappings": {
+    "exasol_to_starrocks": {
+      "AR_PERIOD1": "ar_period1",
+      "AR_PERIOD2": "ar_period2", 
+      "DELTA_AR": "delta_ar",
+      "COUNT_TRANSACTIONS": "count_transactions",
+      "TURNOVER_EUR_PERIOD1": "turnover_eur_period1",
+      "TURNOVER_EUR_PERIOD2": "turnover_eur_period2",
+      "COUNT_TRANSACTIONS_PERIOD1": "count_transactions_period1",
+      "COUNT_TRANSACTIONS_PERIOD2": "count_transactions_period2",
+      "POTENTIAL_TURNOVER_EUR_PERIOD1": "potential_turnover_eur_period1",
+      "POTENTIAL_TURNOVER_EUR_PERIOD2": "potential_turnover_eur_period2",
+      "INPUT_AR1": "input_ar1",
+      "INPUT_AR2": "input_ar2",
+      "CREATED_AT": "created_at",
+      "RATE": "rate",
+      "TURNOVER": "turnover",
+      "GROUPING_TOP_N": "grouping_top_n",
+      "CARD_BANK": "card_bank",
+      "CARD_BIN": "card_bin",
+      "CARD_COUNTRY": "card_country",
+      "TR": "tr",
+      "PAYMENT_AT": "payment_at",
+      "TRANSACTION_DATE": "transaction_date",
+      "AMOUNT_EUR": "amount_eur",
+      "AMOUNT": "amount",
+      "CURRENCY": "currency",
+      "STATUS": "status",
+      "MERCHANT_ID": "merchant_id",
+      "MERCHANT_NAME": "merchant_name",
+      "ACQUIRER": "acquirer",
+      "NETWORK": "network",
+      "CARD_TYPE": "card_type",
+      "CARD_BRAND": "card_brand",
+      "COUNTRY": "country",
+      "REGION": "region",
+      "CITY": "city",
+      "USER_ID": "user_id",
+      "USER_NAME": "user_name",
+      "BUSINESS_NAME": "business_name",
+      "PARTNER_NAME": "partner_name",
+      "VENDOR_NAME": "vendor_name",
+      "SHOP": "shop",
+      "PAYMENT_TERMINAL": "payment_terminal",
+      "FIAT_CURRENCY": "fiat_currency",
+      "CRYPTO_CURRENCY": "crypto_currency",
+      "PAY_SYSTEM": "pay_system",
+      "TYPE_OPERATION": "type_operation",
+      "ANTIFRAUD_STATUS": "antifraud_status",
+      "IS_AFT": "is_aft",
+      "RETRY_EXCLUDE": "retry_exclude",
+      "CARD_GEOSCHEME": "card_geoscheme",
+      "BRAND_CARD": "brand_card",
+      "COUNTRY_CARD": "country_card",
+      "PARTNER_NAME": "partner_name",
+      "ACQUIRER": "acquirer"
+    }
+  },
+  "dashboard_specific_mappings": {
+    "419": {
+      "description": "Acceptance Rate Dashboard",
+      "additional_mappings": {
+        "FATPAY_COUNTRY": "fatpay_country",
+        "CARD_BANK_TITLE": "card_bank_title",
+        "CARD_ISOCUNTRY": "card_isocountry"
+      }
+    },
+    "418": {
+      "description": "Transaction Dashboard",
+      "additional_mappings": {
+        "TRANSACTION_ID": "transaction_id",
+        "TRANSACTION_TYPE": "transaction_type"
+      }
+    },
+    "420": {
+      "description": "Dashboard 420",
+      "additional_mappings": {}
+    },
+    "421": {
+      "description": "Dashboard 421",
+      "additional_mappings": {}
+    }
+  },
+  "formatting_preservation": {
+    "percentage_columns": [
+      "AR_PERIOD1",
+      "AR_PERIOD2", 
+      "DELTA_AR",
+      "INPUT_AR1",
+      "INPUT_AR2",
+      "RATE",
+      "TR"
+    ],
+    "currency_columns": [
+      "TURNOVER_EUR_PERIOD1",
+      "TURNOVER_EUR_PERIOD2",
+      "POTENTIAL_TURNOVER_EUR_PERIOD1",
+      "POTENTIAL_TURNOVER_EUR_PERIOD2",
+      "AMOUNT_EUR",
+      "AMOUNT"
+    ],
+    "mini_bar_columns": [
+      "DELTA_AR"
+    ],
+    "conditional_formatting_rules": {
+      "DELTA_AR": [
+        {
+          "operator": ">",
+          "value": 0.25,
+          "color": "#88BF4D",
+          "highlight_row": true
+        },
+        {
+          "operator": ">",
+          "value": 0,
+          "color": "#A7D07C",
+          "highlight_row": true
+        },
+        {
+          "operator": "<",
+          "value": -0.25,
+          "color": "#EF8C8C",
+          "highlight_row": true
+        },
+        {
+          "operator": "<",
+          "value": 0,
+          "color": "#F7C4C4",
+          "highlight_row": true
+        }
+      ]
+    }
+  },
+  "display_name_mappings": {
+    "ar_period1": "AR: period 1",
+    "ar_period2": "AR: period 2",
+    "delta_ar": "Delta AR",
+    "count_transactions": "Count Transactions",
+    "turnover_eur_period1": "Turnover EUR: period 1",
+    "turnover_eur_period2": "Turnover EUR: period 2",
+    "count_transactions_period1": "Count Transactions: period 1",
+    "count_transactions_period2": "Count Transactions: period 2",
+    "potential_turnover_eur_period1": "Potential Turnover EUR: period 1",
+    "potential_turnover_eur_period2": "Potential Turnover EUR: period 2",
+    "input_ar1": "AR: period 1 input",
+    "input_ar2": "AR: period 2 input",
+    "created_at": "Transaction Date",
+    "rate": "Acceptance Rate",
+    "turnover": "TURNOVER",
+    "grouping_top_n": "GROUPING_TOP_N",
+    "card_bank": "CARD_BANK",
+    "card_bin": "CARD_BIN",
+    "card_country": "CARD_COUNTRY",
+    "tr": "TR"
+  }
+} 

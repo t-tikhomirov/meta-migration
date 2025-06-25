@@ -1,0 +1,34 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 2 questions
+
+📝 Validating Question 1/2
+--------------------------------------------------
+  🔍 Validating Question 4091: Find OOR transactions
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with mart as (
+    select *
+    from MART__TRANSACTIONS
+    where 
+        {{id}} and 
+        {{CON...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"CONFIRMED"}
+
+📝 Validating Question 2/2
+--------------------------------------------------
+  🔍 Validating Question 4092: Find Pay-In transactions
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with mart as (
+    select *
+    from MART__FATPAY 
+    where 
+        {{created_at}} and 
+        {{...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"ORDER_ID"}
+
+🎉 Validation Summary:
+✅ Successfully validated: 0/2 questions
+⚠️  Some questions have issues. Migration may need fixes.

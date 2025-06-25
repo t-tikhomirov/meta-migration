@@ -1,0 +1,102 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 9 questions
+
+📝 Validating Question 1/9
+--------------------------------------------------
+  🔍 Validating Question 3916: 1 Sum of Transactions EUR split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select distinct granularity
+    from MD__FATPAY_DASHBOARD_HELP_TA...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"CREATED_AT" "BUSINESS_NAME" "HAS_ID_PROVIDER" "FIAT_CURRENCY" "groupby" "is_aft" "STATUS" "ACQUIRER" "CARD_COUNTRY" "granularity" "CARD_BRAND" "CARD_GEOSCHEME" "SHOP" "PAYMENT_TERMINAL" "ERROR_GROUP" "ERROR_NAME" "USER_NAME"}
+
+📝 Validating Question 2/9
+--------------------------------------------------
+  🔍 Validating Question 3916: 1 Sum of Transactions EUR split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select distinct granularity
+    from MD__FATPAY_DASHBOARD_HELP_TA...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"CREATED_AT" "BUSINESS_NAME" "HAS_ID_PROVIDER" "FIAT_CURRENCY" "groupby" "is_aft" "STATUS" "ACQUIRER" "CARD_COUNTRY" "granularity" "CARD_BRAND" "CARD_GEOSCHEME" "SHOP" "PAYMENT_TERMINAL" "ERROR_GROUP" "ERROR_NAME" "USER_NAME"}
+
+📝 Validating Question 3/9
+--------------------------------------------------
+  🔍 Validating Question 3917: 1 Number of Transactions
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"is_aft"}
+
+📝 Validating Question 4/9
+--------------------------------------------------
+  🔍 Validating Question 3918: 1 Number of Transactions split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select distinct granularity
+    from MD__FATPAY_DASHBOARD_HELP_TA...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"CREATED_AT" "BUSINESS_NAME" "HAS_ID_PROVIDER" "FIAT_CURRENCY" "groupby" "is_aft" "STATUS" "ACQUIRER" "CARD_COUNTRY" "granularity" "CARD_BRAND" "CARD_GEOSCHEME" "SHOP" "PAYMENT_TERMINAL" "ERROR_GROUP" "ERROR_NAME" "USER_NAME"}
+
+📝 Validating Question 5/9
+--------------------------------------------------
+  🔍 Validating Question 3918: 1 Number of Transactions split
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select distinct granularity
+    from MD__FATPAY_DASHBOARD_HELP_TA...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"CREATED_AT" "BUSINESS_NAME" "HAS_ID_PROVIDER" "FIAT_CURRENCY" "groupby" "is_aft" "STATUS" "ACQUIRER" "CARD_COUNTRY" "granularity" "CARD_BRAND" "CARD_GEOSCHEME" "SHOP" "PAYMENT_TERMINAL" "ERROR_GROUP" "ERROR_NAME" "USER_NAME"}
+
+📝 Validating Question 6/9
+--------------------------------------------------
+  🔍 Validating Question 3919: 1 Revenue, Acquiring Commission, GMV EUR
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"is_aft"}
+
+📝 Validating Question 7/9
+--------------------------------------------------
+  🔍 Validating Question 3920: 1 Revenue/Turnover,  GMV/Turnover
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"is_aft"}
+
+📝 Validating Question 8/9
+--------------------------------------------------
+  🔍 Validating Question 3921: 1 Stat Table 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select distinct granularity
+    from MD__FATPAY_DASHBOARD_HELP_TA...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"is_aft"}
+
+📝 Validating Question 9/9
+--------------------------------------------------
+  🔍 Validating Question 3922: 1 Sum of Transactions
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with filtered_granularity as (
+    select granularity
+    from MD__FATPAY_DASHBOARD_HELP_TABLE
+    w...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"is_aft"}
+
+🎉 Validation Summary:
+✅ Successfully validated: 0/9 questions
+⚠️  Some questions have issues. Migration may need fixes.

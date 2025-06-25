@@ -1,0 +1,381 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 35 questions
+
+📝 Validating Question 1/35
+--------------------------------------------------
+  🔍 Validating Question 3770: Top N Number of Transaction table - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 2/35
+--------------------------------------------------
+  🔍 Validating Question 3784: Turnover - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 3/35
+--------------------------------------------------
+  🔍 Validating Question 3797: Top N Turnover - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 4/35
+--------------------------------------------------
+  🔍 Validating Question 3799: Acceptance Rate - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 5/35
+--------------------------------------------------
+  🔍 Validating Question 3794: GMV  - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 6/35
+--------------------------------------------------
+  🔍 Validating Question 3795: GMV,  percent - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 7/35
+--------------------------------------------------
+  🔍 Validating Question 3777: GMV Top N - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 8/35
+--------------------------------------------------
+  🔍 Validating Question 3774: OOR share GMV from Turnover - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 9/35
+--------------------------------------------------
+  🔍 Validating Question 3796: Distribution GMV with FX mark up and without - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH 
+  main_query as (select MART__TRANSACTIONS.CREATED_AT 
+                      , MART__TRANSAC...
+    ✅ Query executed successfully!
+    📊 Rows returned: 30
+    📋 Columns: 5
+    📝 Column names: ['CREATED_AT', 'GMV_EUR', 'GMV_EUR_NO_FX_MARKUP', 'GMV_EUR_FX_MARKUP', 'SHARE_GMV_FX_MARKUP']
+    📈 First row: ['2025-05-19T00:00:00Z', 29247.575499501563, 0.0, 7183.665973782106, None]
+    📈 Second row: ['2025-05-20T00:00:00Z', 27895.64061383877, 0.0, 4900.39394182966, None]
+
+📝 Validating Question 10/35
+--------------------------------------------------
+  🔍 Validating Question 3785: Acceptance rate by parameter OOR - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 11/35
+--------------------------------------------------
+  🔍 Validating Question 3775: Revenue EUR OOR - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 12/35
+--------------------------------------------------
+  🔍 Validating Question 3782: Number of Transactions - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 13/35
+--------------------------------------------------
+  🔍 Validating Question 3780: Turnover EUR relative value - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 14/35
+--------------------------------------------------
+  🔍 Validating Question 3778: Number of OOR transaction relative value - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 15/35
+--------------------------------------------------
+  🔍 Validating Question 3802: Network fee EUR - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 16/35
+--------------------------------------------------
+  🔍 Validating Question 3788: Commission revenue EUR - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 17/35
+--------------------------------------------------
+  🔍 Validating Question 3790: Mark up revenue - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 18/35
+--------------------------------------------------
+  🔍 Validating Question 3781: FX Mark up Revenue - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 19/35
+--------------------------------------------------
+  🔍 Validating Question 3768: Share transactions with fee min (by transactions) - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 20/35
+--------------------------------------------------
+  🔍 Validating Question 3787: Share transaction with fee min (by Amount EUR) - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 21/35
+--------------------------------------------------
+  🔍 Validating Question 3791: Group failed reason - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH 
+  main_query as (select MART__TRANSACTIONS.CREATED_AT 
+                      , MART__TRANSAC...
+    ❌ SQL Error: Getting analyzing error. Detail message: Column '`TRANSACTIONs`.`status_main`' cannot be resolved.
+
+📝 Validating Question 22/35
+--------------------------------------------------
+  🔍 Validating Question 3789: Count users - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH 
+  main_query as (select MART__TRANSACTIONS.CREATED_AT 
+                      , MART__TRANSAC...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 2
+    📝 Column names: ['DT', 'COUNT_USERS']
+    📈 First row: ['2019-04-01T00:00:00Z', 2]
+    📈 Second row: ['2019-04-03T00:00:00Z', 2]
+
+📝 Validating Question 23/35
+--------------------------------------------------
+  🔍 Validating Question 3783: Share Network Fee to Turnover - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 24/35
+--------------------------------------------------
+  🔍 Validating Question 3798: Revenue Turnover share OOR - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 25/35
+--------------------------------------------------
+  🔍 Validating Question 3769: Count users number - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH 
+  main_query as (select MART__TRANSACTIONS.CREATED_AT 
+                      , MART__TRANSAC...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 1
+    📝 Column names: ['Count_users']
+    📈 First row: [3482030]
+
+📝 Validating Question 26/35
+--------------------------------------------------
+  🔍 Validating Question 3786: Slippage discount EUR - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 27/35
+--------------------------------------------------
+  🔍 Validating Question 3800: Average bill OOR transaction - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 28/35
+--------------------------------------------------
+  🔍 Validating Question 3801: Median bill OOR transaction - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 29/35
+--------------------------------------------------
+  🔍 Validating Question 3771: Acceptance Rate by user - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 30/35
+--------------------------------------------------
+  🔍 Validating Question 3792: End-to-end Success Rate - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select date_trunc({{granularity}}, CREATED_AT) as DT
+, count(case when T_CONFIRMED then 1 end)/count...
+    ✅ Query executed successfully!
+    📊 Rows returned: 535
+    📋 Columns: 2
+    📝 Column names: ['DT', 'END_TO_END_SUCCESS_RATE']
+    📈 First row: ['2025-05-07T00:00:00Z', 0.16078624747071127]
+    📈 Second row: ['2025-06-11T00:00:00Z', 0.15474465375664165]
+
+📝 Validating Question 31/35
+--------------------------------------------------
+  🔍 Validating Question 3773: End-to-end Success Rate by parameter - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD__...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'TOP_N_PARAMETER', 'END_TO_END_SUCCESS_RATE']
+    📈 First row: ['2024-01-01T00:00:00Z', 'Metamask', 0.2945083014048531]
+    📈 Second row: ['2024-01-01T00:00:00Z', 'StealthEx', 0.19672131147540983]
+
+📝 Validating Question 32/35
+--------------------------------------------------
+  🔍 Validating Question 3779: Users per group - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Getting analyzing error from line 14, column 17 to line 14, column 53. Detail message: No matching function with signature: to_char(tinyint(4)).
+
+📝 Validating Question 33/35
+--------------------------------------------------
+  🔍 Validating Question 3776: Median transactions per user - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"GRANULARITY"}
+
+📝 Validating Question 34/35
+--------------------------------------------------
+  🔍 Validating Question 3772: Median revenue per user - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"GRANULARITY"}
+
+📝 Validating Question 35/35
+--------------------------------------------------
+  🔍 Validating Question 3793: Median GMV per user - Duplicate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"GRANULARITY"}
+
+🎉 Validation Summary:
+✅ Successfully validated: 5/35 questions
+⚠️  Some questions have issues. Migration may need fixes.

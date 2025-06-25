@@ -1,0 +1,511 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 35 questions
+
+📝 Validating Question 1/35
+--------------------------------------------------
+  🔍 Validating Question 3848: Top N Number of Transaction table
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 6
+    📋 Columns: 3
+    📝 Column names: ['TOP_N_PARAMETER', 'TR', 'percent_tr']
+    📈 First row: ['others', 167401, 0.26291726479725336]
+    📈 Second row: ['TrustWallet', 157741, 0.24774542724585602]
+
+📝 Validating Question 2/35
+--------------------------------------------------
+  🔍 Validating Question 3862: Turnover
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 150
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'TURNOVER']
+    📈 First row: ['2025-05-19T00:00:00Z', 'others', 746111.3736554442]
+    📈 Second row: ['2025-05-19T00:00:00Z', 'TrustWallet', 637439.2999862768]
+
+📝 Validating Question 3/35
+--------------------------------------------------
+  🔍 Validating Question 3875: Top N Turnover
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 6
+    📋 Columns: 3
+    📝 Column names: ['TOP_N_PARAMETER', 'SUM_TRANSACTIONS', 'percent']
+    📈 First row: ['TrustWallet', 43900734, None]
+    📈 Second row: ['others', 33772982, None]
+
+📝 Validating Question 4/35
+--------------------------------------------------
+  🔍 Validating Question 3877: Acceptance Rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 150
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'TOP_N_PARAMETER', 'TR']
+    📈 First row: ['2025-05-19T00:00:00Z', 'others', 0.565018315018315]
+    📈 Second row: ['2025-05-19T00:00:00Z', 'TrustWallet', 0.6385814321210752]
+
+📝 Validating Question 5/35
+--------------------------------------------------
+  🔍 Validating Question 3872: GMV 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'GMV']
+    📈 First row: ['2019-04-01T00:00:00Z', 'MercuryoWidget', 0.0]
+    📈 Second row: ['2019-04-03T00:00:00Z', 'MercuryoWidget', 0.7551466666666666]
+
+📝 Validating Question 6/35
+--------------------------------------------------
+  🔍 Validating Question 3873: GMV,  percent
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 180
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'GMV']
+    📈 First row: ['2025-05-19T00:00:00Z', 'MercuryoWidget', 7615.741739758459]
+    📈 Second row: ['2025-05-19T00:00:00Z', 'TrustWallet', 7419.851600920729]
+
+📝 Validating Question 7/35
+--------------------------------------------------
+  🔍 Validating Question 3855: GMV Top N
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 6
+    📋 Columns: 3
+    📝 Column names: ['TOP_N_PARAMETER', 'SUM_TRANSACTIONS', 'percent']
+    📈 First row: ['TrustWallet', 253107, None]
+    📈 Second row: ['MercuryoWidget', 239537, None]
+
+📝 Validating Question 8/35
+--------------------------------------------------
+  🔍 Validating Question 3852: OOR share GMV from Turnover
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'TOP_N_PARAMETER', 'SHARE_GMV']
+    📈 First row: ['2019-04-03T00:00:00Z', 'MercuryoWidget', 0.07551466666666666]
+    📈 Second row: ['2019-04-05T00:00:00Z', 'MercuryoWidget', 0.03613110214421876]
+
+📝 Validating Question 9/35
+--------------------------------------------------
+  🔍 Validating Question 3874: Distribution GMV with FX mark up and without
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH 
+  main_query as (select MART__TRANSACTIONS.CREATED_AT 
+                      , MART__TRANSAC...
+    ✅ Query executed successfully!
+    📊 Rows returned: 30
+    📋 Columns: 5
+    📝 Column names: ['CREATED_AT', 'GMV_EUR', 'GMV_EUR_NO_FX_MARKUP', 'GMV_EUR_FX_MARKUP', 'SHARE_GMV_FX_MARKUP']
+    📈 First row: ['2025-05-19T00:00:00Z', 29247.575499501563, 0.0, 7183.665973782106, None]
+    📈 Second row: ['2025-05-20T00:00:00Z', 27895.64061383877, 0.0, 4900.39394182966, None]
+
+📝 Validating Question 10/35
+--------------------------------------------------
+  🔍 Validating Question 3863: Acceptance rate by parameter OOR
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 5
+    📋 Columns: 3
+    📝 Column names: ['TOP_N_PARAMETER', 'COUNT_TRANSACTIONS', 'acceptance_rate']
+    📈 First row: ['others', 264904, 0.7174362265970096]
+    📈 Second row: ['TrustWallet', 214041, 0.7731382315863997]
+
+📝 Validating Question 11/35
+--------------------------------------------------
+  🔍 Validating Question 3853: Revenue EUR OOR
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 150
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'REVENUE']
+    📈 First row: ['2025-05-19T00:00:00Z', 'others', 33971.692202378574]
+    📈 Second row: ['2025-05-19T00:00:00Z', 'TrustWallet', 23440.22758568278]
+
+📝 Validating Question 12/35
+--------------------------------------------------
+  🔍 Validating Question 3860: Number of Transactions
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 150
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'NUMBER_OF_ACCEPANCE_TRANSACTION']
+    📈 First row: ['2025-05-26T00:00:00Z', 'PrimeFin Solutions inc.', 163]
+    📈 Second row: ['2025-05-25T00:00:00Z', 'PrimeFin Solutions inc.', 170]
+
+📝 Validating Question 13/35
+--------------------------------------------------
+  🔍 Validating Question 3858: Turnover EUR relative value
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 150
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'TURNOVER']
+    📈 First row: ['2025-06-15T00:00:00Z', 'MercuryoWidget', 69233.73542680815]
+    📈 Second row: ['2025-06-08T00:00:00Z', 'MercuryoWidget', 73278.60890044011]
+
+📝 Validating Question 14/35
+--------------------------------------------------
+  🔍 Validating Question 3856: Number of OOR transaction relative value
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 150
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'NUMBER_OF_ACCEPANCE_TRANSACTION']
+    📈 First row: ['2025-05-26T00:00:00Z', 'PrimeFin Solutions inc.', 163]
+    📈 Second row: ['2025-05-25T00:00:00Z', 'PrimeFin Solutions inc.', 170]
+
+📝 Validating Question 15/35
+--------------------------------------------------
+  🔍 Validating Question 3880: Network fee EUR
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'FEE_BLOCKCHAIN_EUR']
+    📈 First row: ['2019-04-03T00:00:00Z', 'MercuryoWidget', 0.0]
+    📈 Second row: ['2019-04-05T00:00:00Z', 'MercuryoWidget', 0.0]
+
+📝 Validating Question 16/35
+--------------------------------------------------
+  🔍 Validating Question 3866: Commission revenue EUR
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'COMMISSION_REVENUE']
+    📈 First row: ['2019-04-03T00:00:00Z', 'MercuryoWidget', 0.38]
+    📈 Second row: ['2019-04-05T00:00:00Z', 'MercuryoWidget', 1.152084]
+
+📝 Validating Question 17/35
+--------------------------------------------------
+  🔍 Validating Question 3868: Mark up revenue
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'MARK_UP_REVENUE']
+    📈 First row: ['2019-04-03T00:00:00Z', 'MercuryoWidget', 0.0]
+    📈 Second row: ['2019-04-05T00:00:00Z', 'MercuryoWidget', 0.0]
+
+📝 Validating Question 18/35
+--------------------------------------------------
+  🔍 Validating Question 3859: FX Mark up Revenue
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'FX_MARK_UP_REVENUE']
+    📈 First row: ['2019-04-03T00:00:00Z', 'MercuryoWidget', None]
+    📈 Second row: ['2019-04-05T00:00:00Z', 'MercuryoWidget', None]
+
+📝 Validating Question 19/35
+--------------------------------------------------
+  🔍 Validating Question 3846: Share transactions with fee min (by transactions)
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'TOP_N_PARAMETER', 'SHARE_TRANSACTION_FEE_MIN']
+    📈 First row: ['2019-04-03T00:00:00Z', 'MercuryoWidget', 0.0]
+    📈 Second row: ['2019-04-05T00:00:00Z', 'MercuryoWidget', 0.0]
+
+📝 Validating Question 20/35
+--------------------------------------------------
+  🔍 Validating Question 3865: Share transaction with fee min (by Amount EUR)
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'TOP_N_PARAMETER', 'SHARE_TRANSACTION_FEE_MIN']
+    📈 First row: ['2019-04-03T00:00:00Z', 'MercuryoWidget', None]
+    📈 Second row: ['2019-04-05T00:00:00Z', 'MercuryoWidget', None]
+
+📝 Validating Question 21/35
+--------------------------------------------------
+  🔍 Validating Question 3869: Group failed reason
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH 
+  main_query as (select MART__TRANSACTIONS.CREATED_AT 
+                      , MART__TRANSAC...
+    ❌ SQL Error: Getting analyzing error. Detail message: Column '`TRANSACTIONs`.`status_main`' cannot be resolved.
+
+📝 Validating Question 22/35
+--------------------------------------------------
+  🔍 Validating Question 3867: Count users
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH 
+  main_query as (select MART__TRANSACTIONS.CREATED_AT 
+                      , MART__TRANSAC...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 2
+    📝 Column names: ['DT', 'COUNT_USERS']
+    📈 First row: ['2019-04-01T00:00:00Z', 2]
+    📈 Second row: ['2019-04-03T00:00:00Z', 2]
+
+📝 Validating Question 23/35
+--------------------------------------------------
+  🔍 Validating Question 3861: Share Network Fee to Turnover
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'TOP_N_PARAMETER', 'SHARE_NETWORK_FEE']
+    📈 First row: ['2019-04-03T00:00:00Z', '0', 0.0]
+    📈 Second row: ['2019-04-03T00:00:00Z', '\x01', 0.0]
+
+📝 Validating Question 24/35
+--------------------------------------------------
+  🔍 Validating Question 3876: Revenue Turnover share OOR
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'TOP_N_PARAMETER', 'SHARE_REVENUE']
+    📈 First row: ['2019-04-03T00:00:00Z', 'MercuryoWidget', 0.038]
+    📈 Second row: ['2019-04-05T00:00:00Z', 'MercuryoWidget', 0.03801253794377722]
+
+📝 Validating Question 25/35
+--------------------------------------------------
+  🔍 Validating Question 3847: Count users number
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH 
+  main_query as (select MART__TRANSACTIONS.CREATED_AT 
+                      , MART__TRANSAC...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 1
+    📝 Column names: ['Count_users']
+    📈 First row: [3482030]
+
+📝 Validating Question 26/35
+--------------------------------------------------
+  🔍 Validating Question 3864: Slippage discount EUR
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'SLIPPAGE_DISCOUNT_EUR']
+    📈 First row: ['2019-04-03T00:00:00Z', 'MercuryoWidget', 0.0]
+    📈 Second row: ['2019-04-05T00:00:00Z', 'MercuryoWidget', 0.0]
+
+📝 Validating Question 27/35
+--------------------------------------------------
+  🔍 Validating Question 3878: Average bill OOR transaction
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 60
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'AVG_BILL']
+    📈 First row: ['2025-05-19T00:00:00Z', '\x01', 101.9299284285591]
+    📈 Second row: ['2025-05-19T00:00:00Z', '\x00', 0.0]
+
+📝 Validating Question 28/35
+--------------------------------------------------
+  🔍 Validating Question 3879: Median bill OOR transaction
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 60
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'MEDIAN_BILL']
+    📈 First row: ['2025-05-19T00:00:00Z', '\x00', 0.0]
+    📈 Second row: ['2025-05-19T00:00:00Z', '\x01', 0.0]
+
+📝 Validating Question 29/35
+--------------------------------------------------
+  🔍 Validating Question 3849: Acceptance Rate by user
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 150
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'TOP_N_PARAMETER', 'AR']
+    📈 First row: ['2025-05-19T00:00:00Z', 'others', 0.7002779883750316]
+    📈 Second row: ['2025-05-19T00:00:00Z', 'TrustWallet', 0.7631896898912606]
+
+📝 Validating Question 30/35
+--------------------------------------------------
+  🔍 Validating Question 3870: End-to-end Success Rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select date_trunc({{granularity}}, CREATED_AT) as DT
+, count(case when T_CONFIRMED then 1 end)/count...
+    ✅ Query executed successfully!
+    📊 Rows returned: 535
+    📋 Columns: 2
+    📝 Column names: ['DT', 'END_TO_END_SUCCESS_RATE']
+    📈 First row: ['2024-06-11T00:00:00Z', 0.08819166675191555]
+    📈 Second row: ['2024-05-07T00:00:00Z', 0.17081168554637594]
+
+📝 Validating Question 31/35
+--------------------------------------------------
+  🔍 Validating Question 3851: End-to-end Success Rate by parameter
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD__...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 3
+    📝 Column names: ['CREATED_AT', 'TOP_N_PARAMETER', 'END_TO_END_SUCCESS_RATE']
+    📈 First row: ['2024-01-01T00:00:00Z', 'Metamask', 0.2945083014048531]
+    📈 Second row: ['2024-01-01T00:00:00Z', 'StealthEx', 0.19672131147540983]
+
+📝 Validating Question 32/35
+--------------------------------------------------
+  🔍 Validating Question 3857: Users per group
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ✅ Query executed successfully!
+    📊 Rows returned: 150
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'NUMBER_OF_ACCEPANCE_TRANSACTION']
+    📈 First row: ['2025-06-15T00:00:00Z', 'MercuryoWidget', 618]
+    📈 Second row: ['2025-06-14T00:00:00Z', 'MercuryoWidget', 696]
+
+📝 Validating Question 33/35
+--------------------------------------------------
+  🔍 Validating Question 3854: Median transactions per user
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"GRANULARITY"}
+
+📝 Validating Question 34/35
+--------------------------------------------------
+  🔍 Validating Question 3850: Median revenue per user
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"GRANULARITY"}
+
+📝 Validating Question 35/35
+--------------------------------------------------
+  🔍 Validating Question 3871: Median GMV per user
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH group_by_parameter as (
+    select TRANSACTION_COLUMNS_GROUPBY as parameter_group
+    from MD...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"GRANULARITY"}
+
+🎉 Validation Summary:
+✅ Successfully validated: 31/35 questions
+⚠️  Some questions have issues. Migration may need fixes.

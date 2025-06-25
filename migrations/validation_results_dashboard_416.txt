@@ -1,0 +1,108 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 8 questions
+
+📝 Validating Question 1/8
+--------------------------------------------------
+  🔍 Validating Question 4179: Pay-In Acceptance Rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with fatpay1 as (
+    select 
+        fatpay_country as card_country,
+        card_bank,
+        car...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 3
+    📝 Column names: ['ar_period1', 'ar_period2', 'DELTA_AR']
+    📈 First row: [0.6297676124369387, 0.6856443220079583, 0.055876709571019645]
+
+📝 Validating Question 2/8
+--------------------------------------------------
+  🔍 Validating Question 4172: OOR Acceptance Rate compare Country
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH oor1 as (
+    select 
+        card_isocountry as card_country,
+        card_bank_title as ca...
+    ❌ SQL Error: Getting syntax error at line 113, column 15. Detail message: Unexpected input '(', the most similar input is {<EOF>, ';'}.
+
+📝 Validating Question 3/8
+--------------------------------------------------
+  🔍 Validating Question 4173: Pay-In Acceptance Rate compare Country
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with fatpay1 as (
+    select 
+        fatpay_country as card_country,
+        card_bank,
+        car...
+    ❌ SQL Error: Getting syntax error at line 101, column 15. Detail message: Unexpected input '(', the most similar input is {<EOF>, ';'}.
+
+📝 Validating Question 4/8
+--------------------------------------------------
+  🔍 Validating Question 4174: OOR Acceptance Rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH oor1 as (
+    select 
+        card_isocountry as card_country,
+        card_bank_title as ca...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 3
+    📝 Column names: ['AR_PERIOD1', 'ar_period2', 'delta_ar']
+    📈 First row: [0.6733436055469953, 0.6442157096543412, -0.029127895892654188]
+
+📝 Validating Question 5/8
+--------------------------------------------------
+  🔍 Validating Question 4175: OOR Acceptance Rate compare Bank
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH oor1 as (
+    select 
+        card_isocountry as card_country,
+        card_bank_title as ca...
+    ❌ SQL Error: Getting syntax error at line 113, column 15. Detail message: Unexpected input '(', the most similar input is {<EOF>, ';'}.
+
+📝 Validating Question 6/8
+--------------------------------------------------
+  🔍 Validating Question 4176: OOR Acceptance Rate compare BIN
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH oor1 as (
+    select 
+        card_isocountry as card_country,
+        card_bank_title as ca...
+    ❌ SQL Error: Getting syntax error at line 113, column 15. Detail message: Unexpected input '(', the most similar input is {<EOF>, ';'}.
+
+📝 Validating Question 7/8
+--------------------------------------------------
+  🔍 Validating Question 4177: Pay-In Acceptance Rate compare Bank
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with fatpay1 as (
+    select 
+        fatpay_country as card_country,
+        card_bank,
+        car...
+    ❌ SQL Error: Getting syntax error at line 101, column 15. Detail message: Unexpected input '(', the most similar input is {<EOF>, ';'}.
+
+📝 Validating Question 8/8
+--------------------------------------------------
+  🔍 Validating Question 4178: Pay-In Acceptance Rate compare BIN
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with fatpay1 as (
+    select 
+        fatpay_country as card_country,
+        card_bank,
+        car...
+    ❌ SQL Error: Getting syntax error at line 101, column 15. Detail message: Unexpected input '(', the most similar input is {<EOF>, ';'}.
+
+🎉 Validation Summary:
+✅ Successfully validated: 2/8 questions
+⚠️  Some questions have issues. Migration may need fixes.

@@ -1,0 +1,53 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 3 questions
+
+📝 Validating Question 1/3
+--------------------------------------------------
+  🔍 Validating Question 4114: Acceptance Rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH pre_top_n as (
+    select CASE 
+        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Partner Widge...
+    ✅ Query executed successfully!
+    📊 Rows returned: 30
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'ar']
+    📈 First row: ['2025-05-23T00:00:00Z', 'blik_hyperion_mobilum', 0.8008130081300813]
+    📈 Second row: ['2025-05-24T00:00:00Z', 'blik_hyperion_mobilum', 0.7892156862745098]
+
+📝 Validating Question 2/3
+--------------------------------------------------
+  🔍 Validating Question 4115: Turnover
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH pre_top_n as (
+    select CASE 
+        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Partner Widge...
+    ✅ Query executed successfully!
+    📊 Rows returned: 30
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'turnover']
+    📈 First row: ['2025-05-23T00:00:00Z', 'blik_hyperion_mobilum', 8497.022822500001]
+    📈 Second row: ['2025-05-24T00:00:00Z', 'blik_hyperion_mobilum', 8348.3259495]
+
+📝 Validating Question 3/3
+--------------------------------------------------
+  🔍 Validating Question 4116: Count
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH pre_top_n as (
+    select CASE 
+        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Partner Widge...
+    ✅ Query executed successfully!
+    📊 Rows returned: 30
+    📋 Columns: 3
+    📝 Column names: ['DT', 'PARAMETER_TOPN', 'N']
+    📈 First row: ['2025-05-23T00:00:00Z', 'blik_hyperion_mobilum', 197]
+    📈 Second row: ['2025-05-24T00:00:00Z', 'blik_hyperion_mobilum', 161]
+
+🎉 Validation Summary:
+✅ Successfully validated: 3/3 questions
+🎊 All questions are working correctly! Migration successful!

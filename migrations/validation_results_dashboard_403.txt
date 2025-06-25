@@ -1,0 +1,382 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 27 questions
+
+📝 Validating Question 1/27
+--------------------------------------------------
+  🔍 Validating Question 3982: Turnover First period time
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 234
+    📋 Columns: 3
+    📝 Column names: ['DT', 'TURNOVER_EUR_NEW', 'TURNOVER_EUR_OLD']
+    📈 First row: ['2024-10-28T00:00:00Z', 1656831.1037851423, 11715260.002108963]
+    📈 Second row: ['2025-05-26T00:00:00Z', 1749646.0260866953, 12317388.542323686]
+
+📝 Validating Question 2/27
+--------------------------------------------------
+  🔍 Validating Question 3970: Turnover Second period time
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 3
+    📝 Column names: ['DT', 'TURNOVER_EUR_NEW', 'TURNOVER_EUR_OLD']
+    📈 First row: ['2025-01-27T00:00:00Z', 2386563.6890847078, 14612227.244964423]
+    📈 Second row: ['2024-02-26T00:00:00Z', 2695360.973784456, 10512143.714664185]
+
+📝 Validating Question 3/27
+--------------------------------------------------
+  🔍 Validating Question 3980: Share user based Turnover First period time by wallet
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select w.ADDRESS, min(tr.CREATED_AT) as first_tr
+    from MART__TRANSACTIONS as tr
+  ...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"granularity"}
+
+📝 Validating Question 4/27
+--------------------------------------------------
+  🔍 Validating Question 3966: Share user based Turnover Second period time by wallet
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select w.ADDRESS, min(tr.CREATED_AT) as first_tr
+    from MART__TRANSACTIONS as tr
+  ...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 4
+    📝 Column names: ['DT', 'TURNOVER_EUR', 'TURNOVER_EUR_ONLY_NEW_USERS', 'TURNOVER_EUR_ONLY_OLD_USERS']
+    📈 First row: ['2024-05-20T00:00:00Z', 0.0, 0.0, 0.0]
+    📈 Second row: ['2024-12-23T00:00:00Z', 0.0330374776891479, 0.0009679347847622211, 0.04293824446051132]
+
+📝 Validating Question 5/27
+--------------------------------------------------
+  🔍 Validating Question 3972: Share user fast track Turnover First period time 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 4
+    📝 Column names: ['DT', 'TURNOVER_EUR', 'TURNOVER_EUR_ONLY_NEW_USERS', 'TURNOVER_EUR_ONLY_OLD_USERS']
+    📈 First row: ['2025-01-27T00:00:00Z', 0.022009145755045065, 0.0968737520023414, 0.009781771246376381]
+    📈 Second row: ['2024-02-26T00:00:00Z', 0.0, 0.0, 0.0]
+
+📝 Validating Question 6/27
+--------------------------------------------------
+  🔍 Validating Question 3963: Share user fast track Turnover Second period time
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 4
+    📝 Column names: ['DT', 'TURNOVER_EUR', 'TURNOVER_EUR_ONLY_NEW_USERS', 'TURNOVER_EUR_ONLY_OLD_USERS']
+    📈 First row: ['2024-09-02T00:00:00Z', 0.011335931419812836, 0.04319327102780659, 0.007195010099620776]
+    📈 Second row: ['2024-04-08T00:00:00Z', 0.0, 0.0, 0.0]
+
+📝 Validating Question 7/27
+--------------------------------------------------
+  🔍 Validating Question 3961: Count new users first period by user id
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 234
+    📋 Columns: 4
+    📝 Column names: ['DT', 'COUNT_USERS', 'SHARE_NEW_USERS', 'COUNT_NEW_USERS']
+    📈 First row: ['2024-06-17T00:00:00Z', 25543, 0.41338135692753397, 10559]
+    📈 Second row: ['2023-10-16T00:00:00Z', 21443, 0.421069812992585, 9029]
+
+📝 Validating Question 8/27
+--------------------------------------------------
+  🔍 Validating Question 3983: Count new users second period by user_id
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 4
+    📝 Column names: ['DT', 'COUNT_USERS', 'SHARE_NEW_USERS', 'COUNT_NEW_USERS']
+    📈 First row: ['2024-12-23T00:00:00Z', 36481, 0.43874893780324004, 16006]
+    📈 Second row: ['2024-05-20T00:00:00Z', 25963, 0.4125871432423064, 10712]
+
+📝 Validating Question 9/27
+--------------------------------------------------
+  🔍 Validating Question 3971: AR second period
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where TYP...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 4
+    📝 Column names: ['DT', 'AR', 'AR_NEW', 'AN_OLD']
+    📈 First row: ['2025-01-13T00:00:00Z', 0.590655269873501, 0.4851012713136908, 0.6179719005552533]
+    📈 Second row: ['2025-04-21T00:00:00Z', 0.6059703816140269, 0.4369208838203849, 0.642443958123854]
+
+📝 Validating Question 10/27
+--------------------------------------------------
+  🔍 Validating Question 3981: AR first period
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where TYP...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 4
+    📝 Column names: ['DT', 'AR', 'AR_NEW', 'AN_OLD']
+    📈 First row: ['2024-08-05T00:00:00Z', 0.5424462024508009, 0.42754113139508676, 0.5761323216861765]
+    📈 Second row: ['2024-02-12T00:00:00Z', 0.5762425878609652, 0.4681221537637289, 0.6103769795124426]
+
+📝 Validating Question 11/27
+--------------------------------------------------
+  🔍 Validating Question 3984: Ration rate and Revenue first period
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select date_trunc({{granularity}}, MART__TRANSACTIONS.CREATED_AT) as DT
+     , avg(RATIO_RATE) as AV...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 3
+    📝 Column names: ['DT', 'AVG_RATIO_RATE', 'REVENUE_PERCENT']
+    📈 First row: ['2025-06-09T00:00:00Z', 0.9996533483203065, 0.038385460552975134]
+    📈 Second row: ['2024-10-28T00:00:00Z', 0.9965100614702623, 0.03705315293421141]
+
+📝 Validating Question 12/27
+--------------------------------------------------
+  🔍 Validating Question 3975: Ration rate and Revenue second period
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select date_trunc({{granularity}}, MART__TRANSACTIONS.CREATED_AT) as DT
+     , avg(RATIO_RATE) as AV...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 3
+    📝 Column names: ['DT', 'AVG_RATIO_RATE', 'REVENUE_PERCENT']
+    📈 First row: ['2024-03-25T00:00:00Z', 0.9958284322865472, 0.03910884815455112]
+    📈 Second row: ['2025-06-02T00:00:00Z', 0.999884682575638, 0.03766122373429993]
+
+📝 Validating Question 13/27
+--------------------------------------------------
+  🔍 Validating Question 3977: Conversion rate from calculation first period
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID
+              , coalesce(min(case when t_confirmed then CREATED_AT end...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 4
+    📝 Column names: ['dt', 'Conversion_rate', 'Conversion_rate_new_users', 'Conversion_rate_old_users']
+    📈 First row: ['2025-01-27T00:00:00Z', 0.1838099653747127, 0.18828797126597177, 0.25541411035821604]
+    📈 Second row: ['2024-02-26T00:00:00Z', 0.15922016877220688, 0.20771019033056104, 0.21433059087509349]
+
+📝 Validating Question 14/27
+--------------------------------------------------
+  🔍 Validating Question 3979: Conversion rate from calculation second period
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID
+              , coalesce(min(case when t_confirmed then CREATED_AT end...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 4
+    📝 Column names: ['DT', 'CONVERSION_RATE', 'CONVERSION_RATE_NEW_USERS', 'CONVERSION_RATE_OLD_USERS']
+    📈 First row: ['2024-09-02T00:00:00Z', 0.09829097767382368, 0.12518533219701833, 0.184885172752579]
+    📈 Second row: ['2024-10-28T00:00:00Z', 0.11268742665121331, 0.19405427098447195, 0.2545981199896241]
+
+📝 Validating Question 15/27
+--------------------------------------------------
+  🔍 Validating Question 3976: Compare users after first transactions
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ❌ SQL Error: Getting syntax error at line 17, column 198. Detail message: No viable statement for input 'cast(count(distinct case when first_tr = MART__TRANSACTIONS.CREATED_AT then users.USER_ID end as'.
+
+📝 Validating Question 16/27
+--------------------------------------------------
+  🔍 Validating Question 3978: Summarise table for Turnover EUR
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH us_tr AS (select USER_ID
+                    , MART__TRANSACTIONS.iD
+                    , sum(...
+    ✅ Query executed successfully!
+    📊 Rows returned: 49
+    📋 Columns: 16
+    📝 Column names: ['PERIOD', 'USER_BASED_SELECTIVE', 'IS_FAST_TRACK_KYC', 'SUM_TR', 'type_user', 'TURNOVER_EUR_1', 'REVENUE_EUR_1', 'SUM_GMV_1', 'FEE_MERCURIO_FIAT_EUR_1', 'Mark_up_Revenue_EUR_1', 'count_users_1', 'share_turn_1', 'Rev_Turn_1', 'share_users_1', 'avg_day_TURN_1', 'avg_day_Rev_1']
+    📈 First row: ['PERIOD 1', '1', '0', 'more 700 EUR', 'new', 1132091.051790205, 5258.459903529, -17088.259555305285, 1210.2472001779, 4037.5344978268, 884, None, 0.004644909202112727, 0.0002879314697044957, 9675.991895642777, 44.944101739564104]
+    📈 Second row: ['PERIOD 1', '1', '0', 'more 700 EUR', 'old', 35443284.03974539, 1086733.797938097, 86469.16162370812, 1426256.7374652645, -366655.80783499277, 6009, None, 0.030661205037831624, 0.0019572174224596318, 114703.18459464527, 3516.937857404845]
+
+📝 Validating Question 17/27
+--------------------------------------------------
+  🔍 Validating Question 3973: Revenue First period time
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 234
+    📋 Columns: 3
+    📝 Column names: ['DT', 'REVENUE_EUR_NEW', 'REVENUE_EUR_OLD']
+    📈 First row: ['2024-11-11T00:00:00Z', 112834.9775950037, 570217.4743700492]
+    📈 Second row: ['2024-12-16T00:00:00Z', 98649.41451973771, 563519.8071104918]
+
+📝 Validating Question 18/27
+--------------------------------------------------
+  🔍 Validating Question 3962: Revenue Second period time
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 3
+    📝 Column names: ['DT', 'REVENUE_EUR_NEW', 'REVENUE_EUR_OLD']
+    📈 First row: ['2024-08-05T00:00:00Z', 57830.5047071055, 333485.4571954616]
+    📈 Second row: ['2025-01-06T00:00:00Z', 84510.5715633787, 482043.4326755727]
+
+📝 Validating Question 19/27
+--------------------------------------------------
+  🔍 Validating Question 3965: GMV First period time
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 234
+    📋 Columns: 3
+    📝 Column names: ['DT', 'GMV_EUR_NEW', 'GMV_EUR_OLD']
+    📈 First row: ['2024-10-07T00:00:00Z', 23032.978217114927, 118843.66286258875]
+    📈 Second row: ['2024-06-03T00:00:00Z', 11004.70423064891, 86302.26711156404]
+
+📝 Validating Question 20/27
+--------------------------------------------------
+  🔍 Validating Question 3985: GMV Second period time
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 3
+    📝 Column names: ['DT', 'GMV_EUR_NEW', 'GMV_EUR_OLD']
+    📈 First row: ['2024-09-23T00:00:00Z', 22580.445500426158, 138677.90952474927]
+    📈 Second row: ['2024-06-24T00:00:00Z', 12082.534839071259, 81159.17897937969]
+
+📝 Validating Question 21/27
+--------------------------------------------------
+  🔍 Validating Question 3987: Count new wallets first period by wallet
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select w.ADDRESS, min(tr.CREATED_AT) as first_tr
+    from MART__TRANSACTIONS as tr
+  ...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 4
+    📝 Column names: ['DT', 'COUNT_WALLETS', 'SHARE_NEW_WALLETS', 'COUNT_NEW_WALLETS']
+    📈 First row: ['2024-05-27T00:00:00Z', 28115, 0.5210030232971723, 14648]
+    📈 Second row: ['2024-12-30T00:00:00Z', 39043, 0.5460645954460467, 21320]
+
+📝 Validating Question 22/27
+--------------------------------------------------
+  🔍 Validating Question 3974: Count new wallets second period by wallet
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select w.ADDRESS, min(tr.CREATED_AT) as first_tr
+    from MART__TRANSACTIONS as tr
+  ...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 4
+    📝 Column names: ['DT', 'COUNT_WALLETS', 'SHARE_NEW_WALLETS', 'COUNT_NEW_WALLETS']
+    📈 First row: ['2024-01-22T00:00:00Z', 21532, 0.5046906929221624, 10867]
+    📈 Second row: ['2024-07-15T00:00:00Z', 25626, 0.5065948645906502, 12982]
+
+📝 Validating Question 23/27
+--------------------------------------------------
+  🔍 Validating Question 3967: Count transactions First period time
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 234
+    📋 Columns: 3
+    📝 Column names: ['DT', 'COUNT_TR_NEW', 'COUNT_TR_OLD']
+    📈 First row: ['2024-12-23T00:00:00Z', 16005, 58136]
+    📈 Second row: ['2024-05-20T00:00:00Z', 10711, 36846]
+
+📝 Validating Question 24/27
+--------------------------------------------------
+  🔍 Validating Question 3968: Count transactions Second period time
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ✅ Query executed successfully!
+    📊 Rows returned: 77
+    📋 Columns: 3
+    📝 Column names: ['DT', 'COUNT_TR_NEW', 'COUNT_TR_OLD']
+    📈 First row: ['2024-12-02T00:00:00Z', 22216, 69301]
+    📈 Second row: ['2024-04-22T00:00:00Z', 14431, 43172]
+
+📝 Validating Question 25/27
+--------------------------------------------------
+  🔍 Validating Question 3964: Compare users after first transactions no granularity
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH users AS (select USER_ID, min(CREATED_AT) as first_tr
+    from MART__TRANSACTIONS
+    where con...
+    ❌ SQL Error: Getting syntax error at line 20, column 214. Detail message: No viable statement for input 'cast(count(distinct case when first_tr = MART__TRANSACTIONS.CREATED_AT then user_filtered.USER_ID end as'.
+
+📝 Validating Question 26/27
+--------------------------------------------------
+  🔍 Validating Question 3969: SumSub cost First period time 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select date_trunc({{granularity}}, dt_sumsub_cost) as DT
+     , sum(case when transaction_id = 'no t...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"geo_card" "FIAT_CURRENCY" "card_country" "widget_id" "partner_name" "network" "acquirer_name" "pay_system" "FIRST_PERIOD_TIME" "CRYPTO_CURRENCY" "REGION"}
+
+📝 Validating Question 27/27
+--------------------------------------------------
+  🔍 Validating Question 3986: SumSub cost Second period time 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select date_trunc({{granularity}}, dt_sumsub_cost) as DT
+     , sum(case when transaction_id = 'no t...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"geo_card" "FIAT_CURRENCY" "card_country" "widget_id" "partner_name" "network" "acquirer_name" "Senond_PERIOD_TIME" "pay_system" "CRYPTO_CURRENCY" "REGION"}
+
+🎉 Validation Summary:
+✅ Successfully validated: 22/27 questions
+⚠️  Some questions have issues. Migration may need fixes.

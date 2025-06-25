@@ -1,0 +1,440 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 38 questions
+
+📝 Validating Question 1/38
+--------------------------------------------------
+  🔍 Validating Question 4019: Count calculation 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(1) AS count_calculations_1
+from MART__CALCULATIONS_UNIQ
+where {{FIRST_period}} and
+{{Pa...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 1
+    📝 Column names: ['count_calculations_1']
+    📈 First row: [38780919]
+
+📝 Validating Question 2/38
+--------------------------------------------------
+  🔍 Validating Question 4012: Count calculation 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(1) AS count_calculations_2
+from MART__CALCULATIONS_UNIQ
+where {{Second_period}} and
+{{P...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 1
+    📝 Column names: ['count_calculations_2']
+    📈 First row: [38780919]
+
+📝 Validating Question 3/38
+--------------------------------------------------
+  🔍 Validating Question 4014: Change count calculations
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select (count(case when {{First_period}} then 1 end)-count(case when {{Second_period}} then 1 end))/...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 1
+    📝 Column names: ['count_calculations_change']
+    📈 First row: [0.0]
+
+📝 Validating Question 4/38
+--------------------------------------------------
+  🔍 Validating Question 4021: Conversion calculation 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(case when T_CONFIRMED then 1 end)/count(1) AS count_calculations_1
+from MART__CALCULATI...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 1
+    📝 Column names: ['count_calculations_1']
+    📈 First row: [0.12285918237265084]
+
+📝 Validating Question 5/38
+--------------------------------------------------
+  🔍 Validating Question 4025: Conversion calculation 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(case when t_confirmed then 1 end)/count(1) AS count_calculations_2
+from MART__CALCULATI...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 1
+    📝 Column names: ['count_calculations_2']
+    📈 First row: [0.12285918237265084]
+
+📝 Validating Question 6/38
+--------------------------------------------------
+  🔍 Validating Question 3989: Change conversion calculation
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(case when {{First_period}} and t_confirmed then 1 end)/count(case when {{First_period}}...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 1
+    📝 Column names: ['count_calculations_change']
+    📈 First row: [0.0]
+
+📝 Validating Question 7/38
+--------------------------------------------------
+  🔍 Validating Question 3988: Count created transactions 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(1) AS count_calculations_1
+from MART__TRANSACTIONS 
+left join MART.KYC_STATUS_TRANSACTI...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"KYC_STATUS_CRYPTO"}
+
+📝 Validating Question 8/38
+--------------------------------------------------
+  🔍 Validating Question 4020: Count created transactions 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(1) AS count_calculations_2
+from MART.Transactions
+left join MART.KYC_STATUS_TRANSACTION...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 9/38
+--------------------------------------------------
+  🔍 Validating Question 4006: Change count created transaction 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select (count(case when {{First_period}} then 1 end)-count(case when {{Second_period}} then 1 end))/...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 10/38
+--------------------------------------------------
+  🔍 Validating Question 3993: AR 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(case when MART__TRANSACTIONS.confirmed then 1 end)/count(1) AS count_calculations_1
+fro...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 11/38
+--------------------------------------------------
+  🔍 Validating Question 4011: AR 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(case when MART__TRANSACTIONS.confirmed then 1 end)/count(1) AS count_calculations_2
+fro...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"rec_status_crypto"}
+
+📝 Validating Question 12/38
+--------------------------------------------------
+  🔍 Validating Question 4016: Change AR
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(case when {{First_period}} and transactions.confirmed then 1 end)/count(case when {{Fir...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 13/38
+--------------------------------------------------
+  🔍 Validating Question 3995: Count failed transactions 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(1) AS count_calculations_1
+from MART__TRANSACTIONS
+left join MART.KYC_STATUS_TRANSACTIO...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 14/38
+--------------------------------------------------
+  🔍 Validating Question 4017: Count failed transactions 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(1) AS count_calculations_2
+from MART.Transactions
+left join MART.KYC_STATUS_TRANSACTION...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 15/38
+--------------------------------------------------
+  🔍 Validating Question 4002: Change count failed transaction 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select (count(case when {{First_period}} then 1 end)-count(case when {{Second_period}} then 1 end))/...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 16/38
+--------------------------------------------------
+  🔍 Validating Question 3998: Group failed reason 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select GROUP_FAILED_REASON
+     , count(case when MART__TRANSACTIONS.CONFIRMED is false then 1 end) ...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 17/38
+--------------------------------------------------
+  🔍 Validating Question 4013: Group failed reason 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select GROUP_FAILED_REASON
+     , count(case when MART__TRANSACTIONS.CONFIRMED is false then 1 end) ...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 18/38
+--------------------------------------------------
+  🔍 Validating Question 4009: Count calculations by partner 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select Partner_name, count(1) as COUNT_CALCULATIONS_1, count(case when T_CONFIRMED then 1 end)/count...
+    ✅ Query executed successfully!
+    📊 Rows returned: 248
+    📋 Columns: 3
+    📝 Column names: ['Partner_name', 'COUNT_CALCULATIONS_1', 'conversion_to_completed_transacntions']
+    📈 First row: ['TrustWallet', 9747869, 0.19928170967418624]
+    📈 Second row: ['Tonkeeper', 9242071, 0.021829414640939244]
+
+📝 Validating Question 19/38
+--------------------------------------------------
+  🔍 Validating Question 3996: Count calculations by partner 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select Partner_name, count(1) AS count_calculations_2, count(case when T_CONFIRMED then 1 end)/count...
+    ✅ Query executed successfully!
+    📊 Rows returned: 248
+    📋 Columns: 3
+    📝 Column names: ['Partner_name', 'count_calculations_2', 'conversion_to_completed_transacntions']
+    📈 First row: ['TrustWallet', 9747869, 0.19928170967418624]
+    📈 Second row: ['Tonkeeper', 9242071, 0.021829414640939244]
+
+📝 Validating Question 20/38
+--------------------------------------------------
+  🔍 Validating Question 4018: Turnover by partner 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select widget_partner_name, count(1) AS count_completed_transactions_1, sum(Turnover_EUR) as Turnove...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_transaction_crypto"}
+
+📝 Validating Question 21/38
+--------------------------------------------------
+  🔍 Validating Question 3999: Turnover by partner 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select widget_partner_name, count(1) AS count_completed_transactions_1, sum(Turnover_EUR) as Turnove...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 22/38
+--------------------------------------------------
+  🔍 Validating Question 4015: Antifraud reason changing
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: 
+
+select REASON_REJECT
+     , count(case when {{First_period}} then 1 end) as COUNT_1
+     , count(c...
+    ❌ SQL Error: Getting syntax error at line 18, column 22. Detail message: Unexpected input 'false', the most similar input is {'NULL', 'NOT'}.
+
+📝 Validating Question 23/38
+--------------------------------------------------
+  🔍 Validating Question 4003: SumSub reason reject changings
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH list_users AS (select USER_ID, KYC_START_AT
+                        from MART__USERS
+          ...
+    ❌ SQL Error: Getting analyzing error from line 17, column 49 to line 17, column 66. Detail message: No matching function with signature: is_number(varchar(256)).
+
+📝 Validating Question 24/38
+--------------------------------------------------
+  🔍 Validating Question 4000: Count completed transactions 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(1) AS count_calculations_1
+from MART__TRANSACTIONS
+left join MART.KYC_STATUS_TRANSACTIO...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 25/38
+--------------------------------------------------
+  🔍 Validating Question 4005: Count completed transactions 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select count(1) AS count_calculations_2
+from MART.Transactions
+left join MART.KYC_STATUS_TRANSACTION...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 26/38
+--------------------------------------------------
+  🔍 Validating Question 4010: Change count completed transaction 
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select (count(case when {{First_period}} then 1 end)-count(case when {{Second_period}} then 1 end))/...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 27/38
+--------------------------------------------------
+  🔍 Validating Question 4001: Count calculations by user country 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select USR_COUNTRY_ENG, count(1) as COUNT_CALCULATIONS_1, count(case when T_CONFIRMED then 1 end)/co...
+    ✅ Query executed successfully!
+    📊 Rows returned: 244
+    📋 Columns: 3
+    📝 Column names: ['USR_COUNTRY_ENG', 'COUNT_CALCULATIONS_1', 'conversion_to_completed_transacntions']
+    📈 First row: [None, 18191686, 0.038015662759350616]
+    📈 Second row: ['United States of America', 3482886, 0.2014984125234073]
+
+📝 Validating Question 28/38
+--------------------------------------------------
+  🔍 Validating Question 3990: Count calculations by country user 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select USR_COUNTRY_ENG, count(1) AS count_calculations_2, count(case when T_CONFIRMED then 1 end)/co...
+    ✅ Query executed successfully!
+    📊 Rows returned: 244
+    📋 Columns: 3
+    📝 Column names: ['USR_COUNTRY_ENG', 'count_calculations_2', 'conversion_to_completed_transacntions']
+    📈 First row: [None, 18191686, 0.038015662759350616]
+    📈 Second row: ['United States of America', 3482886, 0.2014984125234073]
+
+📝 Validating Question 29/38
+--------------------------------------------------
+  🔍 Validating Question 4007: Group failed reason change
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select GROUP_FAILED_REASON
+     , count(case when MART__TRANSACTIONS.CONFIRMED is false and {{FIRST_...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_status_crypto"}
+
+📝 Validating Question 30/38
+--------------------------------------------------
+  🔍 Validating Question 4004: Count calculations by partner change
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select Partner_name
+, count(case when T_CONFIRMED and {{FIRST_period}} then 1 end)/NULLIF(cast(count...
+    ❌ SQL Error: Getting syntax error at line 3, column 97. Detail message: No viable statement for input 'cast(count(case when 1 = 1 then 1 end as'.
+
+📝 Validating Question 31/38
+--------------------------------------------------
+  🔍 Validating Question 4024: Turnover by partner change
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select widget_partner_name
+, sum(case when MART__TRANSACTIONS.CONFIRMED and {{FIRST_period}} then MA...
+    ❌ SQL Error: Cannot run the query: missing required parameters: #{"kyc_transaction_crypto"}
+
+📝 Validating Question 32/38
+--------------------------------------------------
+  🔍 Validating Question 3994: Count calculations by country change
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: select USR_COUNTRY_ENG
+, count(case when T_CONFIRMED and {{FIRST_period}} then 1 end)/NULLIF(cast(co...
+    ❌ SQL Error: Getting syntax error at line 3, column 97. Detail message: No viable statement for input 'cast(count(case when 1 = 1 then 1 end as'.
+
+📝 Validating Question 33/38
+--------------------------------------------------
+  🔍 Validating Question 3991: Antifraud reason changing  Group 1
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: 
+
+-- CTE 1: Подсчет ОБЩЕГО числа реджектов по ВСЕМ причинам (с учетом основных фильтров, но БЕЗ {{RE...
+    ❌ SQL Error: Getting syntax error at line 9, column 24. Detail message: No viable statement for input 'WITH TotalRejectsAllReasons AS (
+    SELECT
+        SUM(CASE WHEN 1 = 1 THEN 1 ELSE 0 END) AS total_rejects_p1_all,
+        SUM(CASE WHEN 1 = 1 THEN 1 ELSE 0 END) AS total_rejects_p2_all
+    FROM MART__ANTIFRAUD_TX
+    WHERE
+        FINAL_STATUS IS FALSE'.
+
+📝 Validating Question 34/38
+--------------------------------------------------
+  🔍 Validating Question 4008: Antifraud reason changing  Group 2
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: 
+
+-- CTE 1: Подсчет ОБЩЕГО числа реджектов по ВСЕМ причинам (с учетом основных фильтров, но БЕЗ {{RE...
+    ❌ SQL Error: Getting syntax error at line 9, column 24. Detail message: No viable statement for input 'WITH TotalRejectsAllReasons AS (
+    SELECT
+        SUM(CASE WHEN 1 = 1 THEN 1 ELSE 0 END) AS total_rejects_p1_all,
+        SUM(CASE WHEN 1 = 1 THEN 1 ELSE 0 END) AS total_rejects_p2_all
+    FROM MART__ANTIFRAUD_TX
+    WHERE
+        FINAL_STATUS IS FALSE'.
+
+📝 Validating Question 35/38
+--------------------------------------------------
+  🔍 Validating Question 4023: Antifraud reason changing  Group 3
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: 
+
+-- CTE 1: Подсчет ОБЩЕГО числа реджектов по ВСЕМ причинам (с учетом основных фильтров, но БЕЗ {{RE...
+    ❌ SQL Error: Getting syntax error at line 9, column 24. Detail message: No viable statement for input 'WITH TotalRejectsAllReasons AS (
+    SELECT
+        SUM(CASE WHEN 1 = 1 THEN 1 ELSE 0 END) AS total_rejects_p1_all,
+        SUM(CASE WHEN 1 = 1 THEN 1 ELSE 0 END) AS total_rejects_p2_all
+    FROM MART__ANTIFRAUD_TX
+    WHERE
+        FINAL_STATUS IS FALSE'.
+
+📝 Validating Question 36/38
+--------------------------------------------------
+  🔍 Validating Question 3992: Antifraud reason changing  Group 4
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: 
+
+-- CTE 1: Подсчет ОБЩЕГО числа реджектов по ВСЕМ причинам (с учетом основных фильтров, но БЕЗ {{RE...
+    ❌ SQL Error: Getting syntax error at line 9, column 24. Detail message: No viable statement for input 'WITH TotalRejectsAllReasons AS (
+    SELECT
+        SUM(CASE WHEN 1 = 1 THEN 1 ELSE 0 END) AS total_rejects_p1_all,
+        SUM(CASE WHEN 1 = 1 THEN 1 ELSE 0 END) AS total_rejects_p2_all
+    FROM MART__ANTIFRAUD_TX
+    WHERE
+        FINAL_STATUS IS FALSE'.
+
+📝 Validating Question 37/38
+--------------------------------------------------
+  🔍 Validating Question 4022: Antifraud reason changing  Group 5
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: 
+
+-- CTE 1: Подсчет ОБЩЕГО числа реджектов по ВСЕМ причинам (с учетом основных фильтров, но БЕЗ {{RE...
+    ❌ SQL Error: Getting syntax error at line 9, column 24. Detail message: No viable statement for input 'WITH TotalRejectsAllReasons AS (
+    SELECT
+        SUM(CASE WHEN 1 = 1 THEN 1 ELSE 0 END) AS total_rejects_p1_all,
+        SUM(CASE WHEN 1 = 1 THEN 1 ELSE 0 END) AS total_rejects_p2_all
+    FROM MART__ANTIFRAUD_TX
+    WHERE
+        FINAL_STATUS IS FALSE'.
+
+📝 Validating Question 38/38
+--------------------------------------------------
+  🔍 Validating Question 3997: Antifraud reason changing Total
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: 
+
+
+select REASON_REJECT
+     , count(case when {{First_period}} then 1 end) as COUNT_1
+     , count(...
+    ✅ Query executed successfully!
+    📊 Rows returned: 424
+    📋 Columns: 6
+    📝 Column names: ['REASON_REJECT', 'COUNT_1', 'percnt_1', 'count_2', 'perc_2', 'CHANGE_PERC']
+    📈 First row: [None, 7224199, 0.3688232361223614, 7224199, 0.3688232361223614, 0.0]
+    📈 Second row: ['riskified_pass_only_mobile', 3295586, 0.16825238250490449, 3295586, 0.16825238250490449, 0.0]
+
+🎉 Validation Summary:
+✅ Successfully validated: 11/38 questions
+⚠️  Some questions have issues. Migration may need fixes.

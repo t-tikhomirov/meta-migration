@@ -1,0 +1,469 @@
+[
+  {
+    "dashboard_id": 385,
+    "dashboard_name": "OOR Transaction Amount Statistics chart - Duplicate",
+    "questions": [
+      {
+        "question_id": 3722,
+        "question_name": "% Turnover - Duplicate",
+        "type": "mbql",
+        "mbql_structure": {
+          "aggregation": [
+            [
+              "metric",
+              3010
+            ]
+          ],
+          "breakout": [
+            [
+              "field",
+              25606,
+              {
+                "binning": {
+                  "num-bins": 10,
+                  "strategy": "num-bins"
+                }
+              }
+            ],
+            [
+              "field",
+              20834,
+              null
+            ]
+          ],
+          "filter": [
+            "and",
+            [
+              "=",
+              [
+                "field",
+                20847,
+                null
+              ],
+              true
+            ],
+            [
+              "=",
+              [
+                "field",
+                20838,
+                null
+              ],
+              "buy",
+              "sell"
+            ]
+          ],
+          "source-table": 45
+        },
+        "note": "MBQL migration requires additional implementation for full conversion"
+      },
+      {
+        "question_id": 3723,
+        "question_name": "Base - Duplicate",
+        "type": "mbql",
+        "mbql_structure": {
+          "aggregation": [
+            [
+              "metric",
+              3010
+            ],
+            [
+              "metric",
+              3038
+            ],
+            [
+              "metric",
+              3044
+            ],
+            [
+              "metric",
+              3034
+            ],
+            [
+              "metric",
+              3047
+            ]
+          ],
+          "breakout": [
+            [
+              "field",
+              25606,
+              {
+                "binning": {
+                  "num-bins": 10,
+                  "strategy": "num-bins"
+                }
+              }
+            ],
+            [
+              "field",
+              20834,
+              null
+            ]
+          ],
+          "source-table": 45,
+          "filter": [
+            "and",
+            [
+              "=",
+              [
+                "field",
+                20847,
+                null
+              ],
+              true
+            ],
+            [
+              "=",
+              [
+                "field",
+                20838,
+                null
+              ],
+              "buy",
+              "sell"
+            ]
+          ]
+        },
+        "note": "MBQL migration requires additional implementation for full conversion"
+      },
+      {
+        "question_id": 3721,
+        "question_name": "% Accepted Transactions - Duplicate",
+        "type": "mbql",
+        "mbql_structure": {
+          "aggregation": [
+            [
+              "metric",
+              3006
+            ]
+          ],
+          "breakout": [
+            [
+              "field",
+              25606,
+              {
+                "binning": {
+                  "num-bins": 10,
+                  "strategy": "num-bins"
+                }
+              }
+            ],
+            [
+              "field",
+              20834,
+              null
+            ]
+          ],
+          "filter": [
+            "and",
+            [
+              "=",
+              [
+                "field",
+                20847,
+                null
+              ],
+              true
+            ],
+            [
+              "=",
+              [
+                "field",
+                20838,
+                null
+              ],
+              "buy",
+              "sell"
+            ]
+          ],
+          "source-table": 45
+        },
+        "note": "MBQL migration requires additional implementation for full conversion"
+      },
+      {
+        "question_id": 3725,
+        "question_name": "Statistic - Duplicate",
+        "type": "mbql",
+        "mbql_structure": {
+          "aggregation": [
+            [
+              "min",
+              [
+                "field",
+                25606,
+                null
+              ]
+            ],
+            [
+              "max",
+              [
+                "field",
+                25606,
+                null
+              ]
+            ],
+            [
+              "avg",
+              [
+                "field",
+                25606,
+                null
+              ]
+            ],
+            [
+              "median",
+              [
+                "field",
+                25606,
+                null
+              ]
+            ]
+          ],
+          "filter": [
+            "and",
+            [
+              "=",
+              [
+                "field",
+                20847,
+                null
+              ],
+              true
+            ],
+            [
+              "=",
+              [
+                "field",
+                20838,
+                null
+              ],
+              "buy",
+              "sell"
+            ],
+            [
+              "time-interval",
+              [
+                "field",
+                20835,
+                null
+              ],
+              -3,
+              "month",
+              {
+                "include-current": true
+              }
+            ],
+            [
+              "=",
+              [
+                "field",
+                20834,
+                null
+              ],
+              "TrustWallet"
+            ]
+          ],
+          "source-table": 45
+        },
+        "note": "MBQL migration requires additional implementation for full conversion"
+      },
+      {
+        "question_id": 3727,
+        "question_name": "Distribution count transaction by Turnover EUR - Duplicate",
+        "original_sql": "WITH tr as (select date_trunc({{granularity}}, TRANSACTIONS.CREATED_AT) as dt\n     , CASE\n         WHEN TURNOVER_EUR <= 50 THEN '0-50 EUR'\n         WHEN TURNOVER_EUR <= 100 THEN '50-100 EUR'\n         WHEN TURNOVER_EUR <= 200 THEN '100-200 EUR'\n         WHEN TURNOVER_EUR <= 300 THEN '200-300 EUR'\n         WHEN TURNOVER_EUR <= 400 THEN '300-400 EUR'\n         WHEN TURNOVER_EUR <= 600 THEN '400-600 EUR'\n         WHEN TURNOVER_EUR <= 800 THEN '600-800 EUR'\n         WHEN TURNOVER_EUR <= 1000 THEN '800-1000 EUR'\n         WHEN TURNOVER_EUR <= 1200 THEN '1000-1200 EUR'\n         WHEN TURNOVER_EUR <= 1400 THEN '1200-1400 EUR'\n         WHEN TURNOVER_EUR <= 1600 THEN '1400-1600 EUR'\n         WHEN TURNOVER_EUR <= 1800 THEN '1600-1800 EUR'\n         WHEN TURNOVER_EUR <= 2000 THEN '1800-2000 EUR'\n         WHEN TURNOVER_EUR <= 5000 THEN '2000-5000 EUR'\n         WHEN TURNOVER_EUR <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM\n     , count(1) as count_transactions\n    from MART.TRANSACTIONS\n    left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\nwhere TYPE_MAIN in ('buy', 'sell') and\n      CONFIRMED and\n      SOURCE_MAIN = 'widget' and\n      {{CREATED_AT}} and {{partner_name}} and {{widget_id}} and {{fiat_currency}} and\n      {{crypto_currency}} and {{GEO_card}} and {{country_card}} and {{turnover_eur}} and\n      {{network}} and {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\ngroup by 1,2)\n\nselect tr.dt\n     , tr.GROUP_SUM\n     , GROUP_SUM_TURNOVER_EUR.order_id\n     , tr.count_transactions\n     , tr.count_transactions/sum(tr.count_transactions) over (partition by 1) as percent\n    from tr\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = tr.GROUP_SUM\nwhere {{GROUP_SUM}}\norder by 3",
+        "converted_sql": "WITH tr as (select date_trunc({{granularity}}, TRANSACTIONS.CREATED_AT) as dt\n     , CASE\n         WHEN TURNOVER_EUR <= 50 THEN '0-50 EUR'\n         WHEN TURNOVER_EUR <= 100 THEN '50-100 EUR'\n         WHEN TURNOVER_EUR <= 200 THEN '100-200 EUR'\n         WHEN TURNOVER_EUR <= 300 THEN '200-300 EUR'\n         WHEN TURNOVER_EUR <= 400 THEN '300-400 EUR'\n         WHEN TURNOVER_EUR <= 600 THEN '400-600 EUR'\n         WHEN TURNOVER_EUR <= 800 THEN '600-800 EUR'\n         WHEN TURNOVER_EUR <= 1000 THEN '800-1000 EUR'\n         WHEN TURNOVER_EUR <= 1200 THEN '1000-1200 EUR'\n         WHEN TURNOVER_EUR <= 1400 THEN '1200-1400 EUR'\n         WHEN TURNOVER_EUR <= 1600 THEN '1400-1600 EUR'\n         WHEN TURNOVER_EUR <= 1800 THEN '1600-1800 EUR'\n         WHEN TURNOVER_EUR <= 2000 THEN '1800-2000 EUR'\n         WHEN TURNOVER_EUR <= 5000 THEN '2000-5000 EUR'\n         WHEN TURNOVER_EUR <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM\n     , count(1) as count_transactions\n    from sr_mart.transactions\n    left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\nwhere TYPE_MAIN in ('buy', 'sell') and\n      CONFIRMED and\n      SOURCE_MAIN = 'widget' and\n      {{CREATED_AT}} and {{partner_name}} and {{widget_id}} and {{fiat_currency}} and\n      {{crypto_currency}} and {{GEO_card}} and {{country_card}} and {{turnover_eur}} and\n      {{network}} and {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\ngroup by 1,2)\n\nselect tr.dt\n     , tr.GROUP_SUM\n     , GROUP_SUM_TURNOVER_EUR.order_id\n     , tr.count_transactions\n     , tr.count_transactions/sum(tr.count_transactions) over (partition by 1) as percent\n    from tr\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = tr.GROUP_SUM\nwhere {{GROUP_SUM}}\norder by 3",
+        "variables": [
+          "crypto_currency",
+          "granularity",
+          "country_card",
+          "widget_id",
+          "GEO_card",
+          "pay_system",
+          "turnover_eur",
+          "CREATED_AT",
+          "Try_Again",
+          "ACQUIRER",
+          "GROUP_SUM",
+          "type_operation",
+          "network",
+          "partner_name",
+          "fiat_currency"
+        ],
+        "type": "native",
+        "validation": {
+          "success": true,
+          "warnings": [],
+          "errors": [],
+          "variables_preserved": true,
+          "tables_converted": 1,
+          "functions_converted": 0
+        }
+      },
+      {
+        "question_id": 3720,
+        "question_name": "Distribution Amount EUR transaction by Turnover EUR - Duplicate",
+        "original_sql": "WITH tr as (select date_trunc({{granularity}}, TRANSACTIONS.CREATED_AT) as dt\n     , CASE\n         WHEN TURNOVER_EUR <= 50 THEN '0-50 EUR'\n         WHEN TURNOVER_EUR <= 100 THEN '50-100 EUR'\n         WHEN TURNOVER_EUR <= 200 THEN '100-200 EUR'\n         WHEN TURNOVER_EUR <= 300 THEN '200-300 EUR'\n         WHEN TURNOVER_EUR <= 400 THEN '300-400 EUR'\n         WHEN TURNOVER_EUR <= 600 THEN '400-600 EUR'\n         WHEN TURNOVER_EUR <= 800 THEN '600-800 EUR'\n         WHEN TURNOVER_EUR <= 1000 THEN '800-1000 EUR'\n         WHEN TURNOVER_EUR <= 1200 THEN '1000-1200 EUR'\n         WHEN TURNOVER_EUR <= 1400 THEN '1200-1400 EUR'\n         WHEN TURNOVER_EUR <= 1600 THEN '1400-1600 EUR'\n         WHEN TURNOVER_EUR <= 1800 THEN '1600-1800 EUR'\n         WHEN TURNOVER_EUR <= 2000 THEN '1800-2000 EUR'\n         WHEN TURNOVER_EUR <= 5000 THEN '2000-5000 EUR'\n         WHEN TURNOVER_EUR <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM\n     , sum(TURNOVER_EUR) as Turnover_EUR\n    from MART.TRANSACTIONS\n    left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\nwhere TYPE_MAIN in ('buy', 'sell') and\n      CONFIRMED and\n      SOURCE_MAIN = 'widget' and\n      {{CREATED_AT}} and {{partner_name}} and {{widget_id}} and {{fiat_currency}} and\n      {{crypto_currency}} and {{GEO_card}} and {{country_card}} and {{turnover_eur}} and\n      {{network}} and {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\ngroup by 1,2)\n\nselect tr.dt\n     , tr.GROUP_SUM\n     , GROUP_SUM_TURNOVER_EUR.order_id\n     , tr.Turnover_EUR\n     , tr.Turnover_EUR/sum(tr.Turnover_EUR) over (partition by 1) as percent\n    from tr\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = tr.GROUP_SUM\nwhere {{GROUP_SUM}}\norder by 3",
+        "converted_sql": "WITH tr as (select date_trunc({{granularity}}, TRANSACTIONS.CREATED_AT) as dt\n     , CASE\n         WHEN TURNOVER_EUR <= 50 THEN '0-50 EUR'\n         WHEN TURNOVER_EUR <= 100 THEN '50-100 EUR'\n         WHEN TURNOVER_EUR <= 200 THEN '100-200 EUR'\n         WHEN TURNOVER_EUR <= 300 THEN '200-300 EUR'\n         WHEN TURNOVER_EUR <= 400 THEN '300-400 EUR'\n         WHEN TURNOVER_EUR <= 600 THEN '400-600 EUR'\n         WHEN TURNOVER_EUR <= 800 THEN '600-800 EUR'\n         WHEN TURNOVER_EUR <= 1000 THEN '800-1000 EUR'\n         WHEN TURNOVER_EUR <= 1200 THEN '1000-1200 EUR'\n         WHEN TURNOVER_EUR <= 1400 THEN '1200-1400 EUR'\n         WHEN TURNOVER_EUR <= 1600 THEN '1400-1600 EUR'\n         WHEN TURNOVER_EUR <= 1800 THEN '1600-1800 EUR'\n         WHEN TURNOVER_EUR <= 2000 THEN '1800-2000 EUR'\n         WHEN TURNOVER_EUR <= 5000 THEN '2000-5000 EUR'\n         WHEN TURNOVER_EUR <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM\n     , sum(TURNOVER_EUR) as Turnover_EUR\n    from sr_mart.transactions\n    left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\nwhere TYPE_MAIN in ('buy', 'sell') and\n      CONFIRMED and\n      SOURCE_MAIN = 'widget' and\n      {{CREATED_AT}} and {{partner_name}} and {{widget_id}} and {{fiat_currency}} and\n      {{crypto_currency}} and {{GEO_card}} and {{country_card}} and {{turnover_eur}} and\n      {{network}} and {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\ngroup by 1,2)\n\nselect tr.dt\n     , tr.GROUP_SUM\n     , GROUP_SUM_TURNOVER_EUR.order_id\n     , tr.Turnover_EUR\n     , tr.Turnover_EUR/sum(tr.Turnover_EUR) over (partition by 1) as percent\n    from tr\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = tr.GROUP_SUM\nwhere {{GROUP_SUM}}\norder by 3",
+        "variables": [
+          "crypto_currency",
+          "granularity",
+          "country_card",
+          "widget_id",
+          "GEO_card",
+          "pay_system",
+          "turnover_eur",
+          "CREATED_AT",
+          "Try_Again",
+          "ACQUIRER",
+          "GROUP_SUM",
+          "type_operation",
+          "network",
+          "partner_name",
+          "fiat_currency"
+        ],
+        "type": "native",
+        "validation": {
+          "success": true,
+          "warnings": [],
+          "errors": [],
+          "variables_preserved": true,
+          "tables_converted": 1,
+          "functions_converted": 0
+        }
+      },
+      {
+        "question_id": 3726,
+        "question_name": "Avg, median, min Amount EUR transaction  - Duplicate",
+        "original_sql": "WITH tr as (select date_trunc({{granularity}}, TRANSACTIONS.CREATED_AT) as dt\n     , CASE\n         WHEN TURNOVER_EUR <= 50 THEN '0-50 EUR'\n         WHEN TURNOVER_EUR <= 100 THEN '50-100 EUR'\n         WHEN TURNOVER_EUR <= 200 THEN '100-200 EUR'\n         WHEN TURNOVER_EUR <= 300 THEN '200-300 EUR'\n         WHEN TURNOVER_EUR <= 400 THEN '300-400 EUR'\n         WHEN TURNOVER_EUR <= 600 THEN '400-600 EUR'\n         WHEN TURNOVER_EUR <= 800 THEN '600-800 EUR'\n         WHEN TURNOVER_EUR <= 1000 THEN '800-1000 EUR'\n         WHEN TURNOVER_EUR <= 1200 THEN '1000-1200 EUR'\n         WHEN TURNOVER_EUR <= 1400 THEN '1200-1400 EUR'\n         WHEN TURNOVER_EUR <= 1600 THEN '1400-1600 EUR'\n         WHEN TURNOVER_EUR <= 1800 THEN '1600-1800 EUR'\n         WHEN TURNOVER_EUR <= 2000 THEN '1800-2000 EUR'\n         WHEN TURNOVER_EUR <= 5000 THEN '2000-5000 EUR'\n         WHEN TURNOVER_EUR <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM\n     , TURNOVER_EUR as Turnover_EUR\n    from MART.TRANSACTIONS\n      left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\nwhere TYPE_MAIN in ('buy', 'sell') and\n      CONFIRMED and\n      SOURCE_MAIN = 'widget' and\n      {{CREATED_AT}} and {{partner_name}} and {{widget_id}} and {{fiat_currency}} and\n      {{crypto_currency}} and {{GEO_card}} and {{country_card}} and {{turnover_eur}} and\n      {{NETWORK}} and {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\n)\n\nselect tr.dt\n     , avg(Turnover_EUR) as avg_Turnover_EUR\n     , median(Turnover_EUR) as median_Turnover_EUR\n     , min(Turnover_EUR) as min_Turnover_EUR\n    from tr\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = tr.GROUP_SUM\nwhere {{GROUP_SUM}}\ngroup by 1",
+        "converted_sql": "WITH tr as (select date_trunc({{granularity}}, TRANSACTIONS.CREATED_AT) as dt\n     , CASE\n         WHEN TURNOVER_EUR <= 50 THEN '0-50 EUR'\n         WHEN TURNOVER_EUR <= 100 THEN '50-100 EUR'\n         WHEN TURNOVER_EUR <= 200 THEN '100-200 EUR'\n         WHEN TURNOVER_EUR <= 300 THEN '200-300 EUR'\n         WHEN TURNOVER_EUR <= 400 THEN '300-400 EUR'\n         WHEN TURNOVER_EUR <= 600 THEN '400-600 EUR'\n         WHEN TURNOVER_EUR <= 800 THEN '600-800 EUR'\n         WHEN TURNOVER_EUR <= 1000 THEN '800-1000 EUR'\n         WHEN TURNOVER_EUR <= 1200 THEN '1000-1200 EUR'\n         WHEN TURNOVER_EUR <= 1400 THEN '1200-1400 EUR'\n         WHEN TURNOVER_EUR <= 1600 THEN '1400-1600 EUR'\n         WHEN TURNOVER_EUR <= 1800 THEN '1600-1800 EUR'\n         WHEN TURNOVER_EUR <= 2000 THEN '1800-2000 EUR'\n         WHEN TURNOVER_EUR <= 5000 THEN '2000-5000 EUR'\n         WHEN TURNOVER_EUR <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM\n     , TURNOVER_EUR as Turnover_EUR\n    from sr_mart.transactions\n      left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\nwhere TYPE_MAIN in ('buy', 'sell') and\n      CONFIRMED and\n      SOURCE_MAIN = 'widget' and\n      {{CREATED_AT}} and {{partner_name}} and {{widget_id}} and {{fiat_currency}} and\n      {{crypto_currency}} and {{GEO_card}} and {{country_card}} and {{turnover_eur}} and\n      {{NETWORK}} and {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\n)\n\nselect tr.dt\n     , avg(Turnover_EUR) as avg_Turnover_EUR\n     , PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY Turnover_EUR) as median_Turnover_EUR\n     , min(Turnover_EUR) as min_Turnover_EUR\n    from tr\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = tr.GROUP_SUM\nwhere {{GROUP_SUM}}\ngroup by 1",
+        "variables": [
+          "crypto_currency",
+          "granularity",
+          "country_card",
+          "widget_id",
+          "GEO_card",
+          "pay_system",
+          "turnover_eur",
+          "NETWORK",
+          "CREATED_AT",
+          "Try_Again",
+          "ACQUIRER",
+          "GROUP_SUM",
+          "type_operation",
+          "partner_name",
+          "fiat_currency"
+        ],
+        "type": "native",
+        "validation": {
+          "success": true,
+          "warnings": [
+            "MEDIAN function conversion may need manual review"
+          ],
+          "errors": [],
+          "variables_preserved": true,
+          "tables_converted": 1,
+          "functions_converted": 0
+        }
+      },
+      {
+        "question_id": 3724,
+        "question_name": "Max Amount EUR transaction  - Duplicate",
+        "original_sql": "WITH tr as (select date_trunc({{granularity}}, TRANSACTIONS.CREATED_AT) as dt\n     , CASE\n         WHEN TURNOVER_EUR <= 50 THEN '0-50 EUR'\n         WHEN TURNOVER_EUR <= 100 THEN '50-100 EUR'\n         WHEN TURNOVER_EUR <= 200 THEN '100-200 EUR'\n         WHEN TURNOVER_EUR <= 300 THEN '200-300 EUR'\n         WHEN TURNOVER_EUR <= 400 THEN '300-400 EUR'\n         WHEN TURNOVER_EUR <= 600 THEN '400-600 EUR'\n         WHEN TURNOVER_EUR <= 800 THEN '600-800 EUR'\n         WHEN TURNOVER_EUR <= 1000 THEN '800-1000 EUR'\n         WHEN TURNOVER_EUR <= 1200 THEN '1000-1200 EUR'\n         WHEN TURNOVER_EUR <= 1400 THEN '1200-1400 EUR'\n         WHEN TURNOVER_EUR <= 1600 THEN '1400-1600 EUR'\n         WHEN TURNOVER_EUR <= 1800 THEN '1600-1800 EUR'\n         WHEN TURNOVER_EUR <= 2000 THEN '1800-2000 EUR'\n         WHEN TURNOVER_EUR <= 5000 THEN '2000-5000 EUR'\n         WHEN TURNOVER_EUR <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM\n     , TURNOVER_EUR as Turnover_EUR\n    from MART.TRANSACTIONS\n    left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\nwhere TYPE_MAIN in ('buy', 'sell') and\n      CONFIRMED and\n      SOURCE_MAIN = 'widget' and\n      {{CREATED_AT}} and {{partner_name}} and {{widget_id}} and {{fiat_currency}} and\n      {{crypto_currency}} and {{GEO_card}} and {{country_card}} and {{turnover_eur}} and\n      {{NETWORK}} and {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\n)\n\nselect tr.dt\n     , max(Turnover_EUR) as max_Turnover_EUR\n    from tr\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = tr.GROUP_SUM\nwhere {{GROUP_SUM}}\ngroup by 1",
+        "converted_sql": "WITH tr as (select date_trunc({{granularity}}, TRANSACTIONS.CREATED_AT) as dt\n     , CASE\n         WHEN TURNOVER_EUR <= 50 THEN '0-50 EUR'\n         WHEN TURNOVER_EUR <= 100 THEN '50-100 EUR'\n         WHEN TURNOVER_EUR <= 200 THEN '100-200 EUR'\n         WHEN TURNOVER_EUR <= 300 THEN '200-300 EUR'\n         WHEN TURNOVER_EUR <= 400 THEN '300-400 EUR'\n         WHEN TURNOVER_EUR <= 600 THEN '400-600 EUR'\n         WHEN TURNOVER_EUR <= 800 THEN '600-800 EUR'\n         WHEN TURNOVER_EUR <= 1000 THEN '800-1000 EUR'\n         WHEN TURNOVER_EUR <= 1200 THEN '1000-1200 EUR'\n         WHEN TURNOVER_EUR <= 1400 THEN '1200-1400 EUR'\n         WHEN TURNOVER_EUR <= 1600 THEN '1400-1600 EUR'\n         WHEN TURNOVER_EUR <= 1800 THEN '1600-1800 EUR'\n         WHEN TURNOVER_EUR <= 2000 THEN '1800-2000 EUR'\n         WHEN TURNOVER_EUR <= 5000 THEN '2000-5000 EUR'\n         WHEN TURNOVER_EUR <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM\n     , TURNOVER_EUR as Turnover_EUR\n    from sr_mart.transactions\n    left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\nwhere TYPE_MAIN in ('buy', 'sell') and\n      CONFIRMED and\n      SOURCE_MAIN = 'widget' and\n      {{CREATED_AT}} and {{partner_name}} and {{widget_id}} and {{fiat_currency}} and\n      {{crypto_currency}} and {{GEO_card}} and {{country_card}} and {{turnover_eur}} and\n      {{NETWORK}} and {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\n)\n\nselect tr.dt\n     , max(Turnover_EUR) as max_Turnover_EUR\n    from tr\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = tr.GROUP_SUM\nwhere {{GROUP_SUM}}\ngroup by 1",
+        "variables": [
+          "crypto_currency",
+          "granularity",
+          "country_card",
+          "widget_id",
+          "GEO_card",
+          "pay_system",
+          "turnover_eur",
+          "NETWORK",
+          "CREATED_AT",
+          "Try_Again",
+          "ACQUIRER",
+          "GROUP_SUM",
+          "type_operation",
+          "partner_name",
+          "fiat_currency"
+        ],
+        "type": "native",
+        "validation": {
+          "success": true,
+          "warnings": [],
+          "errors": [],
+          "variables_preserved": true,
+          "tables_converted": 1,
+          "functions_converted": 0
+        }
+      },
+      {
+        "question_id": 3728,
+        "question_name": "Distribution AR  by Turnover EUR  - Duplicate",
+        "original_sql": "WITH tr as (select date_trunc({{granularity}}, TRANSACTIONS.CREATED_AT) as dt\n     , CASE\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 50 THEN '0-50 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 100 THEN '50-100 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 200 THEN '100-200 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 300 THEN '200-300 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 400 THEN '300-400 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 600 THEN '400-600 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 800 THEN '600-800 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1000 THEN '800-1000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1200 THEN '1000-1200 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1400 THEN '1200-1400 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1600 THEN '1400-1600 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1800 THEN '1600-1800 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 2000 THEN '1800-2000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 5000 THEN '2000-5000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM\n     , count(case when confirmed then 1 end)/count(1) as AR\n    from MART.TRANSACTIONS\n    left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\nwhere TYPE_MAIN in ('buy', 'sell') and\n      SOURCE_MAIN = 'widget' and\n      {{CREATED_AT}} and {{partner_name}} and {{widget_id}} and {{fiat_currency}} and\n      {{crypto_currency}} and {{GEO_card}} and {{country_card}} and {{turnover_eur}} and\n      {{network}} and {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\ngroup by 1,2)\n\nselect tr.dt\n     , tr.GROUP_SUM\n     , tr.AR\n    from tr\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = tr.GROUP_SUM\nwhere {{GROUP_SUM}}\norder by 3",
+        "converted_sql": "WITH tr as (select date_trunc({{granularity}}, TRANSACTIONS.CREATED_AT) as dt\n     , CASE\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 50 THEN '0-50 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 100 THEN '50-100 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 200 THEN '100-200 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 300 THEN '200-300 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 400 THEN '300-400 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 600 THEN '400-600 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 800 THEN '600-800 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1000 THEN '800-1000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1200 THEN '1000-1200 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1400 THEN '1200-1400 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1600 THEN '1400-1600 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1800 THEN '1600-1800 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 2000 THEN '1800-2000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 5000 THEN '2000-5000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM\n     , count(case when confirmed then 1 end)/count(1) as AR\n    from sr_mart.transactions\n    left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\nwhere TYPE_MAIN in ('buy', 'sell') and\n      SOURCE_MAIN = 'widget' and\n      {{CREATED_AT}} and {{partner_name}} and {{widget_id}} and {{fiat_currency}} and\n      {{crypto_currency}} and {{GEO_card}} and {{country_card}} and {{turnover_eur}} and\n      {{network}} and {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\ngroup by 1,2)\n\nselect tr.dt\n     , tr.GROUP_SUM\n     , tr.AR\n    from tr\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = tr.GROUP_SUM\nwhere {{GROUP_SUM}}\norder by 3",
+        "variables": [
+          "crypto_currency",
+          "granularity",
+          "country_card",
+          "widget_id",
+          "GEO_card",
+          "pay_system",
+          "turnover_eur",
+          "CREATED_AT",
+          "Try_Again",
+          "ACQUIRER",
+          "GROUP_SUM",
+          "type_operation",
+          "network",
+          "partner_name",
+          "fiat_currency"
+        ],
+        "type": "native",
+        "validation": {
+          "success": true,
+          "warnings": [],
+          "errors": [],
+          "variables_preserved": true,
+          "tables_converted": 1,
+          "functions_converted": 0
+        }
+      },
+      {
+        "question_id": 3719,
+        "question_name": "Distribution Grouped Error by Turnover EUR - Duplicate",
+        "original_sql": "WITH trans AS (\n    SELECT\n        DATE_TRUNC({{granularity}}, TRANSACTIONS.CREATED_AT) AS dt,\n     CASE\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 50 THEN '0-50 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 100 THEN '50-100 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 200 THEN '100-200 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 300 THEN '200-300 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 400 THEN '300-400 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 600 THEN '400-600 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 800 THEN '600-800 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1000 THEN '800-1000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1200 THEN '1000-1200 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1400 THEN '1200-1400 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1600 THEN '1400-1600 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1800 THEN '1600-1800 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 2000 THEN '1800-2000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 5000 THEN '2000-5000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM, \n        GROUP_FAILED_REASON,\n        COALESCE(NULLIFZERO(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) AS TURNOVER_EUR\n    FROM MART.TRANSACTIONS\n    left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\n    WHERE TYPE_MAIN IN ('buy', 'sell')\n      AND SOURCE_MAIN = 'widget'\n      AND {{CREATED_AT}} AND {{partner_name}} AND {{widget_id}} AND {{fiat_currency}}\n      AND {{crypto_currency}} AND {{GEO_card}} AND {{country_card}} AND {{turnover_eur}}\n      AND {{network}} AND {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\n),\ntop_errors AS (\n    SELECT GROUP_FAILED_REASON\n    FROM (\n        SELECT GROUP_FAILED_REASON, SUM(TURNOVER_EUR) AS total_turnover\n        FROM trans\n        GROUP BY GROUP_FAILED_REASON\n    ) t\n    ORDER BY total_turnover DESC\n    LIMIT 10\n)\nSELECT\n    trans.dt,\n    -- trans.GROUP_SUM,\n    trans.GROUP_FAILED_REASON, \n    SUM(trans.TURNOVER_EUR) AS total_turnover_eur\nFROM trans\nJOIN top_errors ON trans.GROUP_FAILED_REASON = top_errors.GROUP_FAILED_REASON\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = trans.GROUP_SUM\nwhere {{GROUP_SUM}}\nGROUP BY trans.dt,\n-- trans.GROUP_SUM, \ntrans.GROUP_FAILED_REASON\nORDER BY trans.dt DESC\n",
+        "converted_sql": "WITH trans AS (\n    SELECT\n        DATE_TRUNC({{granularity}}, TRANSACTIONS.CREATED_AT) AS dt,\n     CASE\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 50 THEN '0-50 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 100 THEN '50-100 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 200 THEN '100-200 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 300 THEN '200-300 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 400 THEN '300-400 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 600 THEN '400-600 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 800 THEN '600-800 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1000 THEN '800-1000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1200 THEN '1000-1200 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1400 THEN '1200-1400 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1600 THEN '1400-1600 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 1800 THEN '1600-1800 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 2000 THEN '1800-2000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 5000 THEN '2000-5000 EUR'\n         WHEN coalesce(nullifzero(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) <= 10000 THEN '5000-10000 EUR'\n         ELSE 'more 10000 EUR'\n         END AS GROUP_SUM, \n        GROUP_FAILED_REASON,\n        COALESCE(NULLIFZERO(TURNOVER_EUR), TRANSACTIONS.FIAT_AMOUNT_EUR) AS TURNOVER_EUR\n    FROM sr_mart.transactions\n    left join mart.CALCULATIONS_UNIQ on CALCULATIONS_UNIQ.TRANSACTION_ID=TRANSACTIONS.ID\n    WHERE TYPE_MAIN IN ('buy', 'sell')\n      AND SOURCE_MAIN = 'widget'\n      AND {{CREATED_AT}} AND {{partner_name}} AND {{widget_id}} AND {{fiat_currency}}\n      AND {{crypto_currency}} AND {{GEO_card}} AND {{country_card}} AND {{turnover_eur}}\n      AND {{network}} AND {{type_operation}} and {{pay_system}} and {{ACQUIRER}} and {{Try_Again}}\n),\ntop_errors AS (\n    SELECT GROUP_FAILED_REASON\n    FROM (\n        SELECT GROUP_FAILED_REASON, SUM(TURNOVER_EUR) AS total_turnover\n        FROM trans\n        GROUP BY GROUP_FAILED_REASON\n    ) t\n    ORDER BY total_turnover DESC\n    LIMIT 10\n)\nSELECT\n    trans.dt,\n    -- trans.GROUP_SUM,\n    trans.GROUP_FAILED_REASON, \n    SUM(trans.TURNOVER_EUR) AS total_turnover_eur\nFROM trans\nJOIN top_errors ON trans.GROUP_FAILED_REASON = top_errors.GROUP_FAILED_REASON\nleft join ANALYST.GROUP_SUM_TURNOVER_EUR on GROUP_SUM_TURNOVER_EUR.GROUP_SUM = trans.GROUP_SUM\nwhere {{GROUP_SUM}}\nGROUP BY trans.dt,\n-- trans.GROUP_SUM, \ntrans.GROUP_FAILED_REASON\nORDER BY trans.dt DESC\n",
+        "variables": [
+          "crypto_currency",
+          "granularity",
+          "country_card",
+          "widget_id",
+          "GEO_card",
+          "pay_system",
+          "turnover_eur",
+          "CREATED_AT",
+          "Try_Again",
+          "ACQUIRER",
+          "GROUP_SUM",
+          "type_operation",
+          "network",
+          "partner_name",
+          "fiat_currency"
+        ],
+        "type": "native",
+        "validation": {
+          "success": true,
+          "warnings": [],
+          "errors": [],
+          "variables_preserved": true,
+          "tables_converted": 1,
+          "functions_converted": 0
+        }
+      }
+    ],
+    "total_questions": 10,
+    "migration_timestamp": "2025-06-16T15:18:24.510564"
+  }
+]

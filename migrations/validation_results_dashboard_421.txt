@@ -1,0 +1,138 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 8 questions
+
+📝 Validating Question 1/8
+--------------------------------------------------
+  🔍 Validating Question 4218: Pay-In Acceptance Rate compare Bank
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with fatpay1 as (
+    select 
+        fatpay_country as card_country,
+        card_bank,
+        car...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 14
+    📝 Column names: ['card_country', 'card_bank', 'count_transactions', 'ar_period1', 'ar_period2', 'delta_ar', 'input_ar1', 'input_ar2', 'count_transactions_period1', 'count_transactions_period2', 'potential_turnover_eur_period1', 'potential_turnover_eur_period2', 'turnover_eur_period1', 'turnover_eur_period2']
+    📈 First row: ['United Arab Emirates', 'ABU DHABI ISLAMIC BANK', 12863, 0.8838321232512839, 0.9094964945825367, 0.025664371331252767, 0.07088934813331345, 0.057913961038961036, 11294, 1569, 2588142.3099999987, 336877.2, 1890702.7599999984, 245046.84999999998]
+    📈 Second row: ['Azerbaijan', 'KAPITAL BANK', 7312, 0.33611491108071134, 1.0, 0.6638850889192887, 0.01744892089396425, 8.116883116883117e-05, 7310, 2, 143469.01999999981, 92.8, 39442.41999999996, 92.8]
+
+📝 Validating Question 2/8
+--------------------------------------------------
+  🔍 Validating Question 4217: OOR Acceptance Rate compare BIN
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH oor1 as (
+    select 
+        card_isocountry as card_country,
+        card_bank_title as ca...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 15
+    📝 Column names: ['card_country', 'card_bank', 'card_bin', 'count_transactions', 'ar_period1', 'ar_period2', 'delta_ar', 'input_ar1', 'input_ar2', 'count_transactions_period1', 'count_transactions_period2', 'potential_turnover_eur_period1', 'potential_turnover_eur_period2', 'turnover_eur_period1', 'turnover_eur_period2']
+    📈 First row: ['United States of America', None, None, 4328, 0.5404896421845574, 0.4558862259678694, -0.08460341621668804, 0.0275088660979584, 0.02711848474878977, 531, 3797, 86771.4676645865, 586349.8557315377, 43611.0013838645, 238309.6178114721]
+    📈 Second row: ['Kazakhstan', 'KASPI BANK JSC', '440043', 2277, 0.5016611295681063, 0.5010121457489879, -0.0006489838191183761, 0.014473305856417137, 0.015509705315599004, 301, 1976, 16543.540781988104, 133738.3838058899, 8849.224650246902, 63702.945849951415]
+
+📝 Validating Question 3/8
+--------------------------------------------------
+  🔍 Validating Question 4213: OOR Acceptance Rate compare Country
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH oor1 as (
+    select 
+        card_isocountry as card_country,
+        card_bank_title as ca...
+    ✅ Query executed successfully!
+    📊 Rows returned: 143
+    📋 Columns: 13
+    📝 Column names: ['card_country', 'count_transactions', 'ar_period1', 'ar_period2', 'delta_ar', 'input_ar1', 'input_ar2', 'count_transactions_period1', 'count_transactions_period2', 'potential_turnover_eur_period1', 'potential_turnover_eur_period2', 'turnover_eur_period1', 'turnover_eur_period2']
+    📈 First row: ['United States of America', 25655, 0.6534519956850054, 0.6045017542260901, -0.048950241458915356, 0.23224384165628295, 0.2078457175980323, 3708, 21947, 702823.6799595073, 4164939.730546063, 375689.3531650491, 2204029.389245741]
+    📈 Second row: ['Germany', 9207, 0.6786034019695614, 0.6265760197775031, -0.05202738219205827, 0.07265407840506087, 0.07941282448966804, 1117, 8090, 281112.9199374072, 1999089.2470561585, 153114.68700644528, 958530.3882402375]
+
+📝 Validating Question 4/8
+--------------------------------------------------
+  🔍 Validating Question 4214: Pay-In Acceptance Rate compare Country
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with fatpay1 as (
+    select 
+        fatpay_country as card_country,
+        card_bank,
+        car...
+    ✅ Query executed successfully!
+    📊 Rows returned: 164
+    📋 Columns: 13
+    📝 Column names: ['card_country', 'count_transactions', 'ar_period1', 'ar_period2', 'delta_ar', 'input_ar1', 'input_ar2', 'count_transactions_period1', 'count_transactions_period2', 'potential_turnover_eur_period1', 'potential_turnover_eur_period2', 'turnover_eur_period1', 'turnover_eur_period2']
+    📈 First row: ['United Arab Emirates', 24116, 0.8305779217685454, 0.8356251998720818, 0.005047278103536446, 0.12380424824765111, 0.10604707792207792, 20989, 3127, 4315521.75999999, 629395.32, 3089387.469999995, 450135.28]
+    📈 Second row: ['Poland', 21496, 0.6061584840654608, 0.6876712328767123, 0.08151274881125148, 0.07996534361662086, 0.08149350649350649, 18576, 2920, 933308.3300000002, 160557.39000000004, 570330.69, 122062.54000000002]
+
+📝 Validating Question 5/8
+--------------------------------------------------
+  🔍 Validating Question 4215: OOR Acceptance Rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH oor1 as (
+    select 
+        card_isocountry as card_country,
+        card_bank_title as ca...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 3
+    📝 Column names: ['AR_PERIOD1', 'ar_period2', 'delta_ar']
+    📈 First row: [0.6733436055469953, 0.6442157096543412, -0.029127895892654188]
+
+📝 Validating Question 6/8
+--------------------------------------------------
+  🔍 Validating Question 4216: OOR Acceptance Rate compare Bank
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH oor1 as (
+    select 
+        card_isocountry as card_country,
+        card_bank_title as ca...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 14
+    📝 Column names: ['card_country', 'card_bank', 'count_transactions', 'ar_period1', 'ar_period2', 'delta_ar', 'input_ar1', 'input_ar2', 'count_transactions_period1', 'count_transactions_period2', 'potential_turnover_eur_period1', 'potential_turnover_eur_period2', 'turnover_eur_period1', 'turnover_eur_period2']
+    📈 First row: ['United States of America', None, 4388, 0.5464684014869888, 0.4597402597402597, -0.0867281417467291, 0.028179814051567144, 0.02772947314001034, 538, 3850, 87475.6716712565, 592893.4187869342, 44315.2053905345, 242841.5583591494]
+    📈 Second row: ['United States of America', 'BANK OF AMERICA, NATIONAL ASSOCIATION', 3019, 0.8012958963282938, 0.7762128325508607, -0.02508306377743308, 0.0355602415412633, 0.03108207610722063, 463, 2556, 80123.8032244862, 619617.7829925301, 58224.7937903459, 370385.6320851267]
+
+📝 Validating Question 7/8
+--------------------------------------------------
+  🔍 Validating Question 4219: Pay-In Acceptance Rate compare BIN
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with fatpay1 as (
+    select 
+        fatpay_country as card_country,
+        card_bank,
+        car...
+    ✅ Query executed successfully!
+    📊 Rows returned: 2000
+    📋 Columns: 15
+    📝 Column names: ['card_country', 'card_bank', 'card_bin', 'count_transactions', 'ar_period1', 'ar_period2', 'delta_ar', 'input_ar1', 'input_ar2', 'count_transactions_period1', 'count_transactions_period2', 'potential_turnover_eur_period1', 'potential_turnover_eur_period2', 'turnover_eur_period1', 'turnover_eur_period2']
+    📈 First row: ['Azerbaijan', 'KAPITAL BANK', '52391517', 6891, 0.3373966042664345, 0.0, 0.0, 0.01651149413043015, None, 6891, 0, 130283.59999999998, None, 34656.899999999965, None]
+    📈 Second row: ['Cyprus', 'REVOLUT BANK UAB', '41659812', 4579, 0.9061446720248898, 0.8919667590027701, -0.014177913022119681, 0.024820504079936936, 0.026136363636363635, 3857, 722, 175292.44000000003, 26250.030000000002, 159980.32, 23143.030000000002]
+
+📝 Validating Question 8/8
+--------------------------------------------------
+  🔍 Validating Question 4220: Pay-In Acceptance Rate
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: with fatpay1 as (
+    select 
+        fatpay_country as card_country,
+        card_bank,
+        car...
+    ✅ Query executed successfully!
+    📊 Rows returned: 1
+    📋 Columns: 3
+    📝 Column names: ['ar_period1', 'ar_period2', 'DELTA_AR']
+    📈 First row: [0.6297676124369387, 0.6856443220079583, 0.055876709571019645]
+
+🎉 Validation Summary:
+✅ Successfully validated: 8/8 questions
+🎊 All questions are working correctly! Migration successful!

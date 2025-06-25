@@ -1,0 +1,98 @@
+
+🔍 Validating migration results...
+============================================================
+📊 Validating 6 questions
+
+📝 Validating Question 1/6
+--------------------------------------------------
+  🔍 Validating Question 1458: Turnover OOR weekly by new and old users
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH min_cr_date as (
+    select USER_ID, date_trunc({{granularity}} ,min(CREATED_AT)) as min_cr_dt
+...
+    ✅ Query executed successfully!
+    📊 Rows returned: 112
+    📋 Columns: 3
+    📝 Column names: ['DT_WEEK', 'TYPE_USER', 'SUM_TURNOVER_EUR']
+    📈 First row: ['2024-05-27T00:00:00Z', 'new user', 558468.810300402]
+    📈 Second row: ['2024-05-27T00:00:00Z', 'old user', 1796643.137122426]
+
+📝 Validating Question 2/6
+--------------------------------------------------
+  🔍 Validating Question 1520: Turnover OOR daily by new and old users
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH min_cr_date as (
+    select USER_ID, date_trunc({{granularity}}, min(CREATED_AT)) as min_cr_dt
+...
+    ✅ Query executed successfully!
+    📊 Rows returned: 631
+    📋 Columns: 3
+    📝 Column names: ['DT_WEEK', 'TYPE_USER', 'SUM_TURNOVER_EUR']
+    📈 First row: ['2019-04-01T00:00:00Z', 'new user', 40.308]
+    📈 Second row: ['2019-04-15T00:00:00Z', 'old user', 20.318]
+
+📝 Validating Question 3/6
+--------------------------------------------------
+  🔍 Validating Question 1521: Count acceptance transaction OOR weekly by new and old users
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH min_cr_date as (
+    select USER_ID, date_trunc({{granularity}},min(CREATED_AT)) as min_cr_dt
+ ...
+    ✅ Query executed successfully!
+    📊 Rows returned: 631
+    📋 Columns: 3
+    📝 Column names: ['DT_WEEK', 'TYPE_USER', 'COUNT_CONFIRMED_TRANSACTIONS']
+    📈 First row: ['2019-04-01T00:00:00Z', 'new user', 4]
+    📈 Second row: ['2019-04-15T00:00:00Z', 'old user', 2]
+
+📝 Validating Question 4/6
+--------------------------------------------------
+  🔍 Validating Question 3542: Number of users weekly split by new/old
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH min_cr_date as (
+    select USER_ID, date_trunc({{granularity}} ,min(CREATED_AT)) as min_cr_dt
+...
+    ✅ Query executed successfully!
+    📊 Rows returned: 112
+    📋 Columns: 3
+    📝 Column names: ['DT_WEEK', 'TYPE_USER', 'Paying users']
+    📈 First row: ['2024-05-27T00:00:00Z', 'new user', 3836]
+    📈 Second row: ['2024-05-27T00:00:00Z', 'old user', 5504]
+
+📝 Validating Question 5/6
+--------------------------------------------------
+  🔍 Validating Question 3543: Average check split by new/old
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH min_cr_date as (
+    select USER_ID, date_trunc({{granularity}} ,min(CREATED_AT)) as min_cr_dt
+...
+    ✅ Query executed successfully!
+    📊 Rows returned: 112
+    📋 Columns: 3
+    📝 Column names: ['DT_WEEK', 'TYPE_USER', 'Average check']
+    📈 First row: ['2024-05-27T00:00:00Z', 'new user', 117.25148232215034]
+    📈 Second row: ['2024-05-27T00:00:00Z', 'old user', 198.94177135670756]
+
+📝 Validating Question 6/6
+--------------------------------------------------
+  🔍 Validating Question 3544: Transactions per user group
+    📊 Database ID: 16
+    📝 Query Type: native
+    🔍 SQL Preview: WITH min_cr_date as (
+    select USER_ID, date_trunc({{granularity}} ,min(CREATED_AT)) as min_cr_dt
+...
+    ✅ Query executed successfully!
+    📊 Rows returned: 112
+    📋 Columns: 3
+    📝 Column names: ['DT_WEEK', 'TYPE_USER', 'Transactions per user in period']
+    📈 First row: ['2024-05-27T00:00:00Z', 'new user', 1.241657977059437]
+    📈 Second row: ['2024-05-27T00:00:00Z', 'old user', 1.6408066860465116]
+
+🎉 Validation Summary:
+✅ Successfully validated: 6/6 questions
+🎊 All questions are working correctly! Migration successful!

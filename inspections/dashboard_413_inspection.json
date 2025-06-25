@@ -1,0 +1,3400 @@
+{
+  "description": null,
+  "archived": false,
+  "view_count": 1,
+  "collection_position": 1,
+  "dashcards": [
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": null,
+        "archived": false,
+        "view_count": 1,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": null,
+        "result_metadata": [
+          {
+            "display_name": "DT",
+            "field_ref": [
+              "field",
+              "DT",
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "base_type": "type/DateTime",
+            "effective_type": "type/DateTime",
+            "name": "DT",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 231,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/DateTime": {
+                  "earliest": "2024-10-08T00:00:00Z",
+                  "latest": "2025-06-22T00:00:00Z"
+                }
+              }
+            }
+          },
+          {
+            "display_name": "PARAMETER_TOPN",
+            "field_ref": [
+              "field",
+              "PARAMETER_TOPN",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "PARAMETER_TOPN",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 1,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 21.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "AR",
+            "field_ref": [
+              "field",
+              "AR",
+              {
+                "base-type": "type/Float"
+              }
+            ],
+            "base_type": "type/Float",
+            "effective_type": "type/Float",
+            "name": "AR",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 214,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 0.0,
+                  "q1": 0.791498752489083,
+                  "q3": 0.8692757650689931,
+                  "max": 0.9066344993968637,
+                  "sd": 0.24103763382913948,
+                  "avg": 0.7559685726242094
+                }
+              }
+            }
+          }
+        ],
+        "initially_published_at": null,
+        "can_write": true,
+        "database_id": 2,
+        "enable_embedding": false,
+        "collection_id": 746,
+        "query_type": "native",
+        "name": "Acceptance Rate",
+        "last_used_at": "2025-06-22T10:23:28.865164Z",
+        "type": "question",
+        "query_average_duration": null,
+        "creator_id": 148,
+        "moderation_reviews": [],
+        "updated_at": "2025-06-22T10:23:24.908455Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "database": 2,
+          "type": "native",
+          "native": {
+            "template-tags": {
+              "CREATED_AT": {
+                "id": "d4f8187d-705d-dc50-f477-bb90ec489c08",
+                "name": "CREATED_AT",
+                "display-name": "Created at",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20835,
+                  null
+                ],
+                "widget-type": "date/all-options",
+                "default": "past30days",
+                "required": true
+              },
+              "IS_FAST_TRACK_KYC": {
+                "type": "dimension",
+                "name": "IS_FAST_TRACK_KYC",
+                "id": "bea3cadd-fa86-4341-bc1a-2ce6b75e51d9",
+                "display-name": "Is Fast Track Kyc",
+                "dimension": [
+                  "field",
+                  564369,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "fiat_currency": {
+                "id": "62958889-857c-d3b2-d889-207a0a2b33c6",
+                "name": "fiat_currency",
+                "display-name": "Fiat currency",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20892,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "AUTH_TYPE": {
+                "type": "dimension",
+                "name": "AUTH_TYPE",
+                "id": "ef0daa69-9304-42f2-83ea-002ae9d740ba",
+                "display-name": "Auth Type",
+                "dimension": [
+                  "field",
+                  566012,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "LOCATION_GEO": {
+                "id": "4daebdf9-1050-9bad-f98d-e95cbc3d93b1",
+                "name": "LOCATION_GEO",
+                "display-name": "Geoscheme IP",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  876,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "TRANSACTION_COLUMNS_GROUPBY": {
+                "id": "2239253e-bcd2-4616-9e6c-ada887a3edd6",
+                "name": "TRANSACTION_COLUMNS_GROUPBY",
+                "display-name": "Transaction columns groupby",
+                "type": "text",
+                "default": [
+                  "Acquirer"
+                ],
+                "required": true
+              },
+              "top_n": {
+                "id": "ca0a7260-ea6c-641b-2f9b-ceae59fd194a",
+                "name": "top_n",
+                "display-name": "Top N",
+                "type": "number",
+                "default": "5",
+                "required": true
+              },
+              "partner_name": {
+                "id": "f06dbc00-3f6f-c445-95ef-27779246c502",
+                "name": "partner_name",
+                "display-name": "Partner name",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20834,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "crypto_currency": {
+                "id": "d7979d8b-ee55-b24c-fc25-fcbcdc2bad43",
+                "name": "crypto_currency",
+                "display-name": "Crypto currency",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20836,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "network": {
+                "id": "92e16fc3-a07e-870b-62c0-e9e5f636e691",
+                "name": "network",
+                "display-name": "Network",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  34623,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "is_user_based_selective": {
+                "type": "dimension",
+                "name": "is_user_based_selective",
+                "id": "94ae1d78-40ad-4f69-8212-65d51b5e58b6",
+                "display-name": "Is User Based Selective",
+                "dimension": [
+                  "field",
+                  561795,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "is_amount_based_selective": {
+                "type": "dimension",
+                "name": "is_amount_based_selective",
+                "id": "f8b0f687-2164-47a1-8bb5-a2fffe1da899",
+                "display-name": "Is Amount Based Selective",
+                "default": null,
+                "dimension": [
+                  "field",
+                  573892,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              },
+              "pay_system": {
+                "id": "12ea305a-7a27-0bec-2a1e-e40ddb05662f",
+                "name": "pay_system",
+                "display-name": "Pay system",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20885,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "flag_is_recurring": {
+                "type": "dimension",
+                "name": "flag_is_recurring",
+                "id": "a7aaf14b-3b59-43c9-a804-734e9efc127f",
+                "display-name": "Flag Is Recurring",
+                "dimension": [
+                  "field",
+                  550206,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "GRANULARITY": {
+                "id": "a58cbf6b-e1e4-8c7b-a0fb-14c458b06af1",
+                "name": "GRANULARITY",
+                "display-name": "Granularity",
+                "type": "text",
+                "required": true,
+                "default": "day"
+              },
+              "LOCATION_COUNTRY": {
+                "id": "23dad7cc-474f-9348-36a9-21b856900f50",
+                "name": "LOCATION_COUNTRY",
+                "display-name": "Country IP",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  874,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "RETRY_EXCLUDE": {
+                "type": "dimension",
+                "name": "RETRY_EXCLUDE",
+                "id": "96a218b1-3966-4a54-86c7-9b5ba7a99586",
+                "display-name": "Retry Exclude",
+                "default": null,
+                "dimension": [
+                  "field",
+                  569157,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              }
+            },
+            "query": "WITH pre_top_n as (\r\n    select CASE \r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Partner Widget'\r\n            THEN TRANSACTIONS.WIDGET_PARTNER_NAME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Type operation'\r\n            THEN TRANSACTIONS.TYPE\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Accepted Transaction'\r\n            THEN to_char(TRANSACTIONS.CONFIRMED)\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Crypto currency'\r\n            THEN TRANSACTIONS.currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Fiat currency'\r\n            THEN TRANSACTIONS.fiat_currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country card'\r\n            THEN TRANSACTIONS.CARD_ISOCOUNTRY\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme card'\r\n            THEN TRANSACTIONS.CARD_GEOSCHEME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Brand card'\r\n            THEN TRANSACTIONS.CARD_BRAND\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Pay System'\r\n            THEN TRANSACTIONS.PAY_SYSTEM\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country IP'\r\n            THEN COUNTRY_CODES.COUNTRY_NAME_EN\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme IP'\r\n            THEN COUNTRY_CODES.GEOSCHEME_BUSINESS\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Acquirer'\r\n            THEN TRANSACTIONS.vendor_name\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Network'\r\n            THEN TRANSACTIONS.Network\r\n            END AS GROUP_BY\r\n         , row_number() over (order by sum(TRANSACTIONS.FIAT_AMOUNT_EUR) desc) as rn\r\n    from MART.TRANSACTIONS\r\n    left join MD.COUNTRY_CODES\r\n                   on lower(TRANSACTIONS.LOCATION_COUNTRY) = lower(COUNTRY_CODES.COUNTRY_CODE_ALPHA_3)\r\n    where {{CREATED_AT}} and\r\n      {{CREATED_AT}} and {{partner_name}} and\r\n          {{crypto_currency}} and {{fiat_currency}} and \r\n          {{pay_system}}  and {{LOCATION_COUNTRY}} and {{LOCATION_GEO}} and\r\n          {{network}} and {{flag_is_recurring}}  and {{is_user_based_selective}} and\r\n          {{IS_FAST_TRACK_KYC}} and {{AUTH_TYPE}} and {{RETRY_EXCLUDE}} and {{is_amount_based_selective}} \r\n          and VENDOR_NAME = 'blik_hyperion_mobilum'\r\n    group by 1\r\n    order by 2 desc),\r\n     top_n as (\r\n         select GROUP_BY\r\n                , CASE WHEN rn < {{top_n}}\r\n                    THEN GROUP_BY\r\n                    ELSE 'others' END AS top_n_parameter\r\n         from pre_top_n\r\n     ),\r\n  main_query as (select TRANSACTIONS.CREATED_AT \r\n                      , top_n.top_n_parameter\r\n                      , TRANSACTIONS.TURNOVER_EUR\r\n                      , TRANSACTIONS.id\r\n                      , TRANSACTIONS.confirmed\r\n      from mart.TRANSACTIONS \r\n      left join MD.COUNTRY_CODES\r\n                   on lower(TRANSACTIONS.LOCATION_COUNTRY) = lower(COUNTRY_CODES.COUNTRY_CODE_ALPHA_3)\r\n      left join top_n on top_n.GROUP_BY = CASE \r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Partner Widget'\r\n            THEN TRANSACTIONS.WIDGET_PARTNER_NAME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Type operation'\r\n            THEN TRANSACTIONS.TYPE\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Accepted Transaction'\r\n            THEN to_char(TRANSACTIONS.CONFIRMED)\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Crypto currency'\r\n            THEN TRANSACTIONS.currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Fiat currency'\r\n            THEN TRANSACTIONS.fiat_currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country card'\r\n            THEN TRANSACTIONS.CARD_ISOCOUNTRY\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme card'\r\n            THEN TRANSACTIONS.CARD_GEOSCHEME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Brand card'\r\n            THEN TRANSACTIONS.CARD_BRAND\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Pay System'\r\n            THEN TRANSACTIONS.PAY_SYSTEM\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country IP'\r\n            THEN COUNTRY_CODES.COUNTRY_NAME_EN\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme IP'\r\n            THEN COUNTRY_CODES.GEOSCHEME_BUSINESS\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Acquirer'\r\n            THEN TRANSACTIONS.vendor_name\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Network'\r\n            THEN TRANSACTIONS.Network\r\n            END\r\n                \r\n      where TRANSACTIONS.SOURCE_MAIN = 'widget' and\r\n      {{CREATED_AT}} and {{partner_name}} and\r\n          {{crypto_currency}} and {{fiat_currency}} and \r\n          {{pay_system}}  and {{LOCATION_COUNTRY}} and {{LOCATION_GEO}} and\r\n          {{network}} and {{flag_is_recurring}}  and {{is_user_based_selective}} and\r\n          {{IS_FAST_TRACK_KYC}} and {{AUTH_TYPE}} and {{RETRY_EXCLUDE}} and {{is_amount_based_selective}} \r\n          and VENDOR_NAME = 'blik_hyperion_mobilum'\r\n      ) \r\nselect date_trunc({{GRANULARITY}},CREATED_AT) as DT\r\n      , top_n_parameter AS Parameter_topN\r\n     , count(case when confirmed then id end)/count(*) as ar\r\nfrom main_query\r\ngroup by 1,2\r\norder by 1,3 desc"
+          }
+        },
+        "id": 4114,
+        "parameter_mappings": [],
+        "display": "line",
+        "archived_directly": false,
+        "entity_id": "RfY-RdFE6mtzJPNccNxR7",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.y_axis.title_text": "Acceptance Rate",
+          "graph.show_values": true,
+          "graph.x_axis.title_text": "DT",
+          "graph.label_value_frequency": "all",
+          "graph.metrics": [
+            "AR"
+          ],
+          "graph.label_value_formatting": "auto",
+          "column_settings": {
+            "[\"name\",\"TURNOVER\"]": {
+              "number_style": "currency",
+              "decimals": 0
+            },
+            "[\"name\",\"AR\"]": {
+              "number_style": "percent"
+            }
+          },
+          "graph.dimensions": [
+            "DT",
+            "PARAMETER_TOPN"
+          ],
+          "stackable.stack_type": "stacked"
+        },
+        "metabase_version": "v0.52.9 (f9fbbf8)",
+        "parameters": [
+          {
+            "id": "d4f8187d-705d-dc50-f477-bb90ec489c08",
+            "type": "date/all-options",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "CREATED_AT"
+              ]
+            ],
+            "name": "Created at",
+            "slug": "CREATED_AT",
+            "default": "past30days",
+            "required": true
+          },
+          {
+            "id": "bea3cadd-fa86-4341-bc1a-2ce6b75e51d9",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "IS_FAST_TRACK_KYC"
+              ]
+            ],
+            "name": "Is Fast Track Kyc",
+            "slug": "IS_FAST_TRACK_KYC"
+          },
+          {
+            "id": "62958889-857c-d3b2-d889-207a0a2b33c6",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "fiat_currency"
+              ]
+            ],
+            "name": "Fiat currency",
+            "slug": "fiat_currency"
+          },
+          {
+            "id": "ef0daa69-9304-42f2-83ea-002ae9d740ba",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "AUTH_TYPE"
+              ]
+            ],
+            "name": "Auth Type",
+            "slug": "AUTH_TYPE"
+          },
+          {
+            "id": "4daebdf9-1050-9bad-f98d-e95cbc3d93b1",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "LOCATION_GEO"
+              ]
+            ],
+            "name": "Geoscheme IP",
+            "slug": "LOCATION_GEO"
+          },
+          {
+            "slug": "TRANSACTION_COLUMNS_GROUPBY",
+            "values_query_type": "list",
+            "default": [
+              "Acquirer"
+            ],
+            "name": "Transaction columns groupby",
+            "type": "category",
+            "values_source_type": "static-list",
+            "id": "2239253e-bcd2-4616-9e6c-ada887a3edd6",
+            "target": [
+              "variable",
+              [
+                "template-tag",
+                "TRANSACTION_COLUMNS_GROUPBY"
+              ]
+            ],
+            "values_source_config": {
+              "values": [
+                "Acquirer",
+                "Partner Widget",
+                "Accepted Transaction",
+                "Fiat currency",
+                "Crypto currency",
+                "Network",
+                "Pay System",
+                "Country IP",
+                "Geoscheme IP"
+              ]
+            },
+            "required": true
+          },
+          {
+            "id": "ca0a7260-ea6c-641b-2f9b-ceae59fd194a",
+            "type": "number/=",
+            "target": [
+              "variable",
+              [
+                "template-tag",
+                "top_n"
+              ]
+            ],
+            "name": "Top N",
+            "slug": "top_n",
+            "default": "5",
+            "required": true
+          },
+          {
+            "id": "f06dbc00-3f6f-c445-95ef-27779246c502",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "partner_name"
+              ]
+            ],
+            "name": "Partner name",
+            "slug": "partner_name"
+          },
+          {
+            "id": "d7979d8b-ee55-b24c-fc25-fcbcdc2bad43",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "crypto_currency"
+              ]
+            ],
+            "name": "Crypto currency",
+            "slug": "crypto_currency"
+          },
+          {
+            "id": "92e16fc3-a07e-870b-62c0-e9e5f636e691",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "network"
+              ]
+            ],
+            "name": "Network",
+            "slug": "network"
+          },
+          {
+            "id": "94ae1d78-40ad-4f69-8212-65d51b5e58b6",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "is_user_based_selective"
+              ]
+            ],
+            "name": "Is User Based Selective",
+            "slug": "is_user_based_selective"
+          },
+          {
+            "id": "f8b0f687-2164-47a1-8bb5-a2fffe1da899",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "is_amount_based_selective"
+              ]
+            ],
+            "name": "Is Amount Based Selective",
+            "slug": "is_amount_based_selective"
+          },
+          {
+            "id": "12ea305a-7a27-0bec-2a1e-e40ddb05662f",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "pay_system"
+              ]
+            ],
+            "name": "Pay system",
+            "slug": "pay_system"
+          },
+          {
+            "id": "a7aaf14b-3b59-43c9-a804-734e9efc127f",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "flag_is_recurring"
+              ]
+            ],
+            "name": "Flag Is Recurring",
+            "slug": "flag_is_recurring"
+          },
+          {
+            "id": "a58cbf6b-e1e4-8c7b-a0fb-14c458b06af1",
+            "type": "category",
+            "target": [
+              "variable",
+              [
+                "template-tag",
+                "GRANULARITY"
+              ]
+            ],
+            "name": "Granularity",
+            "slug": "GRANULARITY",
+            "default": "day",
+            "required": true
+          },
+          {
+            "id": "23dad7cc-474f-9348-36a9-21b856900f50",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "LOCATION_COUNTRY"
+              ]
+            ],
+            "name": "Country IP",
+            "slug": "LOCATION_COUNTRY"
+          },
+          {
+            "id": "96a218b1-3966-4a54-86c7-9b5ba7a99586",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "RETRY_EXCLUDE"
+              ]
+            ],
+            "name": "Retry Exclude",
+            "slug": "RETRY_EXCLUDE"
+          }
+        ],
+        "created_at": "2025-06-22T10:23:24.908455Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-06-22T10:23:24.908455Z",
+      "col": 0,
+      "id": 3322,
+      "parameter_mappings": [
+        {
+          "parameter_id": "f5f8f9a5",
+          "card_id": 4114,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "CREATED_AT"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "659bba9d",
+          "card_id": 4114,
+          "target": [
+            "variable",
+            [
+              "template-tag",
+              "TRANSACTION_COLUMNS_GROUPBY"
+            ]
+          ]
+        },
+        {
+          "parameter_id": "8bfcc274",
+          "card_id": 4114,
+          "target": [
+            "variable",
+            [
+              "template-tag",
+              "GRANULARITY"
+            ]
+          ]
+        },
+        {
+          "parameter_id": "a947c3bd",
+          "card_id": 4114,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "partner_name"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "7424225a",
+          "card_id": 4114,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "LOCATION_COUNTRY"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "22ec2adf",
+          "card_id": 4114,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "LOCATION_GEO"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "8254bb33",
+          "card_id": 4114,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "crypto_currency"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "dcaf80f8",
+          "card_id": 4114,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "network"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 4114,
+      "entity_id": "ZPzo0RAb2cuimD_wZiz72",
+      "visualization_settings": {
+        "graph.y_axis.title_text": "Acceptance Rate",
+        "graph.show_values": true,
+        "graph.x_axis.labels_enabled": false,
+        "graph.x_axis.title_text": "DT",
+        "graph.label_value_frequency": "all",
+        "graph.metrics": [
+          "TURNOVER"
+        ],
+        "graph.label_value_formatting": "auto",
+        "column_settings": {
+          "[\"name\",\"TURNOVER\"]": {
+            "number_style": "currency",
+            "decimals": 0
+          },
+          "[\"name\",\"AR\"]": {
+            "number_style": "percent"
+          }
+        },
+        "graph.dimensions": [
+          "DT",
+          "PARAMETER_TOPN"
+        ],
+        "stackable.stack_type": "stacked"
+      },
+      "size_y": 6,
+      "dashboard_id": 413,
+      "created_at": "2025-06-22T10:23:24.908455Z",
+      "row": 12
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": null,
+        "archived": false,
+        "view_count": 1,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": null,
+        "result_metadata": [
+          {
+            "display_name": "DT",
+            "field_ref": [
+              "field",
+              "DT",
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "base_type": "type/DateTime",
+            "effective_type": "type/DateTime",
+            "name": "DT",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 214,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/DateTime": {
+                  "earliest": "2024-10-08T00:00:00Z",
+                  "latest": "2025-06-22T00:00:00Z"
+                }
+              }
+            }
+          },
+          {
+            "display_name": "PARAMETER_TOPN",
+            "field_ref": [
+              "field",
+              "PARAMETER_TOPN",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "PARAMETER_TOPN",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 1,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 21.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "TURNOVER",
+            "field_ref": [
+              "field",
+              "TURNOVER",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "TURNOVER",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 214,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 4.610655599999999,
+                  "q1": 12291.271375125001,
+                  "q3": 101134.33074433432,
+                  "max": 313006.4004705481,
+                  "sd": 78885.70873993546,
+                  "avg": 75789.3413886034
+                }
+              }
+            }
+          }
+        ],
+        "initially_published_at": null,
+        "can_write": true,
+        "database_id": 2,
+        "enable_embedding": false,
+        "collection_id": 746,
+        "query_type": "native",
+        "name": "Turnover",
+        "last_used_at": "2025-06-22T10:23:28.865164Z",
+        "type": "question",
+        "query_average_duration": null,
+        "creator_id": 148,
+        "moderation_reviews": [],
+        "updated_at": "2025-06-22T10:23:24.908455Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "database": 2,
+          "type": "native",
+          "native": {
+            "template-tags": {
+              "CREATED_AT": {
+                "id": "d4f8187d-705d-dc50-f477-bb90ec489c08",
+                "name": "CREATED_AT",
+                "display-name": "Created at",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20835,
+                  null
+                ],
+                "widget-type": "date/all-options",
+                "default": "past30days",
+                "required": true
+              },
+              "IS_FAST_TRACK_KYC": {
+                "type": "dimension",
+                "name": "IS_FAST_TRACK_KYC",
+                "id": "bea3cadd-fa86-4341-bc1a-2ce6b75e51d9",
+                "display-name": "Is Fast Track Kyc",
+                "dimension": [
+                  "field",
+                  564369,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "fiat_currency": {
+                "id": "62958889-857c-d3b2-d889-207a0a2b33c6",
+                "name": "fiat_currency",
+                "display-name": "Fiat currency",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20892,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "AUTH_TYPE": {
+                "type": "dimension",
+                "name": "AUTH_TYPE",
+                "id": "ef0daa69-9304-42f2-83ea-002ae9d740ba",
+                "display-name": "Auth Type",
+                "dimension": [
+                  "field",
+                  566012,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "LOCATION_GEO": {
+                "id": "4daebdf9-1050-9bad-f98d-e95cbc3d93b1",
+                "name": "LOCATION_GEO",
+                "display-name": "Geoscheme IP",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  876,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "TRANSACTION_COLUMNS_GROUPBY": {
+                "id": "2239253e-bcd2-4616-9e6c-ada887a3edd6",
+                "name": "TRANSACTION_COLUMNS_GROUPBY",
+                "display-name": "Transaction columns groupby",
+                "type": "text",
+                "default": [
+                  "Acquirer"
+                ],
+                "required": true
+              },
+              "top_n": {
+                "id": "ca0a7260-ea6c-641b-2f9b-ceae59fd194a",
+                "name": "top_n",
+                "display-name": "Top N",
+                "type": "number",
+                "default": "5",
+                "required": true
+              },
+              "partner_name": {
+                "id": "f06dbc00-3f6f-c445-95ef-27779246c502",
+                "name": "partner_name",
+                "display-name": "Partner name",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20834,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "crypto_currency": {
+                "id": "d7979d8b-ee55-b24c-fc25-fcbcdc2bad43",
+                "name": "crypto_currency",
+                "display-name": "Crypto currency",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20836,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "network": {
+                "id": "92e16fc3-a07e-870b-62c0-e9e5f636e691",
+                "name": "network",
+                "display-name": "Network",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  34623,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "is_user_based_selective": {
+                "type": "dimension",
+                "name": "is_user_based_selective",
+                "id": "94ae1d78-40ad-4f69-8212-65d51b5e58b6",
+                "display-name": "Is User Based Selective",
+                "dimension": [
+                  "field",
+                  561795,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "is_amount_based_selective": {
+                "type": "dimension",
+                "name": "is_amount_based_selective",
+                "id": "f8b0f687-2164-47a1-8bb5-a2fffe1da899",
+                "display-name": "Is Amount Based Selective",
+                "default": null,
+                "dimension": [
+                  "field",
+                  573892,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              },
+              "pay_system": {
+                "id": "12ea305a-7a27-0bec-2a1e-e40ddb05662f",
+                "name": "pay_system",
+                "display-name": "Pay system",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20885,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "flag_is_recurring": {
+                "type": "dimension",
+                "name": "flag_is_recurring",
+                "id": "a7aaf14b-3b59-43c9-a804-734e9efc127f",
+                "display-name": "Flag Is Recurring",
+                "dimension": [
+                  "field",
+                  550206,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "GRANULARITY": {
+                "id": "a58cbf6b-e1e4-8c7b-a0fb-14c458b06af1",
+                "name": "GRANULARITY",
+                "display-name": "Granularity",
+                "type": "text",
+                "required": true,
+                "default": "day"
+              },
+              "transaction_accepted": {
+                "type": "dimension",
+                "name": "transaction_accepted",
+                "id": "dbe7dba3-f7f8-45c5-9ccb-00ae2107d8de",
+                "display-name": "Transaction Accepted",
+                "default": [
+                  true
+                ],
+                "dimension": [
+                  "field",
+                  20847,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "LOCATION_COUNTRY": {
+                "id": "23dad7cc-474f-9348-36a9-21b856900f50",
+                "name": "LOCATION_COUNTRY",
+                "display-name": "Country IP",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  874,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "RETRY_EXCLUDE": {
+                "type": "dimension",
+                "name": "RETRY_EXCLUDE",
+                "id": "96a218b1-3966-4a54-86c7-9b5ba7a99586",
+                "display-name": "Retry Exclude",
+                "default": null,
+                "dimension": [
+                  "field",
+                  569157,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              }
+            },
+            "query": "WITH pre_top_n as (\r\n    select CASE \r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Partner Widget'\r\n            THEN TRANSACTIONS.WIDGET_PARTNER_NAME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Type operation'\r\n            THEN TRANSACTIONS.TYPE\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Accepted Transaction'\r\n            THEN to_char(TRANSACTIONS.CONFIRMED)\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Crypto currency'\r\n            THEN TRANSACTIONS.currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Fiat currency'\r\n            THEN TRANSACTIONS.fiat_currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country card'\r\n            THEN TRANSACTIONS.CARD_ISOCOUNTRY\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme card'\r\n            THEN TRANSACTIONS.CARD_GEOSCHEME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Brand card'\r\n            THEN TRANSACTIONS.CARD_BRAND\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Pay System'\r\n            THEN TRANSACTIONS.PAY_SYSTEM\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country IP'\r\n            THEN COUNTRY_CODES.COUNTRY_NAME_EN\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme IP'\r\n            THEN COUNTRY_CODES.GEOSCHEME_BUSINESS\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Acquirer'\r\n            THEN TRANSACTIONS.vendor_name\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Network'\r\n            THEN TRANSACTIONS.Network\r\n            END AS GROUP_BY\r\n         , row_number() over (order by sum(TRANSACTIONS.FIAT_AMOUNT_EUR) desc) as rn\r\n    from MART.TRANSACTIONS\r\n    left join MD.COUNTRY_CODES\r\n                   on lower(TRANSACTIONS.LOCATION_COUNTRY) = lower(COUNTRY_CODES.COUNTRY_CODE_ALPHA_3)\r\n    where {{CREATED_AT}} and\r\n      {{CREATED_AT}} and {{partner_name}} and {{transaction_accepted}} and\r\n          {{crypto_currency}} and {{fiat_currency}} and \r\n          {{pay_system}}  and {{LOCATION_COUNTRY}} and {{LOCATION_GEO}} and\r\n          {{network}} and {{flag_is_recurring}}  and {{is_user_based_selective}} and\r\n          {{IS_FAST_TRACK_KYC}} and {{AUTH_TYPE}} and {{RETRY_EXCLUDE}} and {{is_amount_based_selective}} \r\n          and VENDOR_NAME = 'blik_hyperion_mobilum'\r\n    group by 1\r\n    order by 2 desc),\r\n     top_n as (\r\n         select GROUP_BY\r\n                , CASE WHEN rn < {{top_n}}\r\n                    THEN GROUP_BY\r\n                    ELSE 'others' END AS top_n_parameter\r\n         from pre_top_n\r\n     ),\r\n  main_query as (select TRANSACTIONS.CREATED_AT \r\n                      , top_n.top_n_parameter\r\n                      , TRANSACTIONS.TURNOVER_EUR\r\n                      , TRANSACTIONS.id\r\n                      , TRANSACTIONS.confirmed\r\n      from mart.TRANSACTIONS \r\n      left join MD.COUNTRY_CODES\r\n                   on lower(TRANSACTIONS.LOCATION_COUNTRY) = lower(COUNTRY_CODES.COUNTRY_CODE_ALPHA_3)\r\n      left join top_n on top_n.GROUP_BY = CASE \r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Partner Widget'\r\n            THEN TRANSACTIONS.WIDGET_PARTNER_NAME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Type operation'\r\n            THEN TRANSACTIONS.TYPE\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Accepted Transaction'\r\n            THEN to_char(TRANSACTIONS.CONFIRMED)\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Crypto currency'\r\n            THEN TRANSACTIONS.currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Fiat currency'\r\n            THEN TRANSACTIONS.fiat_currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country card'\r\n            THEN TRANSACTIONS.CARD_ISOCOUNTRY\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme card'\r\n            THEN TRANSACTIONS.CARD_GEOSCHEME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Brand card'\r\n            THEN TRANSACTIONS.CARD_BRAND\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Pay System'\r\n            THEN TRANSACTIONS.PAY_SYSTEM\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country IP'\r\n            THEN COUNTRY_CODES.COUNTRY_NAME_EN\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme IP'\r\n            THEN COUNTRY_CODES.GEOSCHEME_BUSINESS\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Acquirer'\r\n            THEN TRANSACTIONS.vendor_name\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Network'\r\n            THEN TRANSACTIONS.Network\r\n            END\r\n                \r\n      where TRANSACTIONS.SOURCE_MAIN = 'widget' and\r\n      {{CREATED_AT}} and {{partner_name}} and {{transaction_accepted}} and\r\n          {{crypto_currency}} and {{fiat_currency}} and \r\n          {{pay_system}}  and {{LOCATION_COUNTRY}} and {{LOCATION_GEO}} and\r\n          {{network}} and {{flag_is_recurring}}  and {{is_user_based_selective}} and\r\n          {{IS_FAST_TRACK_KYC}} and {{AUTH_TYPE}} and {{RETRY_EXCLUDE}} and {{is_amount_based_selective}} \r\n          and VENDOR_NAME = 'blik_hyperion_mobilum'\r\n      ) \r\nselect date_trunc({{GRANULARITY}},CREATED_AT) as DT\r\n      , top_n_parameter AS Parameter_topN\r\n     , sum(TURNOVER_EUR) as turnover\r\nfrom main_query\r\ngroup by 1,2\r\norder by 1,3 desc"
+          }
+        },
+        "id": 4115,
+        "parameter_mappings": [],
+        "display": "bar",
+        "archived_directly": false,
+        "entity_id": "dSJdnqqrh-2lpm8d74_GN",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.y_axis.title_text": "Turnover EUR",
+          "graph.show_values": true,
+          "graph.x_axis.title_text": "DT",
+          "graph.label_value_frequency": "all",
+          "graph.metrics": [
+            "TURNOVER"
+          ],
+          "graph.label_value_formatting": "auto",
+          "column_settings": {
+            "[\"name\",\"TURNOVER\"]": {
+              "number_style": "currency",
+              "decimals": 0
+            },
+            "[\"name\",\"AR\"]": {
+              "number_style": "percent"
+            }
+          },
+          "graph.dimensions": [
+            "DT",
+            "PARAMETER_TOPN"
+          ],
+          "stackable.stack_type": "stacked"
+        },
+        "metabase_version": "v0.52.9 (f9fbbf8)",
+        "parameters": [
+          {
+            "id": "d4f8187d-705d-dc50-f477-bb90ec489c08",
+            "type": "date/all-options",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "CREATED_AT"
+              ]
+            ],
+            "name": "Created at",
+            "slug": "CREATED_AT",
+            "default": "past30days",
+            "required": true
+          },
+          {
+            "id": "bea3cadd-fa86-4341-bc1a-2ce6b75e51d9",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "IS_FAST_TRACK_KYC"
+              ]
+            ],
+            "name": "Is Fast Track Kyc",
+            "slug": "IS_FAST_TRACK_KYC"
+          },
+          {
+            "id": "62958889-857c-d3b2-d889-207a0a2b33c6",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "fiat_currency"
+              ]
+            ],
+            "name": "Fiat currency",
+            "slug": "fiat_currency"
+          },
+          {
+            "id": "ef0daa69-9304-42f2-83ea-002ae9d740ba",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "AUTH_TYPE"
+              ]
+            ],
+            "name": "Auth Type",
+            "slug": "AUTH_TYPE"
+          },
+          {
+            "id": "4daebdf9-1050-9bad-f98d-e95cbc3d93b1",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "LOCATION_GEO"
+              ]
+            ],
+            "name": "Geoscheme IP",
+            "slug": "LOCATION_GEO"
+          },
+          {
+            "slug": "TRANSACTION_COLUMNS_GROUPBY",
+            "values_query_type": "list",
+            "default": [
+              "Acquirer"
+            ],
+            "name": "Transaction columns groupby",
+            "type": "category",
+            "values_source_type": "static-list",
+            "id": "2239253e-bcd2-4616-9e6c-ada887a3edd6",
+            "target": [
+              "variable",
+              [
+                "template-tag",
+                "TRANSACTION_COLUMNS_GROUPBY"
+              ]
+            ],
+            "values_source_config": {
+              "values": [
+                "Acquirer",
+                "Partner Widget",
+                "Accepted Transaction",
+                "Fiat currency",
+                "Crypto currency",
+                "Network",
+                "Pay System",
+                "Country IP",
+                "Geoscheme IP"
+              ]
+            },
+            "required": true
+          },
+          {
+            "id": "ca0a7260-ea6c-641b-2f9b-ceae59fd194a",
+            "type": "number/=",
+            "target": [
+              "variable",
+              [
+                "template-tag",
+                "top_n"
+              ]
+            ],
+            "name": "Top N",
+            "slug": "top_n",
+            "default": "5",
+            "required": true
+          },
+          {
+            "id": "f06dbc00-3f6f-c445-95ef-27779246c502",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "partner_name"
+              ]
+            ],
+            "name": "Partner name",
+            "slug": "partner_name"
+          },
+          {
+            "id": "d7979d8b-ee55-b24c-fc25-fcbcdc2bad43",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "crypto_currency"
+              ]
+            ],
+            "name": "Crypto currency",
+            "slug": "crypto_currency"
+          },
+          {
+            "id": "92e16fc3-a07e-870b-62c0-e9e5f636e691",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "network"
+              ]
+            ],
+            "name": "Network",
+            "slug": "network"
+          },
+          {
+            "id": "94ae1d78-40ad-4f69-8212-65d51b5e58b6",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "is_user_based_selective"
+              ]
+            ],
+            "name": "Is User Based Selective",
+            "slug": "is_user_based_selective"
+          },
+          {
+            "id": "f8b0f687-2164-47a1-8bb5-a2fffe1da899",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "is_amount_based_selective"
+              ]
+            ],
+            "name": "Is Amount Based Selective",
+            "slug": "is_amount_based_selective"
+          },
+          {
+            "id": "12ea305a-7a27-0bec-2a1e-e40ddb05662f",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "pay_system"
+              ]
+            ],
+            "name": "Pay system",
+            "slug": "pay_system"
+          },
+          {
+            "id": "a7aaf14b-3b59-43c9-a804-734e9efc127f",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "flag_is_recurring"
+              ]
+            ],
+            "name": "Flag Is Recurring",
+            "slug": "flag_is_recurring"
+          },
+          {
+            "id": "a58cbf6b-e1e4-8c7b-a0fb-14c458b06af1",
+            "type": "category",
+            "target": [
+              "variable",
+              [
+                "template-tag",
+                "GRANULARITY"
+              ]
+            ],
+            "name": "Granularity",
+            "slug": "GRANULARITY",
+            "default": "day",
+            "required": true
+          },
+          {
+            "id": "dbe7dba3-f7f8-45c5-9ccb-00ae2107d8de",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "transaction_accepted"
+              ]
+            ],
+            "name": "Transaction Accepted",
+            "slug": "transaction_accepted",
+            "default": [
+              true
+            ]
+          },
+          {
+            "id": "23dad7cc-474f-9348-36a9-21b856900f50",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "LOCATION_COUNTRY"
+              ]
+            ],
+            "name": "Country IP",
+            "slug": "LOCATION_COUNTRY"
+          },
+          {
+            "id": "96a218b1-3966-4a54-86c7-9b5ba7a99586",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "RETRY_EXCLUDE"
+              ]
+            ],
+            "name": "Retry Exclude",
+            "slug": "RETRY_EXCLUDE"
+          }
+        ],
+        "created_at": "2025-06-22T10:23:24.908455Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-06-22T10:23:24.908455Z",
+      "col": 0,
+      "id": 3323,
+      "parameter_mappings": [
+        {
+          "parameter_id": "f5f8f9a5",
+          "card_id": 4115,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "CREATED_AT"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "a947c3bd",
+          "card_id": 4115,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "partner_name"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "8bfcc274",
+          "card_id": 4115,
+          "target": [
+            "variable",
+            [
+              "template-tag",
+              "GRANULARITY"
+            ]
+          ]
+        },
+        {
+          "parameter_id": "c8dceb3b",
+          "card_id": 4115,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "transaction_accepted"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "659bba9d",
+          "card_id": 4115,
+          "target": [
+            "variable",
+            [
+              "template-tag",
+              "TRANSACTION_COLUMNS_GROUPBY"
+            ]
+          ]
+        },
+        {
+          "parameter_id": "7424225a",
+          "card_id": 4115,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "LOCATION_COUNTRY"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "22ec2adf",
+          "card_id": 4115,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "LOCATION_GEO"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "8254bb33",
+          "card_id": 4115,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "crypto_currency"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "dcaf80f8",
+          "card_id": 4115,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "network"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 4115,
+      "entity_id": "Vie1mTWSn6odlqRY55RST",
+      "visualization_settings": {
+        "graph.y_axis.title_text": "Turnover EUR",
+        "graph.show_values": true,
+        "graph.x_axis.labels_enabled": false,
+        "graph.x_axis.title_text": "DT",
+        "graph.label_value_frequency": "all",
+        "graph.metrics": [
+          "AR"
+        ],
+        "graph.label_value_formatting": "auto",
+        "column_settings": {
+          "[\"name\",\"TURNOVER\"]": {
+            "number_style": "currency",
+            "decimals": 0
+          },
+          "[\"name\",\"AR\"]": {
+            "number_style": "percent"
+          }
+        },
+        "graph.dimensions": [
+          "DT",
+          "PARAMETER_TOPN"
+        ],
+        "stackable.stack_type": "stacked"
+      },
+      "size_y": 6,
+      "dashboard_id": 413,
+      "created_at": "2025-06-22T10:23:24.908455Z",
+      "row": 0
+    },
+    {
+      "size_x": 24,
+      "dashboard_tab_id": null,
+      "series": [],
+      "action_id": null,
+      "collection_authority_level": null,
+      "card": {
+        "cache_invalidated_at": null,
+        "description": null,
+        "archived": false,
+        "view_count": 1,
+        "collection_position": null,
+        "source_card_id": null,
+        "table_id": null,
+        "result_metadata": [
+          {
+            "display_name": "DT",
+            "field_ref": [
+              "field",
+              "DT",
+              {
+                "base-type": "type/DateTime"
+              }
+            ],
+            "base_type": "type/DateTime",
+            "effective_type": "type/DateTime",
+            "name": "DT",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 214,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/DateTime": {
+                  "earliest": "2024-10-08T00:00:00Z",
+                  "latest": "2025-06-22T00:00:00Z"
+                }
+              }
+            }
+          },
+          {
+            "display_name": "PARAMETER_TOPN",
+            "field_ref": [
+              "field",
+              "PARAMETER_TOPN",
+              {
+                "base-type": "type/Text"
+              }
+            ],
+            "base_type": "type/Text",
+            "effective_type": "type/Text",
+            "name": "PARAMETER_TOPN",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 1,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Text": {
+                  "percent-json": 0.0,
+                  "percent-url": 0.0,
+                  "percent-email": 0.0,
+                  "percent-state": 0.0,
+                  "average-length": 21.0
+                }
+              }
+            }
+          },
+          {
+            "display_name": "N",
+            "field_ref": [
+              "field",
+              "N",
+              {
+                "base-type": "type/Decimal"
+              }
+            ],
+            "base_type": "type/Decimal",
+            "effective_type": "type/Decimal",
+            "name": "N",
+            "semantic_type": null,
+            "fingerprint": {
+              "global": {
+                "distinct-count": 197,
+                "nil%": 0.0
+              },
+              "type": {
+                "type/Number": {
+                  "min": 1.0,
+                  "q1": 229.35686274509806,
+                  "q3": 2293.9241719150364,
+                  "max": 7134.0,
+                  "sd": 1925.4711797617606,
+                  "avg": 1745.8878504672898
+                }
+              }
+            }
+          }
+        ],
+        "initially_published_at": null,
+        "can_write": true,
+        "database_id": 2,
+        "enable_embedding": false,
+        "collection_id": 746,
+        "query_type": "native",
+        "name": "Count",
+        "last_used_at": "2025-06-22T10:23:28.865164Z",
+        "type": "question",
+        "query_average_duration": null,
+        "creator_id": 148,
+        "moderation_reviews": [],
+        "updated_at": "2025-06-22T10:23:24.908455Z",
+        "made_public_by_id": null,
+        "embedding_params": null,
+        "cache_ttl": null,
+        "dataset_query": {
+          "database": 2,
+          "type": "native",
+          "native": {
+            "template-tags": {
+              "CREATED_AT": {
+                "id": "d4f8187d-705d-dc50-f477-bb90ec489c08",
+                "name": "CREATED_AT",
+                "display-name": "Created at",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20835,
+                  null
+                ],
+                "widget-type": "date/all-options",
+                "default": "past30days",
+                "required": true
+              },
+              "IS_FAST_TRACK_KYC": {
+                "type": "dimension",
+                "name": "IS_FAST_TRACK_KYC",
+                "id": "bea3cadd-fa86-4341-bc1a-2ce6b75e51d9",
+                "display-name": "Is Fast Track Kyc",
+                "dimension": [
+                  "field",
+                  564369,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "fiat_currency": {
+                "id": "62958889-857c-d3b2-d889-207a0a2b33c6",
+                "name": "fiat_currency",
+                "display-name": "Fiat currency",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20892,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "AUTH_TYPE": {
+                "type": "dimension",
+                "name": "AUTH_TYPE",
+                "id": "ef0daa69-9304-42f2-83ea-002ae9d740ba",
+                "display-name": "Auth Type",
+                "dimension": [
+                  "field",
+                  566012,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "LOCATION_GEO": {
+                "id": "4daebdf9-1050-9bad-f98d-e95cbc3d93b1",
+                "name": "LOCATION_GEO",
+                "display-name": "Geoscheme IP",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  876,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "TRANSACTION_COLUMNS_GROUPBY": {
+                "id": "2239253e-bcd2-4616-9e6c-ada887a3edd6",
+                "name": "TRANSACTION_COLUMNS_GROUPBY",
+                "display-name": "Transaction columns groupby",
+                "type": "text",
+                "default": [
+                  "Acquirer"
+                ],
+                "required": true
+              },
+              "top_n": {
+                "id": "ca0a7260-ea6c-641b-2f9b-ceae59fd194a",
+                "name": "top_n",
+                "display-name": "Top N",
+                "type": "number",
+                "default": "5",
+                "required": true
+              },
+              "partner_name": {
+                "id": "f06dbc00-3f6f-c445-95ef-27779246c502",
+                "name": "partner_name",
+                "display-name": "Partner name",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20834,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "crypto_currency": {
+                "id": "d7979d8b-ee55-b24c-fc25-fcbcdc2bad43",
+                "name": "crypto_currency",
+                "display-name": "Crypto currency",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20836,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "network": {
+                "id": "92e16fc3-a07e-870b-62c0-e9e5f636e691",
+                "name": "network",
+                "display-name": "Network",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  34623,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "is_user_based_selective": {
+                "type": "dimension",
+                "name": "is_user_based_selective",
+                "id": "94ae1d78-40ad-4f69-8212-65d51b5e58b6",
+                "display-name": "Is User Based Selective",
+                "dimension": [
+                  "field",
+                  561795,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "is_amount_based_selective": {
+                "type": "dimension",
+                "name": "is_amount_based_selective",
+                "id": "f8b0f687-2164-47a1-8bb5-a2fffe1da899",
+                "display-name": "Is Amount Based Selective",
+                "default": null,
+                "dimension": [
+                  "field",
+                  573892,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              },
+              "pay_system": {
+                "id": "12ea305a-7a27-0bec-2a1e-e40ddb05662f",
+                "name": "pay_system",
+                "display-name": "Pay system",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  20885,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "flag_is_recurring": {
+                "type": "dimension",
+                "name": "flag_is_recurring",
+                "id": "a7aaf14b-3b59-43c9-a804-734e9efc127f",
+                "display-name": "Flag Is Recurring",
+                "dimension": [
+                  "field",
+                  550206,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "GRANULARITY": {
+                "id": "a58cbf6b-e1e4-8c7b-a0fb-14c458b06af1",
+                "name": "GRANULARITY",
+                "display-name": "Granularity",
+                "type": "text",
+                "required": true,
+                "default": "day"
+              },
+              "transaction_accepted": {
+                "type": "dimension",
+                "name": "transaction_accepted",
+                "id": "dbe7dba3-f7f8-45c5-9ccb-00ae2107d8de",
+                "display-name": "Transaction Accepted",
+                "default": [
+                  true
+                ],
+                "dimension": [
+                  "field",
+                  20847,
+                  null
+                ],
+                "widget-type": "string/="
+              },
+              "LOCATION_COUNTRY": {
+                "id": "23dad7cc-474f-9348-36a9-21b856900f50",
+                "name": "LOCATION_COUNTRY",
+                "display-name": "Country IP",
+                "type": "dimension",
+                "dimension": [
+                  "field",
+                  874,
+                  null
+                ],
+                "widget-type": "string/=",
+                "default": null
+              },
+              "RETRY_EXCLUDE": {
+                "type": "dimension",
+                "name": "RETRY_EXCLUDE",
+                "id": "96a218b1-3966-4a54-86c7-9b5ba7a99586",
+                "display-name": "Retry Exclude",
+                "default": null,
+                "dimension": [
+                  "field",
+                  569157,
+                  null
+                ],
+                "widget-type": "string/=",
+                "options": null
+              }
+            },
+            "query": "WITH pre_top_n as (\r\n    select CASE \r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Partner Widget'\r\n            THEN TRANSACTIONS.WIDGET_PARTNER_NAME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Type operation'\r\n            THEN TRANSACTIONS.TYPE\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Accepted Transaction'\r\n            THEN to_char(TRANSACTIONS.CONFIRMED)\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Crypto currency'\r\n            THEN TRANSACTIONS.currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Fiat currency'\r\n            THEN TRANSACTIONS.fiat_currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country card'\r\n            THEN TRANSACTIONS.CARD_ISOCOUNTRY\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme card'\r\n            THEN TRANSACTIONS.CARD_GEOSCHEME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Brand card'\r\n            THEN TRANSACTIONS.CARD_BRAND\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Pay System'\r\n            THEN TRANSACTIONS.PAY_SYSTEM\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country IP'\r\n            THEN COUNTRY_CODES.COUNTRY_NAME_EN\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme IP'\r\n            THEN COUNTRY_CODES.GEOSCHEME_BUSINESS\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Acquirer'\r\n            THEN TRANSACTIONS.vendor_name\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Network'\r\n            THEN TRANSACTIONS.Network\r\n            END AS GROUP_BY\r\n         , row_number() over (order by sum(TRANSACTIONS.FIAT_AMOUNT_EUR) desc) as rn\r\n    from MART.TRANSACTIONS\r\n    left join MD.COUNTRY_CODES\r\n                   on lower(TRANSACTIONS.LOCATION_COUNTRY) = lower(COUNTRY_CODES.COUNTRY_CODE_ALPHA_3)\r\n    where {{CREATED_AT}} and\r\n      {{CREATED_AT}} and {{partner_name}} and {{transaction_accepted}} and\r\n          {{crypto_currency}} and {{fiat_currency}} and \r\n          {{pay_system}}  and {{LOCATION_COUNTRY}} and {{LOCATION_GEO}} and\r\n          {{network}} and {{flag_is_recurring}}  and {{is_user_based_selective}} and\r\n          {{IS_FAST_TRACK_KYC}} and {{AUTH_TYPE}} and {{RETRY_EXCLUDE}} and {{is_amount_based_selective}} \r\n          and VENDOR_NAME = 'blik_hyperion_mobilum'\r\n    group by 1\r\n    order by 2 desc),\r\n     top_n as (\r\n         select GROUP_BY\r\n                , CASE WHEN rn < {{top_n}}\r\n                    THEN GROUP_BY\r\n                    ELSE 'others' END AS top_n_parameter\r\n         from pre_top_n\r\n     ),\r\n  main_query as (select TRANSACTIONS.CREATED_AT \r\n                      , top_n.top_n_parameter\r\n                      , TRANSACTIONS.TURNOVER_EUR\r\n                      , TRANSACTIONS.id\r\n                      , TRANSACTIONS.confirmed\r\n      from mart.TRANSACTIONS \r\n      left join MD.COUNTRY_CODES\r\n                   on lower(TRANSACTIONS.LOCATION_COUNTRY) = lower(COUNTRY_CODES.COUNTRY_CODE_ALPHA_3)\r\n      left join top_n on top_n.GROUP_BY = CASE \r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Partner Widget'\r\n            THEN TRANSACTIONS.WIDGET_PARTNER_NAME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Type operation'\r\n            THEN TRANSACTIONS.TYPE\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Accepted Transaction'\r\n            THEN to_char(TRANSACTIONS.CONFIRMED)\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Crypto currency'\r\n            THEN TRANSACTIONS.currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Fiat currency'\r\n            THEN TRANSACTIONS.fiat_currency\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country card'\r\n            THEN TRANSACTIONS.CARD_ISOCOUNTRY\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme card'\r\n            THEN TRANSACTIONS.CARD_GEOSCHEME\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Brand card'\r\n            THEN TRANSACTIONS.CARD_BRAND\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Pay System'\r\n            THEN TRANSACTIONS.PAY_SYSTEM\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Country IP'\r\n            THEN COUNTRY_CODES.COUNTRY_NAME_EN\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Geoscheme IP'\r\n            THEN COUNTRY_CODES.GEOSCHEME_BUSINESS\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Acquirer'\r\n            THEN TRANSACTIONS.vendor_name\r\n        WHEN {{TRANSACTION_COLUMNS_GROUPBY}} = 'Network'\r\n            THEN TRANSACTIONS.Network\r\n            END\r\n                \r\n      where TRANSACTIONS.SOURCE_MAIN = 'widget' and\r\n      {{CREATED_AT}} and {{partner_name}} and {{transaction_accepted}} and\r\n          {{crypto_currency}} and {{fiat_currency}} and \r\n          {{pay_system}}  and {{LOCATION_COUNTRY}} and {{LOCATION_GEO}} and\r\n          {{network}} and {{flag_is_recurring}}  and {{is_user_based_selective}} and\r\n          {{IS_FAST_TRACK_KYC}} and {{AUTH_TYPE}} and {{RETRY_EXCLUDE}} and {{is_amount_based_selective}} \r\n          and VENDOR_NAME = 'blik_hyperion_mobilum'\r\n      ) \r\nselect date_trunc({{GRANULARITY}},CREATED_AT) as DT\r\n      , top_n_parameter AS Parameter_topN\r\n     , count(*) as n \r\nfrom main_query\r\ngroup by 1,2\r\norder by 1,3 desc"
+          }
+        },
+        "id": 4116,
+        "parameter_mappings": [],
+        "display": "bar",
+        "archived_directly": false,
+        "entity_id": "XwYPWdsUzY9hLzCX108xf",
+        "collection_preview": true,
+        "visualization_settings": {
+          "graph.y_axis.title_text": "Count Transactions",
+          "graph.show_values": true,
+          "graph.x_axis.title_text": "DT",
+          "graph.label_value_frequency": "all",
+          "graph.metrics": [
+            "N"
+          ],
+          "graph.label_value_formatting": "auto",
+          "column_settings": {
+            "[\"name\",\"TURNOVER\"]": {
+              "number_style": "currency",
+              "decimals": 0
+            },
+            "[\"name\",\"AR\"]": {
+              "number_style": "percent"
+            }
+          },
+          "graph.dimensions": [
+            "DT",
+            "PARAMETER_TOPN"
+          ],
+          "stackable.stack_type": "stacked"
+        },
+        "metabase_version": "v0.52.9 (f9fbbf8)",
+        "parameters": [
+          {
+            "id": "d4f8187d-705d-dc50-f477-bb90ec489c08",
+            "type": "date/all-options",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "CREATED_AT"
+              ]
+            ],
+            "name": "Created at",
+            "slug": "CREATED_AT",
+            "default": "past30days",
+            "required": true
+          },
+          {
+            "id": "bea3cadd-fa86-4341-bc1a-2ce6b75e51d9",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "IS_FAST_TRACK_KYC"
+              ]
+            ],
+            "name": "Is Fast Track Kyc",
+            "slug": "IS_FAST_TRACK_KYC"
+          },
+          {
+            "id": "62958889-857c-d3b2-d889-207a0a2b33c6",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "fiat_currency"
+              ]
+            ],
+            "name": "Fiat currency",
+            "slug": "fiat_currency"
+          },
+          {
+            "id": "ef0daa69-9304-42f2-83ea-002ae9d740ba",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "AUTH_TYPE"
+              ]
+            ],
+            "name": "Auth Type",
+            "slug": "AUTH_TYPE"
+          },
+          {
+            "id": "4daebdf9-1050-9bad-f98d-e95cbc3d93b1",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "LOCATION_GEO"
+              ]
+            ],
+            "name": "Geoscheme IP",
+            "slug": "LOCATION_GEO"
+          },
+          {
+            "slug": "TRANSACTION_COLUMNS_GROUPBY",
+            "values_query_type": "list",
+            "default": [
+              "Acquirer"
+            ],
+            "name": "Transaction columns groupby",
+            "type": "category",
+            "values_source_type": "static-list",
+            "id": "2239253e-bcd2-4616-9e6c-ada887a3edd6",
+            "target": [
+              "variable",
+              [
+                "template-tag",
+                "TRANSACTION_COLUMNS_GROUPBY"
+              ]
+            ],
+            "values_source_config": {
+              "values": [
+                "Acquirer",
+                "Partner Widget",
+                "Accepted Transaction",
+                "Fiat currency",
+                "Crypto currency",
+                "Network",
+                "Pay System",
+                "Country IP",
+                "Geoscheme IP"
+              ]
+            },
+            "required": true
+          },
+          {
+            "id": "ca0a7260-ea6c-641b-2f9b-ceae59fd194a",
+            "type": "number/=",
+            "target": [
+              "variable",
+              [
+                "template-tag",
+                "top_n"
+              ]
+            ],
+            "name": "Top N",
+            "slug": "top_n",
+            "default": "5",
+            "required": true
+          },
+          {
+            "id": "f06dbc00-3f6f-c445-95ef-27779246c502",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "partner_name"
+              ]
+            ],
+            "name": "Partner name",
+            "slug": "partner_name"
+          },
+          {
+            "id": "d7979d8b-ee55-b24c-fc25-fcbcdc2bad43",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "crypto_currency"
+              ]
+            ],
+            "name": "Crypto currency",
+            "slug": "crypto_currency"
+          },
+          {
+            "id": "92e16fc3-a07e-870b-62c0-e9e5f636e691",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "network"
+              ]
+            ],
+            "name": "Network",
+            "slug": "network"
+          },
+          {
+            "id": "94ae1d78-40ad-4f69-8212-65d51b5e58b6",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "is_user_based_selective"
+              ]
+            ],
+            "name": "Is User Based Selective",
+            "slug": "is_user_based_selective"
+          },
+          {
+            "id": "f8b0f687-2164-47a1-8bb5-a2fffe1da899",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "is_amount_based_selective"
+              ]
+            ],
+            "name": "Is Amount Based Selective",
+            "slug": "is_amount_based_selective"
+          },
+          {
+            "id": "12ea305a-7a27-0bec-2a1e-e40ddb05662f",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "pay_system"
+              ]
+            ],
+            "name": "Pay system",
+            "slug": "pay_system"
+          },
+          {
+            "id": "a7aaf14b-3b59-43c9-a804-734e9efc127f",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "flag_is_recurring"
+              ]
+            ],
+            "name": "Flag Is Recurring",
+            "slug": "flag_is_recurring"
+          },
+          {
+            "id": "a58cbf6b-e1e4-8c7b-a0fb-14c458b06af1",
+            "type": "category",
+            "target": [
+              "variable",
+              [
+                "template-tag",
+                "GRANULARITY"
+              ]
+            ],
+            "name": "Granularity",
+            "slug": "GRANULARITY",
+            "default": "day",
+            "required": true
+          },
+          {
+            "id": "dbe7dba3-f7f8-45c5-9ccb-00ae2107d8de",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "transaction_accepted"
+              ]
+            ],
+            "name": "Transaction Accepted",
+            "slug": "transaction_accepted",
+            "default": [
+              true
+            ]
+          },
+          {
+            "id": "23dad7cc-474f-9348-36a9-21b856900f50",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "LOCATION_COUNTRY"
+              ]
+            ],
+            "name": "Country IP",
+            "slug": "LOCATION_COUNTRY"
+          },
+          {
+            "id": "96a218b1-3966-4a54-86c7-9b5ba7a99586",
+            "type": "string/=",
+            "target": [
+              "dimension",
+              [
+                "template-tag",
+                "RETRY_EXCLUDE"
+              ]
+            ],
+            "name": "Retry Exclude",
+            "slug": "RETRY_EXCLUDE"
+          }
+        ],
+        "created_at": "2025-06-22T10:23:24.908455Z",
+        "public_uuid": null
+      },
+      "updated_at": "2025-06-22T10:23:24.908455Z",
+      "col": 0,
+      "id": 3324,
+      "parameter_mappings": [
+        {
+          "parameter_id": "f5f8f9a5",
+          "card_id": 4116,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "CREATED_AT"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "a947c3bd",
+          "card_id": 4116,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "partner_name"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "c8dceb3b",
+          "card_id": 4116,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "transaction_accepted"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "8bfcc274",
+          "card_id": 4116,
+          "target": [
+            "variable",
+            [
+              "template-tag",
+              "GRANULARITY"
+            ]
+          ]
+        },
+        {
+          "parameter_id": "659bba9d",
+          "card_id": 4116,
+          "target": [
+            "variable",
+            [
+              "template-tag",
+              "TRANSACTION_COLUMNS_GROUPBY"
+            ]
+          ]
+        },
+        {
+          "parameter_id": "7424225a",
+          "card_id": 4116,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "LOCATION_COUNTRY"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "22ec2adf",
+          "card_id": 4116,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "LOCATION_GEO"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "8254bb33",
+          "card_id": 4116,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "crypto_currency"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        },
+        {
+          "parameter_id": "dcaf80f8",
+          "card_id": 4116,
+          "target": [
+            "dimension",
+            [
+              "template-tag",
+              "network"
+            ],
+            {
+              "stage-number": 0
+            }
+          ]
+        }
+      ],
+      "card_id": 4116,
+      "entity_id": "rVxhz46wVRQjy_LNxAiki",
+      "visualization_settings": {
+        "graph.y_axis.title_text": "Count Transactions",
+        "graph.show_values": true,
+        "graph.x_axis.labels_enabled": false,
+        "graph.x_axis.title_text": "DT",
+        "card.title": "Count Transactions",
+        "graph.label_value_frequency": "all",
+        "graph.metrics": [
+          "N"
+        ],
+        "graph.label_value_formatting": "auto",
+        "column_settings": {
+          "[\"name\",\"TURNOVER\"]": {
+            "number_style": "currency",
+            "decimals": 0
+          },
+          "[\"name\",\"AR\"]": {
+            "number_style": "percent"
+          }
+        },
+        "graph.dimensions": [
+          "DT",
+          "PARAMETER_TOPN"
+        ],
+        "stackable.stack_type": "stacked"
+      },
+      "size_y": 6,
+      "dashboard_id": 413,
+      "created_at": "2025-06-22T10:23:24.908455Z",
+      "row": 6
+    }
+  ],
+  "param_values": {
+    "561795": {
+      "field_id": 561795,
+      "human_readable_values": [],
+      "values": [
+        false,
+        true
+      ]
+    },
+    "569157": {
+      "field_id": 569157,
+      "human_readable_values": [],
+      "values": [
+        false,
+        true
+      ]
+    },
+    "20885": {
+      "field_id": 20885,
+      "human_readable_values": [],
+      "values": [
+        "AMERICAN EXPRESS",
+        "Apple Pay",
+        "Buy Acquirer",
+        "Google Pay",
+        "HUMOCARD",
+        "LOCAL BRAND",
+        "LOCAL_CARDS_BRANDS",
+        "MASTERCARD",
+        "No Data",
+        "RUPAY",
+        "Sell to an unknown card",
+        "UNIONPAY",
+        "UZCARD",
+        "VISA"
+      ]
+    },
+    "573892": {
+      "field_id": 573892,
+      "human_readable_values": [],
+      "values": [
+        false,
+        true
+      ]
+    },
+    "34623": {
+      "field_id": 34623,
+      "human_readable_values": [],
+      "values": [
+        "ALGORAND",
+        "ARBITRUM",
+        "AVALANCHE",
+        "BASE",
+        "BINANCESMARTCHAIN",
+        "BITCOIN",
+        "BITCOINCASH",
+        "CARDANO",
+        "CELESTIA",
+        "COSMOS",
+        "DASH",
+        "DOGECOIN",
+        "ETHEREUM",
+        "FANTOM",
+        "INJECTIVE",
+        "KAVA",
+        "KUSAMA",
+        "LINEA",
+        "LITECOIN",
+        "NEAR_PROTOCOL",
+        "NEWTON",
+        "OPTIMISM",
+        "POLKADOT",
+        "POLYGON",
+        "RIPPLE",
+        "SOLANA",
+        "SONIC",
+        "STELLAR",
+        "TEZOS",
+        "TRON",
+        "WEMIX",
+        "ZKSYNC",
+        null
+      ]
+    },
+    "20836": {
+      "field_id": 20836,
+      "human_readable_values": [],
+      "values": [
+        "1INCH",
+        "ADA",
+        "ALGO",
+        "ARB",
+        "ATOM",
+        "AVAX",
+        "BAT",
+        "BCH",
+        "BNB",
+        "BTC",
+        "BUSD",
+        "CATI",
+        "CRV",
+        "DAI",
+        "DASH",
+        "DOGE",
+        "DOGS",
+        "DOT",
+        "DYDX",
+        "EGLD",
+        "ETH",
+        "EUR",
+        "FTM",
+        "HMSTR",
+        "INJ",
+        "JUP",
+        "KAVA",
+        "KSM",
+        "LINK",
+        "LTC",
+        "MAJOR",
+        "MANA",
+        "NEAR",
+        "NOT",
+        "OKB",
+        "PEPE",
+        "POL",
+        "RUB",
+        "S",
+        "SAND",
+        "SHIB",
+        "SOL",
+        "SWEAT",
+        "TIA",
+        "TON",
+        "TRUMP",
+        "TRX",
+        "TWT",
+        "UNI",
+        "USDC",
+        "USDE",
+        "USDT",
+        "WEMIX",
+        "X",
+        "XLM",
+        "XRP",
+        "XTZ"
+      ]
+    },
+    "20847": {
+      "field_id": 20847,
+      "human_readable_values": [],
+      "values": [
+        false,
+        true,
+        null
+      ]
+    },
+    "20892": {
+      "field_id": 20892,
+      "human_readable_values": [],
+      "values": [
+        "AED",
+        "AMD",
+        "ARS",
+        "AUD",
+        "BGN",
+        "BRL",
+        "CAD",
+        "CHF",
+        "COP",
+        "CZK",
+        "DKK",
+        "DOP",
+        "EUR",
+        "GBP",
+        "GHS",
+        "HKD",
+        "HUF",
+        "IDR",
+        "ILS",
+        "INR",
+        "ISK",
+        "JOD",
+        "JPY",
+        "KES",
+        "KRW",
+        "KZT",
+        "LKR",
+        "MXN",
+        "NGN",
+        "NOK",
+        "NZD",
+        "PEN",
+        "PHP",
+        "PLN",
+        "QAR",
+        "RON",
+        "RUB",
+        "SEK",
+        "SGD",
+        "THB",
+        "TRY",
+        "TWD",
+        "TZS",
+        "UAH",
+        "UGX",
+        "USD",
+        "UYU",
+        "VND",
+        "ZAR",
+        null
+      ]
+    },
+    "20834": {
+      "field_id": 20834,
+      "human_readable_values": [],
+      "values": [
+        "1inch",
+        "2btc.io",
+        "3commas.io",
+        "5bit.me",
+        "AAX",
+        "ADV cash",
+        "AMLSafe",
+        "AMarkets",
+        "AWEX",
+        "AXOM",
+        "Abra",
+        "Accumulus",
+        "Actoz",
+        "AfricaMoney",
+        "Aifory LLC",
+        "AlfaCash",
+        "Alpha Exchange",
+        "Amarkets",
+        "Amber",
+        "AmirCapital",
+        "Api.Hamsterspay.com",
+        "Aqru finance",
+        "ArcticWallet",
+        "Artozo",
+        "Atlas Wallet",
+        "B2B exchanger",
+        "BKEX",
+        "BTC-Alpha",
+        "BTCC (task 8417)",
+        "BYDFi",
+        "Bancor",
+        "Barclay Stone",
+        "Best Change",
+        "BetBoom",
+        "Bibox",
+        "Billance",
+        "Binance.mercuryo.io",
+        "BingX",
+        "Biswap",
+        "BitMEX",
+        "Bitay",
+        "Bitcoin TitanX",
+        "Bitcoinbtc.club",
+        "Bitfinex Widget",
+        "Bitforex",
+        "Bitget",
+        "Bithumb",
+        "Bitmax(Ascendex)",
+        "Bitquidity",
+        "Bitzing",
+        "Blue Wallet",
+        "Bonuz App",
+        "BoxExchanger",
+        "Bro Fintech LTD",
+        "Btcshark",
+        "Bybit",
+        "CAEX",
+        "Cabbagino",
+        "Capitalist",
+        "Cardex Exchange",
+        "ChainApp",
+        "ChangeNOW",
+        "Changelly",
+        "Citihexltd",
+        "ClickToBuyBitcoin",
+        "Coin to pay",
+        "Coin98",
+        "CoinCash",
+        "CoinDisco",
+        "CoinEx",
+        "CoinPayments",
+        "CoinStats",
+        "CoinTiger",
+        "CoinW",
+        "Coinandcoin",
+        "Coincola",
+        "Coinlocally",
+        "Coinplay",
+        "Coinsbit",
+        "Coinstore",
+        "Coinzix",
+        "CompanyDao",
+        "Credefi",
+        "Credits.com",
+        "Cricle",
+        "Cryptadium",
+        "Cryptero_x_Mercuryo test partner",
+        "Cryptix",
+        "Crypto-news",
+        "CryptoCash",
+        "CryptoCash API",
+        "CryptoFundsToday",
+        "CryptoPal",
+        "Cryptolines",
+        "Cryptomus",
+        "Custonomy",
+        "Cuverse",
+        "DA 5",
+        "DA5 Mobile",
+        "Darius Tech inc.",
+        "DeCenter",
+        "DefiBet",
+        "Defirex",
+        "DhanuX",
+        "Digifinex",
+        "Dok Wallet",
+        "Doshi",
+        "DreamSteam",
+        "EMCD",
+        "EasiHK.com",
+        "EasyPortal2",
+        "EasyPortal3",
+        "Easyportal",
+        "Ebankx",
+        "Ecos",
+        "Electrocoin",
+        "Ellipal",
+        "Eternl",
+        "Everstake",
+        "Exchange Demo",
+        "Exchangers Monitor",
+        "Exchangesumo",
+        "Exmo",
+        "Exness",
+        "ExpressMinds",
+        "Exworth",
+        "FMFW(bitcoin.com)",
+        "Fairdesk",
+        "FastToken",
+        "Fastex",
+        "Fizen",
+        "Flooz",
+        "Fozeus",
+        "Fundwallet",
+        "GIE",
+        "GKFX",
+        "GMT",
+        "Galaktika N.V.",
+        "GamblingMercuryo",
+        "Garantex",
+        "Gem4Me",
+        "Globiance",
+        "Gokumarket",
+        "Golden Way Payments LTD",
+        "Grand Time",
+        "Grapherex",
+        "HOO",
+        "Hackathon",
+        "HamstersPay.com",
+        "Haru",
+        "Haven",
+        "Hawex",
+        "HereWallet",
+        "Hitbtc",
+        "Hiveon",
+        "Hotcoin",
+        "Hoyabit",
+        "Huacool",
+        "Huobi",
+        "INJ Bridge",
+        "IPerCash",
+        "IXFI",
+        "Indodax.com",
+        "Infinito Solutions",
+        "Insta.money",
+        "InstaSwap",
+        "IntellaX",
+        "Irontrade",
+        "JapanTest",
+        "Jupiter",
+        "Kauri",
+        "Kauri2",
+        "Kauri3",
+        "Keystone",
+        "Kickex",
+        "Kirill_Blik_Test",
+        "KryptoGo",
+        "Kryptoknights.io",
+        "KuCoin",
+        "Kymis",
+        "LA token",
+        "LBank",
+        "Ledger",
+        "Ledger Spend",
+        "Leon",
+        "LeveX",
+        "Livecoin",
+        "LocalTrade",
+        "Lucky Labs",
+        "Lumi",
+        "MEXC",
+        "Magic wallet",
+        "Magneticexchange",
+        "Magnum",
+        "Mandala",
+        "Matrixport",
+        "Mayex",
+        "Meld",
+        "Meld I",
+        "Mercuryo",
+        "Mercuryo CaaS Test",
+        "Mercuryo.b2b.test",
+        "MercuryoWidget",
+        "Mercuryo_referral",
+        "Metamask",
+        "Metaspins",
+        "Metavault",
+        "Meteor Wallet",
+        "Mexo",
+        "Millionero",
+        "Mining-Bitcoin",
+        "Minswap",
+        "Minto",
+        "Mostbet",
+        "Mycelium",
+        "NFTGate",
+        "NeoWallet",
+        "Nft Checkout Brand",
+        "Ninji wallet",
+        "Nominex",
+        "Nova",
+        "OERO",
+        "OKX",
+        "Onederex",
+        "Onramper2",
+        "Onramper3",
+        "OpenC",
+        "PNGMarketing.com",
+        "PU",
+        "Pancakeswap",
+        "Parallax",
+        "Particle",
+        "Paytech Pro LTD",
+        "Phemex",
+        "Pichains",
+        "PointPay",
+        "Poloniex",
+        "PrimeFin Solutions inc.",
+        "Probit",
+        "Pyypl",
+        "Q-Send",
+        "Q-send_preprod",
+        "Qiwi",
+        "Quickex",
+        "RON",
+        "Rare",
+        "Revuto",
+        "Riv",
+        "Roobee",
+        "SDK Blik test",
+        "STEX",
+        "Santepay",
+        "Sapien",
+        "Sastanaqqam",
+        "Savl",
+        "Scrypton",
+        "SendNomad",
+        "Shido",
+        "Simex",
+        "SimpleSwap",
+        "Simpledo",
+        "SmartyAPI",
+        "SmartyPay",
+        "Smarty_PreProd",
+        "Socoin",
+        "SoftSwiss",
+        "Spatium",
+        "Speedybits",
+        "Staging",
+        "Stakecito",
+        "Star Exchangealliance",
+        "Status Wallet",
+        "StealthEx",
+        "StepApp",
+        "Stepan_test_b2b",
+        "SuperEX",
+        "Swapspace",
+        "Swapster",
+        "Sweat",
+        "Swoo",
+        "TEST101",
+        "TKEY",
+        "TON",
+        "TON Space",
+        "Tangem",
+        "Techroo",
+        "Telegram Wallet",
+        "Test",
+        "Test_Mercuryo",
+        "TheWOLF",
+        "Tiger Trade",
+        "ToTheMoon",
+        "TokenPocket",
+        "Tomo",
+        "Tonkeeper",
+        "Trade4coins (task 9345)",
+        "TransferMole",
+        "Trastera",
+        "Trastra",
+        "Trezor",
+        "TrueFlip.io",
+        "TrustWallet",
+        "TrustWallet0%",
+        "Trustee",
+        "UTEX",
+        "UUEX",
+        "UWIM (task 9405)",
+        "UllaPay",
+        "Union BTC",
+        "Uniramp",
+        "Unistex",
+        "VNSmart",
+        "Vardex",
+        "Vave",
+        "Venga",
+        "Venga preprod",
+        "VeroWay",
+        "WOO",
+        "WalletBot",
+        "Wallex",
+        "Waveland",
+        "Waves",
+        "Waves2",
+        "Waxpeer",
+        "Wbb",
+        "Web3Auth",
+        "Wemix",
+        "Weownomy Pay",
+        "Westchange",
+        "WhiteBit",
+        "WhiteMarket",
+        "Wigwam",
+        "Wild",
+        "Win.Wallet",
+        "XENA",
+        "XT.com",
+        "Xive",
+        "Xjet",
+        "Xponential crypto",
+        "Xzen",
+        "YIBI",
+        "Zerion",
+        "Zink",
+        "advantech",
+        "allcoinswapper",
+        "amber",
+        "binance.org",
+        "bitcastle",
+        "bitcoin.com",
+        "bitpapa",
+        "bitx.land/merchantpay",
+        "blackmoonfg.uk",
+        "bspin",
+        "buycoinnow",
+        "c3 exchange",
+        "changehero.io",
+        "coin galaxy",
+        "cryptofully",
+        "cryptoxchangers",
+        "cubaxchange",
+        "daovc",
+        "demo-wg-301019.mercuryo.io",
+        "demo-widget-301019.mercuryo.io",
+        "dropstab.com",
+        "fastcoin",
+        "gate",
+        "goodbuycrypto",
+        "hkbitex",
+        "i-cex",
+        "iToken",
+        "iqex",
+        "iquick.io",
+        "kefa comm",
+        "klever",
+        "kryptonite",
+        "letsexchange.io",
+        "mercuryorabbit.com",
+        "onramper",
+        "onramper1",
+        "open_C (task 9535)",
+        "o\u0441tagonFX",
+        "parabolus",
+        "paytiz",
+        "polysports",
+        "quantfury",
+        "quickx",
+        "ready-steady.net",
+        "rokkex.com",
+        "sendcash.africa",
+        "strikeX",
+        "swallet",
+        "swapy.app",
+        "tbit",
+        "threefold.io",
+        "tokean.com",
+        "tokens.net",
+        "torus",
+        "tozex",
+        "vlafx.us",
+        "x-meta",
+        "xChange",
+        "xp-trade.com",
+        "\u0410thena Crypto Bank",
+        null
+      ]
+    },
+    "550206": {
+      "field_id": 550206,
+      "human_readable_values": [],
+      "values": [
+        false,
+        true
+      ]
+    },
+    "876": {
+      "field_id": 876,
+      "human_readable_values": [],
+      "values": [
+        "-",
+        "Africa",
+        "Asia",
+        "CIS",
+        "Europe EU",
+        "Europe non-EU",
+        "Latin America",
+        "North America",
+        "Oceania",
+        "USA"
+      ]
+    },
+    "566012": {
+      "field_id": 566012,
+      "human_readable_values": [],
+      "values": [
+        "3DS",
+        "3DS, No3DS",
+        "No3DS",
+        null
+      ]
+    },
+    "564369": {
+      "field_id": 564369,
+      "human_readable_values": [],
+      "values": [
+        false,
+        true
+      ]
+    }
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "tabs": [],
+  "enable_embedding": false,
+  "collection_id": 746,
+  "show_in_getting_started": false,
+  "name": "Blik (SR)",
+  "width": "full",
+  "caveats": null,
+  "collection_authority_level": null,
+  "creator_id": 148,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2025-06-22T10:23:35.499576Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "last_used_param_values": {
+    "659bba9d": [
+      "Acquirer"
+    ],
+    "8bfcc274": [
+      "day"
+    ],
+    "c8dceb3b": [
+      true
+    ],
+    "f5f8f9a5": "2024-10-07~"
+  },
+  "id": 413,
+  "last_viewed_at": "2025-06-22T10:23:28.795702Z",
+  "position": null,
+  "archived_directly": false,
+  "entity_id": "bx9VNCufoSy1XtaoOHHnv",
+  "param_fields": {
+    "561795": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "USER_BASED_SELECTIVE",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 561795,
+      "target": null,
+      "display_name": "USER_BASED_SELECTIVE",
+      "name_field": null,
+      "base_type": "type/Boolean"
+    },
+    "569157": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "RETRY_EXCLUDE",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 569157,
+      "target": null,
+      "display_name": "RETRY_EXCLUDE",
+      "name_field": null,
+      "base_type": "type/Boolean"
+    },
+    "20885": {
+      "semantic_type": null,
+      "table_id": 45,
+      "name": "PAY_SYSTEM",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 20885,
+      "target": null,
+      "display_name": "PAY_SYSTEM",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "573892": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "AMOUNT_BASED_SELECTIVE",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 573892,
+      "target": null,
+      "display_name": "AMOUNT_BASED_SELECTIVE",
+      "name_field": null,
+      "base_type": "type/Boolean"
+    },
+    "34623": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "NETWORK",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 34623,
+      "target": null,
+      "display_name": "NETWORK",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "20836": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "CURRENCY",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 20836,
+      "target": null,
+      "display_name": "CURRENCY",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "20847": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "CONFIRMED",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 20847,
+      "target": null,
+      "display_name": "CONFIRMED",
+      "name_field": null,
+      "base_type": "type/Boolean"
+    },
+    "20892": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "FIAT_CURRENCY",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 20892,
+      "target": null,
+      "display_name": "FIAT_CURRENCY",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "20834": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "WIDGET_PARTNER_NAME",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 20834,
+      "target": null,
+      "display_name": "WIDGET_PARTNER_NAME",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "550206": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "FLAG_IS_RECURRING",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 550206,
+      "target": null,
+      "display_name": "FLAG_IS_RECURRING",
+      "name_field": null,
+      "base_type": "type/Boolean"
+    },
+    "876": {
+      "semantic_type": "type/Category",
+      "table_id": 51,
+      "name": "GEOSCHEME_BUSINESS",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 876,
+      "target": null,
+      "display_name": "GEOSCHEME_BUSINESS",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "566012": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "AUTH_TYPE",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 566012,
+      "target": null,
+      "display_name": "AUTH_TYPE",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "874": {
+      "semantic_type": "type/Country",
+      "table_id": 51,
+      "name": "COUNTRY_NAME_EN",
+      "has_field_values": "search",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 874,
+      "target": null,
+      "display_name": "COUNTRY_NAME_EN",
+      "name_field": null,
+      "base_type": "type/Text"
+    },
+    "564369": {
+      "semantic_type": "type/Category",
+      "table_id": 45,
+      "name": "IS_FAST_TRACK_KYC",
+      "has_field_values": "list",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 564369,
+      "target": null,
+      "display_name": "IS_FAST_TRACK_KYC",
+      "name_field": null,
+      "base_type": "type/Boolean"
+    },
+    "20835": {
+      "semantic_type": "type/CreationTimestamp",
+      "table_id": 45,
+      "name": "CREATED_AT",
+      "has_field_values": "none",
+      "fk_target_field_id": null,
+      "dimensions": [],
+      "id": 20835,
+      "target": null,
+      "display_name": "CREATED_AT",
+      "name_field": null,
+      "base_type": "type/DateTime"
+    }
+  },
+  "last-edit-info": {
+    "id": 148,
+    "email": "t.tikhomirov@mercuryo.io",
+    "first_name": "Timofei",
+    "last_name": "Tikhomirov",
+    "timestamp": "2025-06-22T10:23:25.059666Z"
+  },
+  "collection": {
+    "authority_level": null,
+    "description": null,
+    "archived": false,
+    "slug": "blik__sr_",
+    "archive_operation_id": null,
+    "name": "Blik (SR)",
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": false,
+    "id": 746,
+    "archived_directly": null,
+    "entity_id": "TgY6yAX77jEb5lrMt7gLP",
+    "location": "/34/41/545/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2025-06-22T10:22:50.470659Z"
+  },
+  "parameters": [
+    {
+      "name": "Created At",
+      "slug": "created_at",
+      "id": "f5f8f9a5",
+      "type": "date/all-options",
+      "sectionId": "date",
+      "required": false,
+      "default": "2024-10-07~"
+    },
+    {
+      "slug": "granularity",
+      "values_query_type": "list",
+      "default": [
+        "day"
+      ],
+      "name": "Granularity",
+      "type": "string/=",
+      "sectionId": "string",
+      "values_source_type": "static-list",
+      "id": "8bfcc274",
+      "values_source_config": {
+        "values": [
+          "day",
+          "week",
+          "month",
+          "year"
+        ]
+      },
+      "required": true
+    },
+    {
+      "name": "Transaction Accepted",
+      "slug": "transaction_accepted",
+      "id": "c8dceb3b",
+      "type": "string/=",
+      "sectionId": "string",
+      "required": false,
+      "default": [
+        true
+      ]
+    },
+    {
+      "slug": "group_by",
+      "values_query_type": "list",
+      "default": [
+        "Acquirer"
+      ],
+      "name": "Group by",
+      "type": "string/=",
+      "sectionId": "string",
+      "values_source_type": "static-list",
+      "id": "659bba9d",
+      "values_source_config": {
+        "values": [
+          "Acquirer",
+          "Partner Widget",
+          "Accepted Transaction",
+          "Fiat currency",
+          "Crypto currency",
+          "Network",
+          "Pay System",
+          "Country IP",
+          "Geoscheme IP"
+        ]
+      },
+      "required": true
+    },
+    {
+      "name": "Partner Name",
+      "slug": "partner_name",
+      "id": "a947c3bd",
+      "type": "string/=",
+      "sectionId": "string"
+    },
+    {
+      "name": "IP Country",
+      "slug": "ip_country",
+      "id": "7424225a",
+      "type": "string/=",
+      "sectionId": "location"
+    },
+    {
+      "name": "IP Geoscheme",
+      "slug": "ip_geoscheme",
+      "id": "22ec2adf",
+      "type": "string/=",
+      "sectionId": "string"
+    },
+    {
+      "name": "Crypto Currency",
+      "slug": "crypto_currency",
+      "id": "8254bb33",
+      "type": "string/=",
+      "sectionId": "string"
+    },
+    {
+      "name": "Network",
+      "slug": "network",
+      "id": "dcaf80f8",
+      "type": "string/=",
+      "sectionId": "string"
+    }
+  ],
+  "auto_apply_filters": true,
+  "created_at": "2025-06-22T10:23:24.908455Z",
+  "public_uuid": null,
+  "points_of_interest": null,
+  "can_delete": false
+}
